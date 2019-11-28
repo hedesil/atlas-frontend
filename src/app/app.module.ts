@@ -26,6 +26,7 @@ import { AlertsComponent } from './alerts/alerts.component';
 import { UsersComponent } from './administration/users/users.component';
 import { UserDetailsComponent } from './administration/users/user-details/user-details.component';
 import { ProfileDetailsComponent } from './administration/profiles/profile-details/profile-details.component';
+import { MethodologiesComponent } from './methodologies/methodologies.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { ProfileDetailsComponent } from './administration/profiles/profile-detai
     AlertsComponent,
     UsersComponent,
     UserDetailsComponent,
-    ProfileDetailsComponent
+    ProfileDetailsComponent,
+    MethodologiesComponent
   ],
   imports: [
     BrowserModule,

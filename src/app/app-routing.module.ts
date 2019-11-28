@@ -10,6 +10,7 @@ import {DepartmentsComponent} from './administration/departments/departments.com
 import {GroupsComponent} from './administration/groups/groups.component';
 import {ProfilesComponent} from './administration/profiles/profiles.component';
 import { UsersComponent } from './administration/users/users.component';
+import {MethodologiesComponent} from './methodologies/methodologies.component';
 
 
 const routes: Routes = [
@@ -27,7 +28,8 @@ const routes: Routes = [
       {path: 'groups', component: GroupsComponent},
       {path: 'profiles', component: ProfilesComponent}
     ]
-  }
+  },
+  {path: 'methodologies', component: MethodologiesComponent},
 ];
 
 @NgModule({
