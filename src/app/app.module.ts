@@ -28,6 +28,7 @@ import { UserDetailsComponent } from './administration/users/user-details/user-d
 import { ProfileDetailsComponent } from './administration/profiles/profile-details/profile-details.component';
 import { PieChartComponent } from './pie-chart/pie-chart.component';
 import { ChartsModule } from 'ng2-charts';
+import { AuditComponent } from './audit/audit.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { ChartsModule } from 'ng2-charts';
     UsersComponent,
     UserDetailsComponent,
     ProfileDetailsComponent,
-    PieChartComponent
+    PieChartComponent,
+    AuditComponent
   ],
   imports: [
     BrowserModule,

@@ -54,7 +54,6 @@ export class PieChartComponent implements OnInit {
   cambiagrafico(){
     this.selección = this.options;
     this.ngOnInit();
-    location.reload();
   }
 
 }
