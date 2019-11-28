@@ -7,349 +7,379 @@
     </div>
     <div class="row">
         <clr-stack-view>
-                <clr-stack-header>Permissions</clr-stack-header>
-                <clr-stack-block [(clrSbExpanded)]="expanded[0]">
-                  <clr-stack-label>Administration</clr-stack-label>
-                  <clr-stack-block>
-                    <clr-stack-label>Areas</clr-stack-label>
-                    <clr-stack-block>
-                      <clr-stack-label>
-                          <div class="clr-toggle-wrapper">
-                              <input type="checkbox" id="toggle1" [checked]="hasFunctionality('ADD AREAS')" (change)="toggle($event,'ADD AREAS')" class="clr-toggle">
-                              <label for="toggle1" class="clr-control-label">ADD</label>
-                          </div>
-                          <div class="clr-toggle-wrapper">
-                              <input type="checkbox" id="toggle2" [checked]="hasFunctionality('MODIFY AREAS')" (change)="toggle($event,'MODIFY AREAS')"
-                                  class="clr-toggle">
-                              <label for="toggle2" class="clr-control-label">MODIFY</label>
-                          </div>
-                          <div class="clr-toggle-wrapper">
-                              <input type="checkbox" id="toggle3" [checked]="hasFunctionality('DELETE AREAS')" (change)="toggle($event,'DELETE AREAS')"
-                                  class="clr-toggle">
-                              <label for="toggle3" class="clr-control-label">DELETE</label>
-                          </div>
-                          <div class="clr-toggle-wrapper">
-                              <input type="checkbox" id="toggle4" [checked]="hasFunctionality('GET AREAS')" (change)="toggle($event,'GET AREAS')" class="clr-toggle">
-                              <label for="toggle4" class="clr-control-label">GET</label>
-                          </div>
-                      </clr-stack-label>
-                    </clr-stack-block>
-                  </clr-stack-block>
-                  <clr-stack-block>
-                    <clr-stack-label>Companies</clr-stack-label>
-                    <clr-stack-block>
-                      <clr-stack-label>
-                          <div class="clr-toggle-wrapper">
-                              <input type="checkbox" id="toggle1" [checked]="hasFunctionality('ADD COMPANIES')" (change)="toggle($event,'ADD COMPANIES')"
-                                  class="clr-toggle">
-                              <label for="toggle1" class="clr-control-label">ADD</label>
-                          </div>
-                          <div class="clr-toggle-wrapper">
-                              <input type="checkbox" id="toggle2" [checked]="hasFunctionality('MODIFY COMPANIES')" (change)="toggle($event,'MODIFY COMPANIES')"
-                                  class="clr-toggle">
-                              <label for="toggle2" class="clr-control-label">MODIFY</label>
-                          </div>
-                          <div class="clr-toggle-wrapper">
-                              <input type="checkbox" id="toggle3" [checked]="hasFunctionality('DELETE COMPANIES')" (change)="toggle($event,'DELETE COMPANIES')"
-                                  class="clr-toggle">
-                              <label for="toggle3" class="clr-control-label">DELETE</label>
-                          </div>
-                          <div class="clr-toggle-wrapper">
-                              <input type="checkbox" id="toggle4" [checked]="hasFunctionality('GET COMPANIES')" (change)="toggle($event,'GET COMPANIES')"
-                                  class="clr-toggle">
-                              <label for="toggle4" class="clr-control-label">GET</label>
-                          </div>
-                      </clr-stack-label>
-                    </clr-stack-block>
-                  </clr-stack-block>
-                  <clr-stack-block>
-                    <clr-stack-label>Groups</clr-stack-label>
-                    <clr-stack-block>
-                      <clr-stack-label>
-                          <div class="clr-toggle-wrapper">
-                              <input type="checkbox" id="toggle1" [checked]="hasFunctionality('ADD GROUPS')" (change)="toggle($event,'ADD GROUPS')" class="clr-toggle">
-                              <label for="toggle1" class="clr-control-label">ADD</label>
-                          </div>
-                          <div class="clr-toggle-wrapper">
-                              <input type="checkbox" id="toggle2" [checked]="hasFunctionality('MODIFY GROUPS')" (change)="toggle($event,'MODIFY GROUPS')"
-                                  class="clr-toggle">
-                              <label for="toggle2" class="clr-control-label">MODIFY</label>
-                          </div>
-                          <div class="clr-toggle-wrapper">
-                              <input type="checkbox" id="toggle3" [checked]="hasFunctionality('DELETE GROUPS')" (change)="toggle($event,'DELETE GROUPS')"
-                                  class="clr-toggle">
-                              <label for="toggle3" class="clr-control-label">DELETE</label>
-                          </div>
-                          <div class="clr-toggle-wrapper">
-                              <input type="checkbox" id="toggle4" [checked]="hasFunctionality('GET GROUPS')" (change)="toggle($event,'GET GROUPS')" class="clr-toggle">
-                              <label for="toggle4" class="clr-control-label">GET</label>
-                          </div>
-                      </clr-stack-label>
-                    </clr-stack-block>
-                  </clr-stack-block>
-                  <clr-stack-block>
-                    <clr-stack-label>Profiles</clr-stack-label>
-                    <clr-stack-block>
-                      <clr-stack-label>
-                          <div class="clr-toggle-wrapper">
-                              <input type="checkbox" id="toggle1" [checked]="hasFunctionality('ADD PROFILES')" (change)="toggle($event,'ADD PROFILES')"
-                                  class="clr-toggle">
-                              <label for="toggle1" class="clr-control-label">ADD</label>
-                          </div>
-                          <div class="clr-toggle-wrapper">
-                              <input type="checkbox" id="toggle2" [checked]="hasFunctionality('MODIFY PROFILES')" (change)="toggle($event,'MODIFY PROFILES')"
-                                  class="clr-toggle">
-                              <label for="toggle2" class="clr-control-label">MODIFY</label>
-                          </div>
-                          <div class="clr-toggle-wrapper">
-                              <input type="checkbox" id="toggle3" [checked]="hasFunctionality('DELETE PROFILES')" (change)="toggle($event,'DELETE PROFILES')"
-                                  class="clr-toggle">
-                              <label for="toggle3" class="clr-control-label">DELETE</label>
-                          </div>
-                          <div class="clr-toggle-wrapper">
-                              <input type="checkbox" id="toggle4" [checked]="hasFunctionality('GET PROFILES')" (change)="toggle($event,'GET PROFILES')"
-                                  class="clr-toggle">
-                              <label for="toggle4" class="clr-control-label">GET</label>
-                          </div>
-                      </clr-stack-label>
-                    </clr-stack-block>
-                  </clr-stack-block>
-                  <clr-stack-block>
-                    <clr-stack-label>Users</clr-stack-label>
-                    <clr-stack-block>
-                      <clr-stack-label>
-                          <div class="clr-toggle-wrapper">
-                              <input type="checkbox" id="toggle1" [checked]="hasFunctionality('ADD USERS')" (change)="toggle($event,'ADD USERS')" class="clr-toggle">
-                              <label for="toggle1" class="clr-control-label">ADD</label>
-                          </div>
-                          <div class="clr-toggle-wrapper">
-                              <input type="checkbox" id="toggle2" [checked]="hasFunctionality('MODIFY USERS')" (change)="toggle($event,'MODIFY USERS')"
-                                  class="clr-toggle">
-                              <label for="toggle2" class="clr-control-label">MODIFY</label>
-                          </div>
-                          <div class="clr-toggle-wrapper">
-                              <input type="checkbox" id="toggle3" [checked]="hasFunctionality('DELETE USERS')" (change)="toggle($event,'DELETE USERS')"
-                                  class="clr-toggle">
-                              <label for="toggle3" class="clr-control-label">DELETE</label>
-                          </div>
-                          <div class="clr-toggle-wrapper">
-                              <input type="checkbox" id="toggle4" [checked]="hasFunctionality('GET USERS')" (change)="toggle($event,'GET USERS')" class="clr-toggle">
-                              <label for="toggle4" class="clr-control-label">GET</label>
-                          </div>
-                      </clr-stack-label>
-                    </clr-stack-block>
-                  </clr-stack-block>
+            <clr-stack-header>Permissions</clr-stack-header>
+            <clr-stack-block [(clrSbExpanded)]="expanded[0]">
+              <clr-stack-label>Administration</clr-stack-label>
+              <clr-stack-block>
+                <clr-stack-label>Areas</clr-stack-label>
+                <clr-stack-block>
+                  <clr-stack-label>
+                      <div class="clr-toggle-wrapper">
+                          <input type="checkbox" id="toggle1" [checked]="hasFunctionality('ADD AREAS')" (change)="toggle($event,'ADD AREAS')" class="clr-toggle">
+                          <label for="toggle1" class="clr-control-label">ADD</label>
+                      </div>
+                      <div class="clr-toggle-wrapper">
+                          <input type="checkbox" id="toggle2" [checked]="hasFunctionality('MODIFY AREAS')" (change)="toggle($event,'MODIFY AREAS')"
+                              class="clr-toggle">
+                          <label for="toggle2" class="clr-control-label">MODIFY</label>
+                      </div>
+                      <div class="clr-toggle-wrapper">
+                          <input type="checkbox" id="toggle3" [checked]="hasFunctionality('DELETE AREAS')" (change)="toggle($event,'DELETE AREAS')"
+                              class="clr-toggle">
+                          <label for="toggle3" class="clr-control-label">DELETE</label>
+                      </div>
+                      <div class="clr-toggle-wrapper">
+                          <input type="checkbox" id="toggle4" [checked]="hasFunctionality('GET AREAS')" (change)="toggle($event,'GET AREAS')" class="clr-toggle">
+                          <label for="toggle4" class="clr-control-label">GET</label>
+                      </div>
+                  </clr-stack-label>
                 </clr-stack-block>
-                <clr-stack-block [(clrSbExpanded)]="expanded[1]">
-                  <clr-stack-label>Assets</clr-stack-label>
-                  <clr-stack-block>
-                    <clr-stack-label>
-                        <div class="clr-toggle-wrapper">
-                            <input type="checkbox" id="toggle1" [checked]="hasFunctionality('ADD ASSETS')" (change)="toggle($event,'ADD ASSETS')" class="clr-toggle">
-                            <label for="toggle1" class="clr-control-label">ADD</label>
-                        </div>
-                        <div class="clr-toggle-wrapper">
-                            <input type="checkbox" id="toggle2" [checked]="hasFunctionality('MODIFY ASSETS')" (change)="toggle($event,'MODIFY ASSETS')"
-                                class="clr-toggle">
-                            <label for="toggle2" class="clr-control-label">MODIFY</label>
-                        </div>
-                        <div class="clr-toggle-wrapper">
-                            <input type="checkbox" id="toggle3" [checked]="hasFunctionality('DELETE ASSETS')" (change)="toggle($event,'DELETE ASSETS')"
-                                class="clr-toggle">
-                            <label for="toggle3" class="clr-control-label">DELETE</label>
-                        </div>
-                        <div class="clr-toggle-wrapper">
-                            <input type="checkbox" id="toggle4" [checked]="hasFunctionality('GET ASSETS')" (change)="toggle($event,'GET ASSETS')" class="clr-toggle">
-                            <label for="toggle4" class="clr-control-label">GET</label>
-                        </div>
-                    </clr-stack-label>
-                  </clr-stack-block>
+              </clr-stack-block>
+              <clr-stack-block>
+                <clr-stack-label>Companies</clr-stack-label>
+                <clr-stack-block>
+                  <clr-stack-label>
+                      <div class="clr-toggle-wrapper">
+                          <input type="checkbox" id="toggle5" [checked]="hasFunctionality('ADD COMPANIES')" (change)="toggle($event,'ADD COMPANIES')"
+                              class="clr-toggle">
+                          <label for="toggle5" class="clr-control-label">ADD</label>
+                      </div>
+                      <div class="clr-toggle-wrapper">
+                          <input type="checkbox" id="toggle6" [checked]="hasFunctionality('MODIFY COMPANIES')" (change)="toggle($event,'MODIFY COMPANIES')"
+                              class="clr-toggle">
+                          <label for="toggle6" class="clr-control-label">MODIFY</label>
+                      </div>
+                      <div class="clr-toggle-wrapper">
+                          <input type="checkbox" id="toggle7" [checked]="hasFunctionality('DELETE COMPANIES')" (change)="toggle($event,'DELETE COMPANIES')"
+                              class="clr-toggle">
+                          <label for="toggle7" class="clr-control-label">DELETE</label>
+                      </div>
+                      <div class="clr-toggle-wrapper">
+                          <input type="checkbox" id="toggle8" [checked]="hasFunctionality('GET COMPANIES')" (change)="toggle($event,'GET COMPANIES')"
+                              class="clr-toggle">
+                          <label for="toggle8" class="clr-control-label">GET</label>
+                      </div>
+                  </clr-stack-label>
                 </clr-stack-block>
-                <clr-stack-block [(clrSbExpanded)]="expanded[2]">
-                  <clr-stack-label>Audits</clr-stack-label>
-                  <clr-stack-block>
-                    <clr-stack-label>
-                        <div class="clr-toggle-wrapper">
-                            <input type="checkbox" id="toggle1" [checked]="hasFunctionality('ADD AUDITS')" (change)="toggle($event,'ADD AUDITS')" class="clr-toggle">
-                            <label for="toggle1" class="clr-control-label">ADD</label>
-                        </div>
-                        <div class="clr-toggle-wrapper">
-                            <input type="checkbox" id="toggle2" [checked]="hasFunctionality('MODIFY AUDITS')" (change)="toggle($event,'MODIFY AUDITS')"
-                                class="clr-toggle">
-                            <label for="toggle2" class="clr-control-label">MODIFY</label>
-                        </div>
-                        <div class="clr-toggle-wrapper">
-                            <input type="checkbox" id="toggle3" [checked]="hasFunctionality('DELETE AUDITS')" (change)="toggle($event,'DELETE AUDITS')"
-                                class="clr-toggle">
-                            <label for="toggle3" class="clr-control-label">DELETE</label>
-                        </div>
-                        <div class="clr-toggle-wrapper">
-                            <input type="checkbox" id="toggle4" [checked]="hasFunctionality('GET AUDITS')" (change)="toggle($event,'GET AUDITS')" class="clr-toggle">
-                            <label for="toggle4" class="clr-control-label">GET</label>
-                        </div>
-                    </clr-stack-label>
-                  </clr-stack-block>
+              </clr-stack-block>
+              <clr-stack-block>
+                <clr-stack-label>Groups</clr-stack-label>
+                <clr-stack-block>
+                  <clr-stack-label>
+                      <div class="clr-toggle-wrapper">
+                          <input type="checkbox" id="toggle9" [checked]="hasFunctionality('ADD GROUPS')" (change)="toggle($event,'ADD GROUPS')" class="clr-toggle">
+                          <label for="toggle9" class="clr-control-label">ADD</label>
+                      </div>
+                      <div class="clr-toggle-wrapper">
+                          <input type="checkbox" id="toggle10" [checked]="hasFunctionality('MODIFY GROUPS')" (change)="toggle($event,'MODIFY GROUPS')"
+                              class="clr-toggle">
+                          <label for="toggle10" class="clr-control-label">MODIFY</label>
+                      </div>
+                      <div class="clr-toggle-wrapper">
+                          <input type="checkbox" id="toggle11" [checked]="hasFunctionality('DELETE GROUPS')" (change)="toggle($event,'DELETE GROUPS')"
+                              class="clr-toggle">
+                          <label for="toggle11" class="clr-control-label">DELETE</label>
+                      </div>
+                      <div class="clr-toggle-wrapper">
+                          <input type="checkbox" id="toggle12" [checked]="hasFunctionality('GET GROUPS')" (change)="toggle($event,'GET GROUPS')" class="clr-toggle">
+                          <label for="toggle12" class="clr-control-label">GET</label>
+                      </div>
+                  </clr-stack-label>
                 </clr-stack-block>
-                <clr-stack-block [(clrSbExpanded)]="expanded[3]">
-                  <clr-stack-label>Evidences</clr-stack-label>
-                  <clr-stack-block>
-                    <clr-stack-label>
-                        <div class="clr-toggle-wrapper">
-                            <input type="checkbox" id="toggle1" [checked]="hasFunctionality('ADD EVIDENCES')" (change)="toggle($event,'ADD EVIDENCES')"
-                                class="clr-toggle">
-                            <label for="toggle1" class="clr-control-label">ADD</label>
-                        </div>
-                        <div class="clr-toggle-wrapper">
-                            <input type="checkbox" id="toggle2" [checked]="hasFunctionality('MODIFY EVIDENCES')" (change)="toggle($event,'MODIFY EVIDENCES')"
-                                class="clr-toggle">
-                            <label for="toggle2" class="clr-control-label">MODIFY</label>
-                        </div>
-                        <div class="clr-toggle-wrapper">
-                            <input type="checkbox" id="toggle3" [checked]="hasFunctionality('DELETE EVIDENCES')" (change)="toggle($event,'DELETE EVIDENCES')"
-                                class="clr-toggle">
-                            <label for="toggle3" class="clr-control-label">DELETE</label>
-                        </div>
-                        <div class="clr-toggle-wrapper">
-                            <input type="checkbox" id="toggle4" [checked]="hasFunctionality('GET EVIDENCES')" (change)="toggle($event,'GET EVIDENCES')"
-                                class="clr-toggle">
-                            <label for="toggle4" class="clr-control-label">GET</label>
-                        </div>
-                    </clr-stack-label>
-                  </clr-stack-block>
+              </clr-stack-block>
+              <clr-stack-block>
+                <clr-stack-label>Profiles</clr-stack-label>
+                <clr-stack-block>
+                  <clr-stack-label>
+                      <div class="clr-toggle-wrapper">
+                          <input type="checkbox" id="toggle13" [checked]="hasFunctionality('ADD PROFILES')" (change)="toggle($event,'ADD PROFILES')"
+                              class="clr-toggle">
+                          <label for="toggle13" class="clr-control-label">ADD</label>
+                      </div>
+                      <div class="clr-toggle-wrapper">
+                          <input type="checkbox" id="toggle14" [checked]="hasFunctionality('MODIFY PROFILES')" (change)="toggle($event,'MODIFY PROFILES')"
+                              class="clr-toggle">
+                          <label for="toggle14" class="clr-control-label">MODIFY</label>
+                      </div>
+                      <div class="clr-toggle-wrapper">
+                          <input type="checkbox" id="toggle15" [checked]="hasFunctionality('DELETE PROFILES')" (change)="toggle($event,'DELETE PROFILES')"
+                              class="clr-toggle">
+                          <label for="toggle15" class="clr-control-label">DELETE</label>
+                      </div>
+                      <div class="clr-toggle-wrapper">
+                          <input type="checkbox" id="toggle16" [checked]="hasFunctionality('GET PROFILES')" (change)="toggle($event,'GET PROFILES')"
+                              class="clr-toggle">
+                          <label for="toggle16" class="clr-control-label">GET</label>
+                      </div>
+                  </clr-stack-label>
                 </clr-stack-block>
-                <clr-stack-block [(clrSbExpanded)]="expanded[4]">
-                  <clr-stack-label>Integrations</clr-stack-label>
-                  <clr-stack-block>
-                    <clr-stack-label>
-                        <div class="clr-toggle-wrapper">
-                            <input type="checkbox" id="toggle1" [checked]="hasFunctionality('ADD INTEGRATIONS')" (change)="toggle($event,'ADD INTEGRATIONS')"
-                                class="clr-toggle">
-                            <label for="toggle1" class="clr-control-label">ADD</label>
-                        </div>
-                        <div class="clr-toggle-wrapper">
-                            <input type="checkbox" id="toggle2" [checked]="hasFunctionality('MODIFY INTEGRATIONS')" (change)="toggle($event,'MODIFY INTEGRATIONS')"
-                                class="clr-toggle">
-                            <label for="toggle2" class="clr-control-label">MODIFY</label>
-                        </div>
-                        <div class="clr-toggle-wrapper">
-                            <input type="checkbox" id="toggle3" [checked]="hasFunctionality('DELETE INTEGRATIONS')" (change)="toggle($event,'DELETE INTEGRATIONS')"
-                                class="clr-toggle">
-                            <label for="toggle3" class="clr-control-label">DELETE</label>
-                        </div>
-                        <div class="clr-toggle-wrapper">
-                            <input type="checkbox" id="toggle4" [checked]="hasFunctionality('GET INTEGRATIONS')" (change)="toggle($event,'GET INTEGRATIONS')"
-                                class="clr-toggle">
-                            <label for="toggle4" class="clr-control-label">GET</label>
-                        </div>
-                    </clr-stack-label>
-                  </clr-stack-block>
+              </clr-stack-block>
+              <clr-stack-block>
+                <clr-stack-label>Users</clr-stack-label>
+                <clr-stack-block>
+                  <clr-stack-label>
+                      <div class="clr-toggle-wrapper">
+                          <input type="checkbox" id="toggle17" [checked]="hasFunctionality('ADD USERS')" (change)="toggle($event,'ADD USERS')" class="clr-toggle">
+                          <label for="toggle17" class="clr-control-label">ADD</label>
+                      </div>
+                      <div class="clr-toggle-wrapper">
+                          <input type="checkbox" id="toggle18" [checked]="hasFunctionality('MODIFY USERS')" (change)="toggle($event,'MODIFY USERS')"
+                              class="clr-toggle">
+                          <label for="toggle18" class="clr-control-label">MODIFY</label>
+                      </div>
+                      <div class="clr-toggle-wrapper">
+                          <input type="checkbox" id="toggle19" [checked]="hasFunctionality('DELETE USERS')" (change)="toggle($event,'DELETE USERS')"
+                              class="clr-toggle">
+                          <label for="toggle19" class="clr-control-label">DELETE</label>
+                      </div>
+                      <div class="clr-toggle-wrapper">
+                          <input type="checkbox" id="toggle20" [checked]="hasFunctionality('GET USERS')" (change)="toggle($event,'GET USERS')" class="clr-toggle">
+                          <label for="toggle20" class="clr-control-label">GET</label>
+                      </div>
+                  </clr-stack-label>
                 </clr-stack-block>
-                <clr-stack-block [(clrSbExpanded)]="expanded[5]">
-                  <clr-stack-label>Responsables</clr-stack-label>
-                  <clr-stack-block>
-                    <clr-stack-label>
-                        <div class="clr-toggle-wrapper">
-                            <input type="checkbox" id="toggle1" [checked]="hasFunctionality('ADD RESPONSABLES')" (change)="toggle($event,'ADD RESPONSABLES')"
-                                class="clr-toggle">
-                            <label for="toggle1" class="clr-control-label">ADD</label>
-                        </div>
-                        <div class="clr-toggle-wrapper">
-                            <input type="checkbox" id="toggle2" [checked]="hasFunctionality('MODIFY RESPONSABLES')" (change)="toggle($event,'MODIFY RESPONSABLES')"
-                                class="clr-toggle">
-                            <label for="toggle2" class="clr-control-label">MODIFY</label>
-                        </div>
-                        <div class="clr-toggle-wrapper">
-                            <input type="checkbox" id="toggle3" [checked]="hasFunctionality('DELETE RESPONSABLES')" (change)="toggle($event,'DELETE RESPONSABLES')"
-                                class="clr-toggle">
-                            <label for="toggle3" class="clr-control-label">DELETE</label>
-                        </div>
-                        <div class="clr-toggle-wrapper">
-                            <input type="checkbox" id="toggle4" [checked]="hasFunctionality('GET RESPONSABLES')" (change)="toggle($event,'GET RESPONSABLES')"
-                                class="clr-toggle">
-                            <label for="toggle4" class="clr-control-label">GET</label>
-                        </div>
-                    </clr-stack-label>
-                  </clr-stack-block>
+              </clr-stack-block>
+            </clr-stack-block>
+            <clr-stack-block [(clrSbExpanded)]="expanded[1]">
+              <clr-stack-label>Assets</clr-stack-label>
+              <clr-stack-block>
+                <clr-stack-label>
+                    <div class="clr-toggle-wrapper">
+                        <input type="checkbox" id="toggle21" [checked]="hasFunctionality('ADD ASSETS')" (change)="toggle($event,'ADD ASSETS')" class="clr-toggle">
+                        <label for="toggle21" class="clr-control-label">ADD</label>
+                    </div>
+                    <div class="clr-toggle-wrapper">
+                        <input type="checkbox" id="toggle22" [checked]="hasFunctionality('MODIFY ASSETS')" (change)="toggle($event,'MODIFY ASSETS')"
+                            class="clr-toggle">
+                        <label for="toggle22" class="clr-control-label">MODIFY</label>
+                    </div>
+                    <div class="clr-toggle-wrapper">
+                        <input type="checkbox" id="toggle23" [checked]="hasFunctionality('DELETE ASSETS')" (change)="toggle($event,'DELETE ASSETS')"
+                            class="clr-toggle">
+                        <label for="toggle23" class="clr-control-label">DELETE</label>
+                    </div>
+                    <div class="clr-toggle-wrapper">
+                        <input type="checkbox" id="toggle24" [checked]="hasFunctionality('GET ASSETS')" (change)="toggle($event,'GET ASSETS')" class="clr-toggle">
+                        <label for="toggle24" class="clr-control-label">GET</label>
+                    </div>
+                </clr-stack-label>
+              </clr-stack-block>
+            </clr-stack-block>
+            <clr-stack-block [(clrSbExpanded)]="expanded[2]">
+              <clr-stack-label>Audits</clr-stack-label>
+              <clr-stack-block>
+                <clr-stack-label>
+                    <div class="clr-toggle-wrapper">
+                        <input type="checkbox" id="toggle25" [checked]="hasFunctionality('ADD AUDITS')" (change)="toggle($event,'ADD AUDITS')" class="clr-toggle">
+                        <label for="toggle25" class="clr-control-label">ADD</label>
+                    </div>
+                    <div class="clr-toggle-wrapper">
+                        <input type="checkbox" id="toggle26" [checked]="hasFunctionality('MODIFY AUDITS')" (change)="toggle($event,'MODIFY AUDITS')"
+                            class="clr-toggle">
+                        <label for="toggle26" class="clr-control-label">MODIFY</label>
+                    </div>
+                    <div class="clr-toggle-wrapper">
+                        <input type="checkbox" id="toggle27" [checked]="hasFunctionality('DELETE AUDITS')" (change)="toggle($event,'DELETE AUDITS')"
+                            class="clr-toggle">
+                        <label for="toggle27" class="clr-control-label">DELETE</label>
+                    </div>
+                    <div class="clr-toggle-wrapper">
+                        <input type="checkbox" id="toggle28" [checked]="hasFunctionality('GET AUDITS')" (change)="toggle($event,'GET AUDITS')" class="clr-toggle">
+                        <label for="toggle28" class="clr-control-label">GET</label>
+                    </div>
+                </clr-stack-label>
+              </clr-stack-block>
+            </clr-stack-block>
+            <clr-stack-block [(clrSbExpanded)]="expanded[3]">
+              <clr-stack-label>Evidences</clr-stack-label>
+              <clr-stack-block>
+                <clr-stack-label>
+                    <div class="clr-toggle-wrapper">
+                        <input type="checkbox" id="toggle29" [checked]="hasFunctionality('ADD EVIDENCES')" (change)="toggle($event,'ADD EVIDENCES')"
+                            class="clr-toggle">
+                        <label for="toggle29" class="clr-control-label">ADD</label>
+                    </div>
+                    <div class="clr-toggle-wrapper">
+                        <input type="checkbox" id="toggle30" [checked]="hasFunctionality('MODIFY EVIDENCES')" (change)="toggle($event,'MODIFY EVIDENCES')"
+                            class="clr-toggle">
+                        <label for="toggle30" class="clr-control-label">MODIFY</label>
+                    </div>
+                    <div class="clr-toggle-wrapper">
+                        <input type="checkbox" id="toggle31" [checked]="hasFunctionality('DELETE EVIDENCES')" (change)="toggle($event,'DELETE EVIDENCES')"
+                            class="clr-toggle">
+                        <label for="toggle31" class="clr-control-label">DELETE</label>
+                    </div>
+                    <div class="clr-toggle-wrapper">
+                        <input type="checkbox" id="toggle32" [checked]="hasFunctionality('GET EVIDENCES')" (change)="toggle($event,'GET EVIDENCES')"
+                            class="clr-toggle">
+                        <label for="toggle32" class="clr-control-label">GET</label>
+                    </div>
+                </clr-stack-label>
+              </clr-stack-block>
+            </clr-stack-block>
+            <clr-stack-block [(clrSbExpanded)]="expanded[4]">
+              <clr-stack-label>Integrations</clr-stack-label>
+              <clr-stack-block>
+                <clr-stack-label>
+                    <div class="clr-toggle-wrapper">
+                        <input type="checkbox" id="toggle33" [checked]="hasFunctionality('ADD INTEGRATIONS')" (change)="toggle($event,'ADD INTEGRATIONS')"
+                            class="clr-toggle">
+                        <label for="toggle33" class="clr-control-label">ADD</label>
+                    </div>
+                    <div class="clr-toggle-wrapper">
+                        <input type="checkbox" id="toggle34" [checked]="hasFunctionality('MODIFY INTEGRATIONS')" (change)="toggle($event,'MODIFY INTEGRATIONS')"
+                            class="clr-toggle">
+                        <label for="toggle34" class="clr-control-label">MODIFY</label>
+                    </div>
+                    <div class="clr-toggle-wrapper">
+                        <input type="checkbox" id="toggle35" [checked]="hasFunctionality('DELETE INTEGRATIONS')" (change)="toggle($event,'DELETE INTEGRATIONS')"
+                            class="clr-toggle">
+                        <label for="toggle35" class="clr-control-label">DELETE</label>
+                    </div>
+                    <div class="clr-toggle-wrapper">
+                        <input type="checkbox" id="toggle36" [checked]="hasFunctionality('GET INTEGRATIONS')" (change)="toggle($event,'GET INTEGRATIONS')"
+                            class="clr-toggle">
+                        <label for="toggle36" class="clr-control-label">GET</label>
+                    </div>
+                </clr-stack-label>
+              </clr-stack-block>
+            </clr-stack-block>
+            <clr-stack-block [(clrSbExpanded)]="expanded[9]">
+                <clr-stack-label>Methodologies</clr-stack-label>
+                <clr-stack-block>
+                  <clr-stack-label>
+                      <div class="clr-toggle-wrapper">
+                          <input type="checkbox" id="toggle53" [checked]="hasFunctionality('ADD METHODOLOGIES')" (change)="toggle($event,'ADD METHODOLOGIES')"
+                              class="clr-toggle">
+                          <label for="toggle53" class="clr-control-label">ADD</label>
+                      </div>
+                      <div class="clr-toggle-wrapper">
+                          <input type="checkbox" id="toggle54" [checked]="hasFunctionality('MODIFY METHODOLOGIES')" (change)="toggle($event,'MODIFY METHODOLOGIES')"
+                              class="clr-toggle">
+                          <label for="toggle54" class="clr-control-label">MODIFY</label>
+                      </div>
+                      <div class="clr-toggle-wrapper">
+                          <input type="checkbox" id="toggle55" [checked]="hasFunctionality('DELETE METHODOLOGIES')" (change)="toggle($event,'DELETE METHODOLOGIES')"
+                              class="clr-toggle">
+                          <label for="toggle55" class="clr-control-label">DELETE</label>
+                      </div>
+                      <div class="clr-toggle-wrapper">
+                          <input type="checkbox" id="toggle56" [checked]="hasFunctionality('GET METHODOLOGIES')" (change)="toggle($event,'GET METHODOLOGIES')"
+                              class="clr-toggle">
+                          <label for="toggle56" class="clr-control-label">GET</label>
+                      </div>
+                  </clr-stack-label>
                 </clr-stack-block>
-                <clr-stack-block [(clrSbExpanded)]="expanded[6]">
-                  <clr-stack-label>Tags</clr-stack-label>
-                  <clr-stack-block>
-                    <clr-stack-label>
-                        <div class="clr-toggle-wrapper">
-                            <input type="checkbox" id="toggle1" [checked]="hasFunctionality('ADD TAGS')" (change)="toggle($event,'ADD TAGS')" class="clr-toggle">
-                            <label for="toggle1" class="clr-control-label">ADD</label>
-                        </div>
-                        <div class="clr-toggle-wrapper">
-                            <input type="checkbox" id="toggle2" [checked]="hasFunctionality('MODIFY TAGS')" (change)="toggle($event,'MODIFY TAGS')" class="clr-toggle">
-                            <label for="toggle2" class="clr-control-label">MODIFY</label>
-                        </div>
-                        <div class="clr-toggle-wrapper">
-                            <input type="checkbox" id="toggle3" [checked]="hasFunctionality('DELETE TAGS')" (change)="toggle($event,'DELETE TAGS')" class="clr-toggle">
-                            <label for="toggle3" class="clr-control-label">DELETE</label>
-                        </div>
-                        <div class="clr-toggle-wrapper">
-                            <input type="checkbox" id="toggle4" [checked]="hasFunctionality('GET TAGS')" (change)="toggle($event,'GET TAGS')" class="clr-toggle">
-                            <label for="toggle4" class="clr-control-label">GET</label>
-                        </div>
-                    </clr-stack-label>
-                  </clr-stack-block>
-                </clr-stack-block>
-                <clr-stack-block [(clrSbExpanded)]="expanded[7]">
-                  <clr-stack-label>Urls</clr-stack-label>
-                  <clr-stack-block>
-                    <clr-stack-label>
-                        <div class="clr-toggle-wrapper">
-                            <input type="checkbox" id="toggle1" [checked]="hasFunctionality('ADD URLS')" (change)="toggle($event,'ADD URLS')" class="clr-toggle">
-                            <label for="toggle1" class="clr-control-label">ADD</label>
-                        </div>
-                        <div class="clr-toggle-wrapper">
-                            <input type="checkbox" id="toggle2" [checked]="hasFunctionality('MODIFY URLS')" (change)="toggle($event,'MODIFY URLS')" class="clr-toggle">
-                            <label for="toggle2" class="clr-control-label">MODIFY</label>
-                        </div>
-                        <div class="clr-toggle-wrapper">
-                            <input type="checkbox" id="toggle3" [checked]="hasFunctionality('DELETE URLS')" (change)="toggle($event,'DELETE URLS')" class="clr-toggle">
-                            <label for="toggle3" class="clr-control-label">DELETE</label>
-                        </div>
-                        <div class="clr-toggle-wrapper">
-                            <input type="checkbox" id="toggle4" [checked]="hasFunctionality('GET URLS')" (change)="toggle($event,'GET URLS')" class="clr-toggle">
-                            <label for="toggle4" class="clr-control-label">GET</label>
-                        </div>
-                    </clr-stack-label>
-                  </clr-stack-block>
-                </clr-stack-block>
-                <clr-stack-block [(clrSbExpanded)]="expanded[8]">
-                  <clr-stack-label>Vulnerabilities</clr-stack-label>
-                  <clr-stack-block>
-                    <clr-stack-label>
-                        <div class="clr-toggle-wrapper">
-                            <input type="checkbox" id="toggle1" [checked]="hasFunctionality('ADD VULNERABILITIES')" (change)="toggle($event,'ADD VULNERABILITIES')"
-                                class="clr-toggle">
-                            <label for="toggle1" class="clr-control-label">ADD</label>
-                        </div>
-                        <div class="clr-toggle-wrapper">
-                            <input type="checkbox" id="toggle2" [checked]="hasFunctionality('MODIFY VULNERABILITIES')" (change)="toggle($event,'MODIFY VULNERABILITIES')"
-                                class="clr-toggle">
-                            <label for="toggle2" class="clr-control-label">MODIFY</label>
-                        </div>
-                        <div class="clr-toggle-wrapper">
-                            <input type="checkbox" id="toggle3" [checked]="hasFunctionality('DELETE VULNERABILITIES')" (change)="toggle($event,'DELETE VULNERABILITIES')"
-                                class="clr-toggle">
-                            <label for="toggle3" class="clr-control-label">DELETE</label>
-                        </div>
-                        <div class="clr-toggle-wrapper">
-                            <input type="checkbox" id="toggle4" [checked]="hasFunctionality('GET VULNERABILITIES')" (change)="toggle($event,'GET VULNERABILITIES')"
-                                class="clr-toggle">
-                            <label for="toggle4" class="clr-control-label">GET</label>
-                        </div>
-                    </clr-stack-label>
-                  </clr-stack-block>
-                </clr-stack-block>
-              </clr-stack-view>
-            
-            
-            
+              </clr-stack-block>
+            <clr-stack-block [(clrSbExpanded)]="expanded[5]">
+              <clr-stack-label>Responsables</clr-stack-label>
+              <clr-stack-block>
+                <clr-stack-label>
+                    <div class="clr-toggle-wrapper">
+                        <input type="checkbox" id="toggle37" [checked]="hasFunctionality('ADD RESPONSABLES')" (change)="toggle($event,'ADD RESPONSABLES')"
+                            class="clr-toggle">
+                        <label for="toggle37" class="clr-control-label">ADD</label>
+                    </div>
+                    <div class="clr-toggle-wrapper">
+                        <input type="checkbox" id="toggle38" [checked]="hasFunctionality('MODIFY RESPONSABLES')" (change)="toggle($event,'MODIFY RESPONSABLES')"
+                            class="clr-toggle">
+                        <label for="toggle38" class="clr-control-label">MODIFY</label>
+                    </div>
+                    <div class="clr-toggle-wrapper">
+                        <input type="checkbox" id="toggle39" [checked]="hasFunctionality('DELETE RESPONSABLES')" (change)="toggle($event,'DELETE RESPONSABLES')"
+                            class="clr-toggle">
+                        <label for="toggle39" class="clr-control-label">DELETE</label>
+                    </div>
+                    <div class="clr-toggle-wrapper">
+                        <input type="checkbox" id="toggle40" [checked]="hasFunctionality('GET RESPONSABLES')" (change)="toggle($event,'GET RESPONSABLES')"
+                            class="clr-toggle">
+                        <label for="toggle40" class="clr-control-label">GET</label>
+                    </div>
+                </clr-stack-label>
+              </clr-stack-block>
+            </clr-stack-block>
+            <clr-stack-block [(clrSbExpanded)]="expanded[6]">
+              <clr-stack-label>Tags</clr-stack-label>
+              <clr-stack-block>
+                <clr-stack-label>
+                    <div class="clr-toggle-wrapper">
+                        <input type="checkbox" id="toggle41" [checked]="hasFunctionality('ADD TAGS')" (change)="toggle($event,'ADD TAGS')" class="clr-toggle">
+                        <label for="toggle41" class="clr-control-label">ADD</label>
+                    </div>
+                    <div class="clr-toggle-wrapper">
+                        <input type="checkbox" id="toggle42" [checked]="hasFunctionality('MODIFY TAGS')" (change)="toggle($event,'MODIFY TAGS')" class="clr-toggle">
+                        <label for="toggle42" class="clr-control-label">MODIFY</label>
+                    </div>
+                    <div class="clr-toggle-wrapper">
+                        <input type="checkbox" id="toggle43" [checked]="hasFunctionality('DELETE TAGS')" (change)="toggle($event,'DELETE TAGS')" class="clr-toggle">
+                        <label for="toggle43" class="clr-control-label">DELETE</label>
+                    </div>
+                    <div class="clr-toggle-wrapper">
+                        <input type="checkbox" id="toggle44" [checked]="hasFunctionality('GET TAGS')" (change)="toggle($event,'GET TAGS')" class="clr-toggle">
+                        <label for="toggle44" class="clr-control-label">GET</label>
+                    </div>
+                </clr-stack-label>
+              </clr-stack-block>
+            </clr-stack-block>
+            <clr-stack-block [(clrSbExpanded)]="expanded[7]">
+              <clr-stack-label>Urls</clr-stack-label>
+              <clr-stack-block>
+                <clr-stack-label>
+                    <div class="clr-toggle-wrapper">
+                        <input type="checkbox" id="toggle45" [checked]="hasFunctionality('ADD URLS')" (change)="toggle($event,'ADD URLS')" class="clr-toggle">
+                        <label for="toggle45" class="clr-control-label">ADD</label>
+                    </div>
+                    <div class="clr-toggle-wrapper">
+                        <input type="checkbox" id="toggle46" [checked]="hasFunctionality('MODIFY URLS')" (change)="toggle($event,'MODIFY URLS')" class="clr-toggle">
+                        <label for="toggle46" class="clr-control-label">MODIFY</label>
+                    </div>
+                    <div class="clr-toggle-wrapper">
+                        <input type="checkbox" id="toggle47" [checked]="hasFunctionality('DELETE URLS')" (change)="toggle($event,'DELETE URLS')" class="clr-toggle">
+                        <label for="toggle47" class="clr-control-label">DELETE</label>
+                    </div>
+                    <div class="clr-toggle-wrapper">
+                        <input type="checkbox" id="toggle48" [checked]="hasFunctionality('GET URLS')" (change)="toggle($event,'GET URLS')" class="clr-toggle">
+                        <label for="toggle48" class="clr-control-label">GET</label>
+                    </div>
+                </clr-stack-label>
+              </clr-stack-block>
+            </clr-stack-block>
+            <clr-stack-block [(clrSbExpanded)]="expanded[8]">
+              <clr-stack-label>Vulnerabilities</clr-stack-label>
+              <clr-stack-block>
+                <clr-stack-label>
+                    <div class="clr-toggle-wrapper">
+                        <input type="checkbox" id="toggle49" [checked]="hasFunctionality('ADD VULNERABILITIES')" (change)="toggle($event,'ADD VULNERABILITIES')"
+                            class="clr-toggle">
+                        <label for="toggle49" class="clr-control-label">ADD</label>
+                    </div>
+                    <div class="clr-toggle-wrapper">
+                        <input type="checkbox" id="toggle50" [checked]="hasFunctionality('MODIFY VULNERABILITIES')" (change)="toggle($event,'MODIFY VULNERABILITIES')"
+                            class="clr-toggle">
+                        <label for="toggle50" class="clr-control-label">MODIFY</label>
+                    </div>
+                    <div class="clr-toggle-wrapper">
+                        <input type="checkbox" id="toggle51" [checked]="hasFunctionality('DELETE VULNERABILITIES')" (change)="toggle($event,'DELETE VULNERABILITIES')"
+                            class="clr-toggle">
+                        <label for="toggle51" class="clr-control-label">DELETE</label>
+                    </div>
+                    <div class="clr-toggle-wrapper">
+                        <input type="checkbox" id="toggle52" [checked]="hasFunctionality('GET VULNERABILITIES')" (change)="toggle($event,'GET VULNERABILITIES')"
+                            class="clr-toggle">
+                        <label for="toggle52" class="clr-control-label">GET</label>
+                    </div>
+                </clr-stack-label>
+              </clr-stack-block>
+            </clr-stack-block>
+          </clr-stack-view>
+        
+        
+        
+
+        <div></div>
+
     </div>
     <div class="row">
-            <button class="btn btn-primary" (click)="modifyProfile();" type="button">Change</button>
+        <button class="btn btn-primary" (click)="modifyProfile();" type="button">Change</button>
     </div>
 </div>

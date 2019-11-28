@@ -223,6 +223,29 @@
           </clr-stack-label>
         </clr-stack-block>
       </clr-stack-block>
+      <clr-stack-block [(clrSbExpanded)]="expanded[9]">
+        <clr-stack-label>Methodologies</clr-stack-label>
+        <clr-stack-block>
+          <clr-stack-label>
+            <div class="clr-toggle-wrapper">
+              <input type="checkbox" id="toggle58" [(ngModel)]="switches[58]" (checked)="switches[58]" (change)="toggle2($event,'ADD METHODOLOGIES')" class="clr-toggle">
+              <label for="toggle58" class="clr-control-label">ADD</label>
+            </div>
+            <div class="clr-toggle-wrapper">
+              <input type="checkbox" id="toggle59" [(ngModel)]="switches[59]" (checked)="switches[59]" (change)="toggle2($event,'MODIFY METHODOLOGIES')" class="clr-toggle">
+              <label for="toggle59" class="clr-control-label">MODIFY</label>
+            </div>
+            <div class="clr-toggle-wrapper">
+              <input type="checkbox" id="toggle60" [(ngModel)]="switches[60]" (checked)="switches[60]" (change)="toggle2($event,'DELETE METHODOLOGIES')" class="clr-toggle">
+              <label for="toggle60" class="clr-control-label">DELETE</label>
+            </div>
+            <div class="clr-toggle-wrapper">
+              <input type="checkbox" id="toggle61" [(ngModel)]="switches[61]" (checked)="switches[61]" (change)="toggle2($event,'GET METHODOLOGIES')" class="clr-toggle">
+              <label for="toggle61" class="clr-control-label">GET</label>
+            </div>
+          </clr-stack-label>
+        </clr-stack-block>
+      </clr-stack-block>
       <clr-stack-block [(clrSbExpanded)]="expanded[4]">
         <clr-stack-label>Integrations</clr-stack-label>
         <clr-stack-block>
