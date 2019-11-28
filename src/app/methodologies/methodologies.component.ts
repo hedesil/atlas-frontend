@@ -24,7 +24,7 @@ export class MethodologiesComponent implements OnInit {
   filters = null;
   tests = null;
   methodology: Methodology[];
-  newMethodology: Methodology = {company: undefined, description: "", id: 0, users: undefined, name: '', functionalities: []};
+  newMethodology: Methodology = {company: undefined, description: '', id: 0, users: undefined, name: '', functionalities: []};
   isModalVisible = false;
   expanded = new Array(9);
   switches = new Array(58);
@@ -34,6 +34,7 @@ export class MethodologiesComponent implements OnInit {
   searchForm: FormGroup;
   newMethodologyVisible: boolean;
   methodologies$;
+  methodologiesList;
 
   readonly companiesList$ = this.companiesSubject.pipe(
     debounceTime(500),
@@ -63,7 +64,7 @@ export class MethodologiesComponent implements OnInit {
 
   closeModal() {
     this.isModalVisible = false;
-    this.newMethodology = {company: undefined, description: "", id: 0, users: undefined, name: '', functionalities: []};
+    this.newMethodology = {company: undefined, description: '', id: 0, users: undefined, name: '', functionalities: []};
     this.resetSwitches();
     this.closeStacked();
   }
@@ -93,11 +94,15 @@ export class MethodologiesComponent implements OnInit {
 
 
   ngOnInit() {
-    this.methodologies$ = this.methodologiesService.getMethodologies(null, 0)
-      .pipe(
-        map(result => {
-          return result[0]
-        })
+    this.getMethodologies();
+  }
+
+  getMethodologies() {
+    this.methodologiesService.getMethodologies(null, 0)
+      .subscribe(
+        result => {
+          this.methodologiesList = result[0];
+        }
       );
   }
 
@@ -106,7 +111,7 @@ export class MethodologiesComponent implements OnInit {
       .subscribe(
         (res) => {
           this.alertService.success('Methodology has been added');
-          this.methodologiesService.getMethodologies(null, 0);
+          this.getMethodologies();
         }, error => {
           this.alertService.error(error.error.message);
         }

@@ -4,15 +4,13 @@
   <clr-datagrid>
     <clr-dg-column [clrDgField]="'name'" [clrDgSortOrder]="descSort">Name</clr-dg-column>
     <clr-dg-column [clrDgField]="'total'" [clrDgSortOrder]="descSort">Description</clr-dg-column>
-    <div *ngIf="(methodologies$ | async) as methodologies">
-      <clr-dg-row *clrDgItems="let methodology of methodologies" [clrDgItem]="methodology">
+      <clr-dg-row *clrDgItems="let methodology of methodologiesList" [clrDgItem]="methodology">
         <clr-dg-cell>{{methodology.name}}</clr-dg-cell>
         <clr-dg-cell>{{methodology.description}}</clr-dg-cell>
         <clr-dg-action-overflow>
           <button class="action-item" (click)="deleteMethodology(methodology)">Delete</button>
         </clr-dg-action-overflow>
       </clr-dg-row>
-    </div>
     <clr-dg-footer>
       <clr-dg-pagination #pagination [clrDgPageSize]="10">
         <clr-dg-page-size [clrPageSizeOptions]="[1,2,10,20,50,100]">Areas per page</clr-dg-page-size>
@@ -41,7 +39,7 @@
       <div class="right-container"><br>
           <label>Company</label>
           <ng-select style="width: 100%" placeholder="Select one company"
-                     [items]="companiesList$ |async" bindLabel="name" [(ngModel)]="newMethodology.company.id"
+                     [items]="companiesList$ |async" bindLabel="name" [(ngModel)]="newMethodology.company"
                      (input)="searchCompany($event.target.value)" name="company" [clearable]="false">
           </ng-select>
           <br>

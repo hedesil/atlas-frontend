@@ -60,7 +60,7 @@ export class CompaniesComponent implements OnInit {
     this.companyService.addCompany(value)
       .subscribe(
         res => {
-          this.alertService.success("Company has been added")
+          this.alertService.success("Company has been added");
           this.getCompanies(null, 0);
         },
         error => {
