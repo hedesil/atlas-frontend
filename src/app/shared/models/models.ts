@@ -29,6 +29,7 @@ export * from './group';
 export * from './inlineResponse401';
 export * from './integration';
 export * from './profile';
+export * from './methodology';
 export * from './responsable';
 export * from './tag';
 export * from './url';

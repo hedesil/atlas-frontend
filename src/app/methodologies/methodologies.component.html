@@ -1,1 +1,97 @@
 <p>methodologies works!</p>
+<div class="wrap">
+  <button class="btn btn-outline" (click)="isModalVisible=true">New Methodologies</button>
+  <button class="btn btn-outline" (click)="filterVisible=true">Filter</button>
+  <clr-datagrid>
+    <clr-dg-column [clrDgField]="'name'" [clrDgSortOrder]="descSort">Name</clr-dg-column>
+    <clr-dg-column [clrDgField]="'total'" [clrDgSortOrder]="descSort">Total</clr-dg-column>
+    <clr-dg-row *clrDgItems="let profile of profiles" [clrDgItem]="profile">
+      <clr-dg-cell>{{profile.name}}</clr-dg-cell>
+      <clr-dg-cell>{{profile.users.length}}</clr-dg-cell>
+      <clr-dg-action-overflow>
+        <button class="action-item" (click)="deleteProfile(profile)">Delete</button>
+      </clr-dg-action-overflow>
+      <app-profile-details *clrIfExpanded [input]="profile" (emit)="changeProfileValues($event)" ngProjectAs="clr-dg-row-detail">
+      </app-profile-details>
+    </clr-dg-row>
+    <clr-dg-footer>
+      <clr-dg-pagination #pagination [clrDgPageSize]="10">
+        <clr-dg-page-size [clrPageSizeOptions]="[1,2,10,20,50,100]">Areas per page</clr-dg-page-size>
+        {{pagination.firstItem + 1}} - {{pagination.lastItem + 1}} of {{total}} Areas
+      </clr-dg-pagination>
+    </clr-dg-footer>
+  </clr-datagrid>
+</div>
+
+<clr-modal [(clrModalOpen)]="isModalVisible" [clrModalClosable]="false" [clrModalSize]="'lg'">
+  <h3 class="modal-title">New methodology</h3>
+  <div class="modal-body">
+    <clr-input-container>
+      <label>Name</label>
+      <input type="text" name="name" clrInput [(ngModel)]="newMethodology.name" placeholder="Nombre de la metodologia" />
+    </clr-input-container>
+    <clr-input-container>
+        <label>Description</label>
+        <textarea clrTextarea [(ngModel)]="newMethodology.description" name="description" placeholder="Descripción de la metodologia" required></textarea>
+    </clr-input-container>
+        <div>
+          <button class="btn btn-primary" (click)="addTests()">Add</button>
+        <form clrForm [formGroup]="searchForm"  (ngSubmit)="test();filterVisible = false">
+              <div formArrayName="tests" *ngFor="let test of searchForm.controls.tests; let i = index">
+                <ng-container [formGroupName]="i">
+                  <clr-input-container>
+                  <label>Name</label>
+                  <input placeholder="Name" clrInput ngModel formControlName="name">
+                </clr-input-container>
+                <clr-input-container>
+                  <label>Description</label>
+                  <input placeholder="Description" ngModel clrInput formControlName="description">
+                </clr-input-container>
+                </ng-container>
+              </div>
+             <button type="submit" class="btn btn-primary">Submit</button>
+             <button type="button" class="btn btn-primary" (click)="filterVisible = false">Cancel</button>
+          </form>
+      </div>
+    <clr-stack-view> 
+      <clr-stack-header>Test</clr-stack-header> 
+
+      <clr-stack-block [(clrSbExpanded)]="expanded[0]">
+        <clr-stack-label>Administration</clr-stack-label>
+        <clr-stack-block>
+          <clr-stack-label>Areas</clr-stack-label>
+          <clr-stack-block>
+            <clr-stack-label>
+              <div class="clr-toggle-wrapper">
+                <input type="checkbox" id="toggle1" [(ngModel)]="switches[0]" (checked)="switches[0]" (change)="toggle2($event,'ADD AREAS')" class="clr-toggle">
+                <label for="toggle1" class="clr-control-label">ADD</label>
+              </div>
+              <div class="clr-toggle-wrapper">
+                <input type="checkbox" id="toggle2" [(ngModel)]="switches[1]" (checked)="switches[1]" (change)="toggle2($event,'MODIFY AREAS')" class="clr-toggle">
+                <label for="toggle2" class="clr-control-label">MODIFY</label>
+              </div>
+              <div class="clr-toggle-wrapper">
+                <input type="checkbox" id="toggle3" [(ngModel)]="switches[2]" (checked)="switches[2]" (change)="toggle2($event,'DELETE AREAS')" class="clr-toggle">
+                <label for="toggle3" class="clr-control-label">DELETE</label>
+              </div>
+              <div class="clr-toggle-wrapper">
+                <input type="checkbox" id="toggle4" [(ngModel)]="switches[3]" (checked)="switches[3]" (change)="toggle2($event,'GET AREAS')" class="clr-toggle">
+                <label for="toggle4" class="clr-control-label">GET</label>
+              </div>
+            </clr-stack-label>
+          </clr-stack-block>
+        </clr-stack-block>
+        </clr-stack-block>
+      </clr-stack-view>
+  </div>
+
+  <div class="modal-footer">
+    <button class="btn btn-outline" (click)="addMethodology();closeModal()" type="button">Submit</button>
+    <button class="btn btn-primary" (click)="closeModal()" type="button">Cancel</button>
+  </div>
+</clr-modal>
+
+
+
+     
+

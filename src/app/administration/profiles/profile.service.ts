@@ -34,10 +34,10 @@ export class ProfilesService {
     return this.http.post<Profile[] | number>(`${this._baseUrl}/profiles/search`, filters,
       {headers: {XToken: sessionStorage.getItem('token')}});
   }
-
   addProfile(newProfile): Observable<Profile> {
     return this.http.post<Profile>(`${this._baseUrl}/profiles`, newProfile,
       {headers: {XToken: sessionStorage.getItem('token')}});
+
   }
 
   modifyProfile(modProfile): Observable<Profile> {
