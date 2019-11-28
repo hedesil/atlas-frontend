@@ -1,0 +1,189 @@
+<div class="wrap">
+  <button class="btn btn-outline" (click)="isModalVisible=true">New Asset</button>
+  <clr-datagrid>
+    <clr-dg-column>Name</clr-dg-column>
+    <clr-dg-column>Type</clr-dg-column>
+    <clr-dg-column>Visibility</clr-dg-column>
+    <clr-dg-column>Access logs</clr-dg-column>
+    <clr-dg-column>Activity logs</clr-dg-column>
+    <clr-dg-column>Reports</clr-dg-column>
+    <clr-dg-column>Alerts</clr-dg-column>
+    <clr-dg-column>GCU</clr-dg-column>
+    <clr-dg-column>Risk</clr-dg-column>
+    <clr-dg-column>Last audit</clr-dg-column>
+    <clr-dg-column>Next audit</clr-dg-column>
+    <clr-dg-column>Status</clr-dg-column>
+
+    <clr-dg-row *ngFor="let asset of assets">
+      <clr-dg-cell>{{asset.name}}</clr-dg-cell>
+      <clr-dg-cell>{{asset.type}}</clr-dg-cell>
+      <clr-dg-cell>{{asset.visibility}}</clr-dg-cell>
+      <clr-dg-cell>{{asset.accessLogs}}</clr-dg-cell>
+      <clr-dg-cell>{{asset.activityLogs}}</clr-dg-cell>
+      <clr-dg-cell>{{asset.reports}}</clr-dg-cell>
+      <clr-dg-cell>{{asset.alerts}}</clr-dg-cell>
+      <clr-dg-cell>{{asset.gcu}}</clr-dg-cell>
+      <clr-dg-cell>{{asset.risk}}</clr-dg-cell>
+      <clr-dg-cell>{{asset.lastAudit}}</clr-dg-cell>
+      <clr-dg-cell>{{asset.nextAudit}}</clr-dg-cell>
+      <clr-dg-cell>{{asset.status}}</clr-dg-cell>
+    </clr-dg-row>
+    <clr-dg-footer>
+      <clr-dg-pagination #pagination [clrDgPageSize]="10">
+        <clr-dg-page-size [clrPageSizeOptions]="[10,20,50,100]">Assets per page</clr-dg-page-size>
+        {{pagination.firstItem + 1}} - {{pagination.lastItem + 1}} of {{pagination.totalItems}} Assets
+      </clr-dg-pagination>
+    </clr-dg-footer>
+  </clr-datagrid>
+</div>
+
+<clr-modal [(clrModalOpen)]="isModalVisible" [clrModalClosable]="false" [clrModalSize]="'lg'">
+  <h3 class="modal-title">New Asset</h3>
+  <div class="modal-body">
+    <div class="clr-form-control">
+      <label for="basic" class="clr-control-label">Name</label>
+      <input type="text" name="name" class="clr-input" [(ngModel)]="newAsset.name" placeholder="Asset's name" />
+    </div>
+    <div class="clr-form-control">
+      <label for="basic" class="clr-control-label">Project code</label>
+      <input type="text" name="hgf" class="clr-input" [(ngModel)]="newAsset.hgf" placeholder="Asset's project code" />
+    </div>
+    <div class="clr-form-control">
+      <label for="select-full" class="clr-control-label">Status</label>
+      <div class="clr-control-container">
+        <div class="clr-select-wrapper">
+          <select class="clr-select" name="status" [(ngModel)]="newAsset.status">
+            <option [ngValue]="statusType.value" *ngFor="let statusType of _statusTypes">{{statusType.name}}</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <clr-date-container>
+      <label>Status date</label>
+      <input type="date" name="date" [(ngModel)]="newAsset.statusDate" clrDate>
+    </clr-date-container>
+    <br/>
+    <clr-stack-view>
+      <clr-stack-block [(clrSbExpanded)]="expanded[0]">
+        <clr-stack-label>Information</clr-stack-label>
+        <clr-stack-block>
+          <clr-stack-label>Alias</clr-stack-label>
+          <clr-stack-content>
+            <input type="text" name="alias" class="clr-input" [(ngModel)]="newAsset.alias" placeholder="Asset's alias" />
+          </clr-stack-content>
+        </clr-stack-block>
+        <clr-stack-block>
+          <clr-stack-label>Type</clr-stack-label>
+          <clr-stack-content class="clr-select-wrapper">
+            <select class="clr-select" name="type" [(ngModel)]="newAsset.class">
+              <option [ngValue]="assetType.value" *ngFor="let assetType of _assetTypes">{{assetType.name}}</option>
+            </select>
+          </clr-stack-content>
+        </clr-stack-block>
+        <clr-stack-block>
+          <clr-stack-label>Area</clr-stack-label>
+          <clr-stack-content class="clr-select-wrapper">
+            <div class="clr-control-container">
+              <ng-select appendTo="body" style="width: 250px;" placeholder="Area" [items]="areasList$ |async" bindLabel="name" [(ngModel)]="defaultAttributeArea"
+                (input)="searchArea($event.target.value)" name="area" [clearable]="false">
+              </ng-select>
+            </div>
+          </clr-stack-content>
+        </clr-stack-block>
+        <clr-stack-block style="z-index:99">
+          <clr-stack-label>Enviroment</clr-stack-label>
+          <clr-stack-content class="clr-select-wrapper">
+            <select class="clr-select" name="" [(ngModel)]="newAsset.enviroment">
+              <option [ngValue]="enviromentType.value" *ngFor="let enviromentType of _enviromentTypes">{{enviromentType.name}}</option>
+            </select>
+          </clr-stack-content>
+        </clr-stack-block>
+        <clr-stack-block>
+          <clr-stack-label>Visibility</clr-stack-label>
+          <clr-stack-content class="clr-select-wrapper">
+            <select class="clr-select" name="visibility" [(ngModel)]="newAsset.visibility">
+              <option [ngValue]="assetVisibilityType.value" *ngFor="let assetVisibilityType of _assetVisibilityTypes">{{assetVisibilityType.name}}</option>
+            </select>
+          </clr-stack-content>
+        </clr-stack-block>
+        <clr-stack-block>
+          <clr-stack-label>Description</clr-stack-label>
+          <clr-stack-content class="clr-textarea-wrapper">
+            <textarea placeholder="Describe something" [(ngModel)]="newAsset.description" class="clr-textarea"></textarea>
+          </clr-stack-content>
+        </clr-stack-block>
+        <clr-stack-block *ngIf="newAsset.class==0">
+          <clr-stack-label>URLs</clr-stack-label>
+          <clr-stack-content>
+              <div formArrayName="filters" *ngFor="let filter of searchForm.controls.filters.controls; let i = index">
+                  <ng-container [formGroupName]="i">
+                      <div class="clr-form-control">
+                          <label for="example" class="clr-control-label">Name</label>
+                          <div class="clr-control-container">
+                            <input placeholder="Name" clrInput ngModel formControlName="name">
+                          </div>
+                        </div>
+                        <div class="clr-form-control">
+                          <label for="select-full" class="clr-control-label">Company</label>
+                          <div class="clr-control-container">
+                            <ng-select style="width: 250px" placeholder="B&uacute;squeda por compañ&iacute;a"
+                              [items]="companiesList$ |async" bindLabel="name" ngModel
+                              (input)="searchCompany($event.target.value)"   [clearable]="false" formControlName="company">
+                            </ng-select>
+                          </div>
+                        </div>
+                  </ng-container>
+                </div>
+          </clr-stack-content>
+        </clr-stack-block>
+      </clr-stack-block>
+      <clr-stack-block>
+        <clr-stack-label>GRC</clr-stack-label>
+        <clr-stack-block>
+          <clr-stack-label>Confidenciality</clr-stack-label>
+          <clr-stack-content class="clr-select-wrapper">
+            <select class="clr-select" name="confidenciality" [(ngModel)]="newAsset.confidenciality">
+              <option [ngValue]="grcValue" *ngFor="let grcValue of _grcValues">{{grcValue}}</option>
+            </select>
+          </clr-stack-content>
+        </clr-stack-block>
+        <clr-stack-block>
+          <clr-stack-label>Authorization</clr-stack-label>
+          <clr-stack-content class="clr-select-wrapper">
+            <select class="clr-select" name="authorization" [(ngModel)]="newAsset.authorization">
+              <option [ngValue]="grcValue" *ngFor="let grcValue of _grcValues">{{grcValue}}</option>
+            </select>
+          </clr-stack-content>
+        </clr-stack-block>
+        <clr-stack-block>
+          <clr-stack-label>Availability</clr-stack-label>
+          <clr-stack-content class="clr-select-wrapper">
+            <select class="clr-select" name="availability" [(ngModel)]="newAsset.availability">
+              <option [ngValue]="grcValue" *ngFor="let grcValue of _grcValues">{{grcValue}}</option>
+            </select>
+          </clr-stack-content>
+        </clr-stack-block>
+        <clr-stack-block>
+          <clr-stack-label>Integrity</clr-stack-label>
+          <clr-stack-content class="clr-select-wrapper">
+            <select class="clr-select" name="integrity" [(ngModel)]="newAsset.integrity">
+              <option [ngValue]="grcValue" *ngFor="let grcValue of _grcValues">{{grcValue}}</option>
+            </select>
+          </clr-stack-content>
+        </clr-stack-block>
+        <clr-stack-block>
+          <clr-stack-label>Trazability</clr-stack-label>
+          <clr-stack-content class="clr-select-wrapper">
+            <select class="clr-select" name="trazability" [(ngModel)]="newAsset.trazability">
+              <option [ngValue]="grcValue" *ngFor="let grcValue of _grcValues">{{grcValue}}</option>
+            </select>
+          </clr-stack-content>
+        </clr-stack-block>
+      </clr-stack-block>
+    </clr-stack-view>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-outline" (click)="addAsset();closeModal()" type="button">Submit</button>
+    <button class="btn btn-primary" (click)="closeModal()" type="button">Cancel</button>
+  </div>
+</clr-modal>

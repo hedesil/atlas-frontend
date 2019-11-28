@@ -1,0 +1,17 @@
+<header class="header header-6">
+  <div class="branding">
+    <a class="nav-link" routerLink="/dashboard" routerLinkActive="active">
+      <img class="clr-icon" src="../assets/Atlas_Logo_Blanco.svg">
+      <span class="title">Project Atlas</span>
+    </a>
+  </div>
+  <div class="header-nav" *ngIf="isLoggedIn()">
+    <a class="nav-link nav-text" routerLink="/administration" routerLinkActive="active">Administration</a>
+    <a class="nav-link nav-text" routerLink="/assets" routerLinkActive="active">Assets</a>
+    <a class="nav-link nav-text" routerLink="/audits" routerLinkActive="active">Audits</a>
+    <a class="nav-link nav-text" routerLink="/vulnerabilities" routerLinkActive="active">Vulnerabilities</a>
+  </div>
+</header>
+<app-alerts></app-alerts>
+<router-outlet></router-outlet>
+

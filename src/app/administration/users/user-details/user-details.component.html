@@ -1,0 +1,22 @@
+<div class="wrap">
+<ul id="demoTabs" class="nav" role="tablist">
+        <li role="presentation" class="nav-item">
+          <button id="tab1" class="btn btn-link nav-link active" aria-controls="panel1" aria-selected="true" type="button">
+            Info
+          </button>
+        </li>
+      </ul>
+      <section id="panel1" role="tabpanel" aria-labelledby="tab1">
+        <form clrForm #modArea="ngForm" (ngSubmit)="modifyUser()">
+          <clr-input-container>
+            <label>Name</label>
+            <input clrInput type="text" name="name" [(ngModel)]="user.name"/>
+          </clr-input-container>
+          <clr-input-container>
+                <label>Password</label>
+                <input clrInput type="password" name="password" [(ngModel)]="user.name"/>
+        </clr-input-container>
+          <button type="submit" class="btn btn-primary">Modify</button>
+        </form>
+      </section>
+    </div>

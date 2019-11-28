@@ -1,0 +1,19 @@
+<nav class="subnav">
+  <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" routerLinkActive="active" [routerLink]="['companies']">Companies</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLinkActive="active" [routerLink]="['areas']">Areas</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLinkActive="active" [routerLink]="['users']">Users</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLinkActive="active" [routerLink]="['profiles']">Profiles</a>
+    </li>
+  </ul>
+</nav>
+<div class="wrap">
+  <router-outlet></router-outlet>
+</div>

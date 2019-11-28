@@ -1,0 +1,103 @@
+<div class="wrap">
+    <button class="btn btn-outline" (click)="lgOpen=true">Add user</button>
+    <button class="btn btn-outline" (click)="filterVisible=true">Filter</button>
+
+
+
+    <clr-datagrid>
+        <clr-dg-column [clrDgField]="'name'" [clrDgSortOrder]="descSort">Name</clr-dg-column>
+        <clr-dg-column [clrDgField]="'profile'">Profile</clr-dg-column>
+        <clr-dg-column [clrDgField]="'company'">Companies </clr-dg-column>
+        <clr-dg-row *clrDgItems="let user of users" [clrDgItem]="user">
+            <clr-dg-cell>{{user.name}}</clr-dg-cell>
+            <clr-dg-cell>{{user.profile.name}}</clr-dg-cell>
+            <clr-dg-cell>{{getCompanies(user)}}</clr-dg-cell>
+            <clr-dg-action-overflow>
+                <button class="action-item" (click)="deleteUser(user)">Delete</button>
+            </clr-dg-action-overflow>
+            <app-user-details *clrIfExpanded [input]="user" (emit)="changeUserValues($event)"
+                ngProjectAs="clr-dg-row-detail"></app-user-details>
+        </clr-dg-row>
+        <clr-dg-footer>
+            <clr-dg-pagination #pagination [clrDgPageSize]="10" [clrDgTotalItems]="total">
+                <clr-dg-page-size [clrPageSizeOptions]="[1,2,10,20,50,100]">Users per page</clr-dg-page-size>
+                {{pagination.firstItem + 1}} - {{pagination.lastItem + 1}} of {{total}} Users
+            </clr-dg-pagination>
+        </clr-dg-footer>
+    </clr-datagrid>
+</div>
+
+<clr-wizard #wizardlg [(clrWizardOpen)]="lgOpen" clrWizardSize="lg">
+    <clr-wizard-title>New User</clr-wizard-title>
+
+    <clr-wizard-button [type]="'cancel'">Cancel</clr-wizard-button>
+    <clr-wizard-button [type]="'finish'" (click)="addUser(newUser)">Finish</clr-wizard-button>
+
+    <clr-wizard-page>
+        <ng-template clrPageTitle>Info</ng-template>
+        <form class="clr-form" #newUser="ngForm">
+            <div class="clr-form-control">
+                <label for="example" class="clr-control-label">Name</label>
+                <div class="clr-control-container">
+                    <input type="text" name="name" clrInput ngModel placeholder="User's name" />
+                </div>
+            </div>
+            <div class="clr-form-control">
+                <label for="example" class="clr-control-label">Password</label>
+                <div class="clr-control-container">
+                    <input type="password" name="password" clrInput ngModel placeholder="User's password" />
+                </div>
+            </div>
+            <div class="clr-form-control">
+                <label for="select-full" class="clr-control-label">Company</label>
+                <div class="clr-control-container">
+                    <ng-select style="width: 250px" placeholder="B&uacute;squeda por compañ&iacute;a"
+                        [items]="companiesList$ |async" bindLabel="name" [(ngModel)]="defaultAttribute"
+                        (input)="searchCompany($event.target.value)" name="companies" [clearable]="false"
+                        [multiple]="true">
+                    </ng-select>
+                </div>
+            </div>
+            <div class="clr-form-control">
+                <label for="select-full" class="clr-control-label">Profile</label>
+                <div class="clr-control-container">
+                    <ng-select style="width: 250px" placeholder="Profiles" [items]="profilesList$ |async"
+                        bindLabel="name" [(ngModel)]="defaultAttributeProfile"
+                        (input)="searchProfile($event.target.value)" name="profile" [clearable]="false">
+                    </ng-select>
+                </div>
+            </div>
+        </form>
+    </clr-wizard-page>
+</clr-wizard>
+
+<clr-wizard #wizardFilter [(clrWizardOpen)]="filterVisible" clrWizardSize="xl">
+    <clr-wizard-title>Filters</clr-wizard-title>
+    <clr-wizard-button [type]="'cancel'">Cancel</clr-wizard-button>
+    <clr-wizard-button [type]="'finish'" (click)="filter();resetForm()">Finish</clr-wizard-button>
+    <clr-wizard-page>
+        <ng-template clrPageTitle>Info</ng-template>
+        <button class="btn btn-primary" (click)="addFilters()">Add</button>
+        <form clrForm [formGroup]="searchForm" (ngSubmit)="filter();filterVisible = false;resetForm()">
+            <div formArrayName="filters" *ngFor="let filter of searchForm.controls.filters.controls; let i = index">
+                <ng-container [formGroupName]="i">
+                    <div class="clr-form-control">
+                        <label for="example" class="clr-control-label">Name</label>
+                        <div class="clr-control-container">
+                            <input placeholder="Name" clrInput ngModel formControlName="name">
+                        </div>
+                    </div>
+                    <div class="clr-form-control">
+                            <label for="select-full" class="clr-control-label">Profile</label>
+                            <div class="clr-control-container">
+                                <ng-select style="width: 250px" placeholder="Profiles" [items]="profilesList$ |async"
+                                    bindLabel="name" [(ngModel)]="defaultAttributeProfile"
+                                    (input)="searchProfile($event.target.value)" formControlName="profile" [clearable]="false">
+                                </ng-select>
+                            </div>
+                        </div>
+                </ng-container>
+            </div>
+        </form>
+    </clr-wizard-page>
+</clr-wizard>

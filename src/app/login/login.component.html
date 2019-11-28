@@ -1,0 +1,20 @@
+<div class="login-wrapper">
+  <form #credentials="ngForm" class="login" (ngSubmit)="onSubmit(credentials)" >
+    <section class="title">
+      <h3 class="welcome">Welcome to</h3>
+      Project Atlas
+      <img class="login-icon" src="../../assets/Atlas_Logo_NoName.svg"/>
+    </section>
+    <div class="login-group">
+      <clr-input-container>
+        <label class="clr-sr-only">Username</label>
+        <input type="text" name="name" clrInput ngModel placeholder="Username"/>
+      </clr-input-container>
+      <clr-password-container>
+        <label class="clr-sr-only">Password</label>
+        <input type="password" name="password" ngModel clrPassword placeholder="Password"/>
+      </clr-password-container>
+      <button type="submit" class="btn btn-primary login-button">NEXT</button>
+    </div>
+  </form>
+</div>
