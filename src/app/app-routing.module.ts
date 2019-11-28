@@ -10,6 +10,7 @@ import {DepartmentsComponent} from './administration/departments/departments.com
 import {GroupsComponent} from './administration/groups/groups.component';
 import {ProfilesComponent} from './administration/profiles/profiles.component';
 import { UsersComponent } from './administration/users/users.component';
+import { CredentialsComponent } from './administration/credentials/credentials.component';
 
 
 const routes: Routes = [
@@ -25,7 +26,8 @@ const routes: Routes = [
       {path: 'users', component: UsersComponent},
       {path: 'departments', component: DepartmentsComponent},
       {path: 'groups', component: GroupsComponent},
-      {path: 'profiles', component: ProfilesComponent}
+      {path: 'profiles', component: ProfilesComponent},
+      {path: 'credentials', component : CredentialsComponent}
     ]
   }
 ];
