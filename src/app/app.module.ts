@@ -26,6 +26,8 @@ import { AlertsComponent } from './alerts/alerts.component';
 import { UsersComponent } from './administration/users/users.component';
 import { UserDetailsComponent } from './administration/users/user-details/user-details.component';
 import { ProfileDetailsComponent } from './administration/profiles/profile-details/profile-details.component';
+import { PieChartComponent } from './pie-chart/pie-chart.component';
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,8 @@ import { ProfileDetailsComponent } from './administration/profiles/profile-detai
     AlertsComponent,
     UsersComponent,
     UserDetailsComponent,
-    ProfileDetailsComponent
+    ProfileDetailsComponent,
+    PieChartComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +58,8 @@ import { ProfileDetailsComponent } from './administration/profiles/profile-detai
     HttpClientModule,
     FormsModule,
     NgSelectModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ChartsModule
   ],
   providers: [SearchService, CompanyService, AreaService],
   bootstrap: [AppComponent]
