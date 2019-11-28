@@ -108,7 +108,6 @@ export class AreasComponent implements OnInit {
   }
 
   getAreas(filters,offset) {
-    console.log(filters)
     this.areaService.getAreas(filters,offset)
       .subscribe((areas) => {
         this.areas = areas[0];
