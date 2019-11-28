@@ -3,17 +3,16 @@
   <button class="btn btn-outline" (click)="newMethodologyVisible=true">Filter</button>
   <clr-datagrid>
     <clr-dg-column [clrDgField]="'name'" [clrDgSortOrder]="descSort">Name</clr-dg-column>
-    <clr-dg-column [clrDgField]="'total'" [clrDgSortOrder]="descSort">Total</clr-dg-column>
-    <clr-dg-row *clrDgItems="let profile of profiles" [clrDgItem]="profile">
-      <clr-dg-cell>{{profile.name}}</clr-dg-cell>
-      <clr-dg-cell>{{profile.users.length}}</clr-dg-cell>
-      <clr-dg-action-overflow>
-        <button class="action-item" (click)="deleteProfile(profile)">Delete</button>
-      </clr-dg-action-overflow>
-      <app-profile-details *clrIfExpanded [input]="profile" (emit)="changeProfileValues($event)"
-                           ngProjectAs="clr-dg-row-detail">
-      </app-profile-details>
-    </clr-dg-row>
+    <clr-dg-column [clrDgField]="'total'" [clrDgSortOrder]="descSort">Description</clr-dg-column>
+    <div *ngIf="(methodologies$ | async) as methodologies">
+      <clr-dg-row *clrDgItems="let methodology of methodologies" [clrDgItem]="methodology">
+        <clr-dg-cell>{{methodology.name}}</clr-dg-cell>
+        <clr-dg-cell>{{methodology.description}}</clr-dg-cell>
+        <clr-dg-action-overflow>
+          <button class="action-item" (click)="deleteMethodology(methodology)">Delete</button>
+        </clr-dg-action-overflow>
+      </clr-dg-row>
+    </div>
     <clr-dg-footer>
       <clr-dg-pagination #pagination [clrDgPageSize]="10">
         <clr-dg-page-size [clrPageSizeOptions]="[1,2,10,20,50,100]">Areas per page</clr-dg-page-size>
@@ -26,23 +25,32 @@
 <clr-modal [(clrModalOpen)]="isModalVisible" [clrModalClosable]="false" [clrModalSize]="'lg'">
   <h3 class="modal-title">New methodology</h3>
   <div class="modal-body">
-    <clr-input-container>
-      <label>Name</label>
-      <input type="text" name="name" clrInput [(ngModel)]="newMethodology.name" placeholder="Methodology name"/>
-    </clr-input-container>
-    <clr-textarea-container>
-      <label>Description</label>
-      <textarea clrTextarea placeholder="Methodology description..."  name="description" required></textarea>
-    </clr-textarea-container><br>
-    <label for="select-full" class="clr-control-label">Company</label>
-    <ng-select style="width: 250px" placeholder="Select one company"
-               [items]="companiesList$ |async" bindLabel="name" [(ngModel)]="defaultAttribute"
-               (input)="searchCompany($event.target.value)" name="company" [clearable]="false">
-    </ng-select><br>
-    <label for="select-full" class="clr-control-label">Tests</label>
-    <div>
-      <button class="btn btn-primary" (click)="addTests()">Add test</button>
-    </div>
+    <form clrForm clrLayout="horizontal">
+      <div class="left-container">
+        <clr-input-container>
+          <label>Name</label>
+          <input type="text" name="name" clrInput [(ngModel)]="newMethodology.name" placeholder="Methodology name"/>
+        </clr-input-container>
+        <clr-textarea-container>
+          <label>Description</label>
+          <textarea clrTextarea placeholder="Methodology description..." name="description"
+                    [(ngModel)]="newMethodology.description" required></textarea>
+        </clr-textarea-container>
+        <br>
+      </div>
+      <div class="right-container"><br>
+          <label>Company</label>
+          <ng-select style="width: 100%" placeholder="Select one company"
+                     [items]="companiesList$ |async" bindLabel="name" [(ngModel)]="newMethodology.company.id"
+                     (input)="searchCompany($event.target.value)" name="company" [clearable]="false">
+          </ng-select>
+          <br>
+        <label for="select-full" class="clr-control-label">Tests</label>
+        <div>
+          <button class="btn btn-primary" (click)="addTests()">Add test</button>
+        </div>
+      </div>
+    </form>
   </div>
 
   <div class="modal-footer">

@@ -6,7 +6,6 @@ import {FormGroup, FormBuilder, FormArray} from '@angular/forms';
 import {debounceTime, distinctUntilChanged, map, switchMap} from 'rxjs/operators';
 import {AlertsService} from '../alerts.service';
 import {MethodologiesService} from '../methodologies/methodologies.service';
-import {ProfilesService} from '../administration/profiles/profile.service';
 import {CompanyService} from '../administration/companies/company.service';
 
 
@@ -15,6 +14,7 @@ import {CompanyService} from '../administration/companies/company.service';
   templateUrl: './methodologies.component.html',
   styleUrls: ['./methodologies.component.scss']
 })
+
 export class MethodologiesComponent implements OnInit {
 
   @ViewChild('wizardlg', {read: '', static: true}) wizardLarge: ClrWizard;
@@ -24,16 +24,16 @@ export class MethodologiesComponent implements OnInit {
   filters = null;
   tests = null;
   methodology: Methodology[];
-  newMethodology: Methodology = {name: '', functionalities: []};
+  newMethodology: Methodology = {company: undefined, description: "", id: 0, users: undefined, name: '', functionalities: []};
   isModalVisible = false;
   expanded = new Array(9);
-
   switches = new Array(58);
   total: number;
   defaultAttribute;
   companiesSubject = new Subject<string>();
   searchForm: FormGroup;
   newMethodologyVisible: boolean;
+  methodologies$;
 
   readonly companiesList$ = this.companiesSubject.pipe(
     debounceTime(500),
@@ -49,7 +49,7 @@ export class MethodologiesComponent implements OnInit {
 
   //constructor() { }
 
-  constructor(private companyService : CompanyService, private fb: FormBuilder, private alertService: AlertsService, private methodologiesService: MethodologiesService) {
+  constructor(private companyService: CompanyService, private fb: FormBuilder, private alertService: AlertsService, private methodologiesService: MethodologiesService) {
     this.searchForm = this.fb.group({
       tests: this.fb.array([]),
     });
@@ -63,7 +63,7 @@ export class MethodologiesComponent implements OnInit {
 
   closeModal() {
     this.isModalVisible = false;
-    this.newMethodology = {name: '', functionalities: []};
+    this.newMethodology = {company: undefined, description: "", id: 0, users: undefined, name: '', functionalities: []};
     this.resetSwitches();
     this.closeStacked();
   }
@@ -80,14 +80,6 @@ export class MethodologiesComponent implements OnInit {
     }
   }
 
-  toggle2(e, functionalityName) {
-    if (e.target.checked) {
-      this.addFunctionality2(functionalityName);
-    } else {
-      this.removeFunctionality2(functionalityName);
-    }
-  }
-
   addFunctionality2(functionalityName) {
     this.newMethodology.functionalities.push({name: functionalityName});
   }
@@ -101,8 +93,12 @@ export class MethodologiesComponent implements OnInit {
 
 
   ngOnInit() {
-    this.methodologiesService.getMethodologies(null, 0);
-
+    this.methodologies$ = this.methodologiesService.getMethodologies(null, 0)
+      .pipe(
+        map(result => {
+          return result[0]
+        })
+      );
   }
 
   addMethodology() {
