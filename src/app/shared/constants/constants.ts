@@ -28,6 +28,13 @@ export class AppConstants {
     ]
   }
 
+public static get trackingSystems(): Object[]{
+  return [
+    {name : "JIRA" },
+    {name : "OpenOffice" },
+  ]
+}
+
   public static get statusTypes(): Object[] {
     return [
       { name : "On development" , value : 0},

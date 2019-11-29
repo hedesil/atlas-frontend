@@ -1,0 +1,76 @@
+<div class="wrap">
+    <button class="btn btn-outline" (click)="isModalVisible=true">Add vulnerability</button>
+    <button class="btn btn-outline" (click)="filterVisible=true">Filter</button>
+
+
+    <clr-datagrid>
+        <clr-dg-column [clrDgField]="'name'" [clrDgSortOrder]="descSort">Name</clr-dg-column>
+        <clr-dg-column [clrDgField]="'asset'">Asset</clr-dg-column>
+        <clr-dg-row *clrDgItems="let vulnerability of vulnerabilities" [clrDgItem]="company">
+            <clr-dg-cell>{{vulnerability.name}}</clr-dg-cell>
+            <clr-dg-cell>{{vulnerability.asset.name}}</clr-dg-cell>
+            <clr-dg-cell>{{vulnerability.audit.name}}</clr-dg-cell>
+            <clr-dg-cell>{{vulnerability.audit.url}}</clr-dg-cell>
+            <clr-dg-action-overflow>
+                <button class="action-item" (click)="deleteVulnerability(vulnerability)">Delete</button>
+            </clr-dg-action-overflow>
+            <!-- <app-vulnerability-details *clrIfExpanded [input]="vulnerability"  (emit)="changeVulnerabilityValues($event)" ngProjectAs="clr-dg-row-detail"></app-vulnerability-details>-->
+        </clr-dg-row>
+        <clr-dg-footer>
+            <clr-dg-pagination #pagination [clrDgPageSize]="10" [clrDgTotalItems]="total">
+                <clr-dg-page-size [clrPageSizeOptions]="[1,2,10,20,50,100]">Vulnerabilities per page</clr-dg-page-size>
+                {{pagination.firstItem + 1}} - {{pagination.lastItem + 1}} of {{total}} Vulnerabilitiesº
+            </clr-dg-pagination>
+        </clr-dg-footer>
+    </clr-datagrid>
+</div>
+
+<clr-modal [(clrModalOpen)]="isModalVisible" [clrModalSize]="'lg'">
+    <h3 class="modal-title">New vulnerability</h3>
+    <div class="modal-body">
+        <form clrForm #newVulnerability="ngForm">
+            <clr-input-container>
+                <label>Name</label>
+                <input type="text" name="name" clrInput ngModel placeholder="Vulnerability name" />
+            </clr-input-container>
+            <clr-input-container>
+                <label>Description</label>
+                <input type="text" name="description" clrInput ngModel placeholder="Vulnerabilities description" />
+            </clr-input-container>
+            <div class="clr-form-control">
+                <label for="select-full" class="clr-control-label">Audit</label>
+                <div class="clr-control-container">
+                    <ng-select style="width: 250px" placeholder="Audit" [items]="auditsList$ |async" bindLabel="name" [(ngModel)]="defaultAttributeAudit"
+                        (input)="searchAudit($event.target.value)" name="audit" [clearable]="false">
+                    </ng-select>
+                </div>
+            </div>
+            <clr-select-container>
+                <label>Risk</label>
+                <select clrSelect name="risk" [(ngModel)]="options">
+                  <option value="0">Info</option>
+                  <option value="1">Low</option>
+                  <option value="2">Medium</option>
+                  <option value="3">High</option>
+                  <option value="4">Critical</option>
+                </select>
+              </clr-select-container>
+              <clr-textarea-container>
+                <label>Description</label>
+                <textarea clrTextarea name="description" required></textarea>
+              </clr-textarea-container>
+              <clr-textarea-container>
+                <label>Executed Test</label>
+                <textarea clrTextarea name="executedTest" required></textarea>
+              </clr-textarea-container>
+              <clr-textarea-container>
+                <label>Solution</label>
+                <textarea clrTextarea name="Solution" required></textarea>
+              </clr-textarea-container>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-outline" (click)="addVulnerability(newVulnerability);isModalVisible = false" type="button">Submit</button>
+        <button class="btn btn-primary" (click)="isModalVisible = false" type="button">Cancel</button>
+    </div>
+</clr-modal>
