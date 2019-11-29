@@ -37,7 +37,7 @@
 
         <label>Test</label>
         <ng-select style="width: 100%" placeholder="Select one company"
-                   [items]="companiesList$ |async" bindLabel="name" [(ngModel)]="newMethodology.company"
+                   [items]="companiesList$ |async" bindLabel="name"
                    (input)="searchCompany($event.target.value)" name="company" [clearable]="false">
         </ng-select>
         <br>
