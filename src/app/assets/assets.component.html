@@ -10,16 +10,16 @@
     <clr-dg-column [clrDgField]="'area'" [clrDgSortOrder]="descSort">Area</clr-dg-column>
     <clr-dg-row *clrDgItems="let asset of assets" [clrDgItem]="asset">
       <clr-dg-cell>{{asset.name}}</clr-dg-cell>
-      <clr-dg-cell *ngIf="asset.kind==0">
+      <clr-dg-cell *ngIf="asset.class==0">
         <clr-icon shape="world"></clr-icon>
       </clr-dg-cell>
-      <clr-dg-cell *ngIf="asset.kind==1">
+      <clr-dg-cell *ngIf="asset.class==1">
         <clr-icon shape="mobile"></clr-icon>
       </clr-dg-cell>
-      <clr-dg-cell *ngIf="asset.kind==2">
+      <clr-dg-cell *ngIf="asset.class==2">
         <clr-icon shape="router"></clr-icon>
       </clr-dg-cell>
-      <clr-dg-cell *ngIf="asset.kind==3">
+      <clr-dg-cell *ngIf="asset.class==3">
         <clr-icon shape="usb"></clr-icon>
       </clr-dg-cell>
       <clr-dg-cell>

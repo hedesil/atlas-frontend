@@ -29,6 +29,7 @@ import { ProfileDetailsComponent } from './administration/profiles/profile-detai
 import { MethodologiesComponent } from './methodologies/methodologies.component';
 import { VulnerabilitiesComponent } from './vulnerabilities/vulnerabilities.component';
 import { VulnerabilityDetailsComponent } from './vulnerabilities/vulnerability-details/vulnerability-details.component';
+import { AuditsComponent } from './audits/audits.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { VulnerabilityDetailsComponent } from './vulnerabilities/vulnerability-d
     ProfileDetailsComponent,
     MethodologiesComponent,
     VulnerabilitiesComponent,
-    VulnerabilityDetailsComponent
+    VulnerabilityDetailsComponent,
+    AuditsComponent
   ],
   imports: [
     BrowserModule,

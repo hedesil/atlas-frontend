@@ -67,12 +67,6 @@ export class AssetsComponent implements OnInit {
   private readonly _grcValues;
   private readonly _trackingSystems;
 
-
-
-
-
-
-
   constructor(private areaService: AreaService, private companyService: CompanyService, private fb: FormBuilder, private alertService: AlertsService, private assetService: AssetService) {
     this.searchForm = this.fb.group({
       filters: this.fb.array([]),

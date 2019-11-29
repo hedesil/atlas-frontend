@@ -35,6 +35,14 @@ public static get trackingSystems(): Object[]{
   ]
 }
 
+public static get pentestTools(): Object[]{
+  return [
+    {name : "Acunetix" },
+    {name : "Nessus" },
+    {name : "Sisifo"}
+  ]
+}
+
   public static get statusTypes(): Object[] {
     return [
       { name : "On development" , value : 0},
