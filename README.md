@@ -1,10 +1,15 @@
 # AtlasFrontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.1.
+Web application to manage information in a Security Operations Center (SOC)
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+**¡Important!** If you are using  a self- signed certificate with Atlas API locally, you must open in your browser the link below:
+- https://localhost:5000/auth/login
+
+
 
 ## Code scaffolding
 
