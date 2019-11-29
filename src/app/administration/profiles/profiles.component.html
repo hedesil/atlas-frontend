@@ -223,6 +223,29 @@
           </clr-stack-label>
         </clr-stack-block>
       </clr-stack-block>
+      <clr-stack-block [(clrSbExpanded)]="expanded[11]">
+        <clr-stack-label>Tests</clr-stack-label>
+        <clr-stack-block>
+          <clr-stack-label>
+            <div class="clr-toggle-wrapper">
+              <input type="checkbox" id="toggle66" [(ngModel)]="switches[66]" (checked)="switches[66]" (change)="toggle2($event,'ADD TESTS')" class="clr-toggle">
+              <label for="toggle66" class="clr-control-label">ADD</label>
+            </div>
+            <div class="clr-toggle-wrapper">
+              <input type="checkbox" id="toggle67" [(ngModel)]="switches[67]" (checked)="switches[67]" (change)="toggle2($event,'MODIFY TESTS')" class="clr-toggle">
+              <label for="toggle67" class="clr-control-label">MODIFY</label>
+            </div>
+            <div class="clr-toggle-wrapper">
+              <input type="checkbox" id="toggle68" [(ngModel)]="switches[68]" (checked)="switches[68]" (change)="toggle2($event,'DELETE TESTS')" class="clr-toggle">
+              <label for="toggle68" class="clr-control-label">DELETE</label>
+            </div>
+            <div class="clr-toggle-wrapper">
+              <input type="checkbox" id="toggle69" [(ngModel)]="switches[69]" (checked)="switches[69]" (change)="toggle2($event,'GET TESTS')" class="clr-toggle">
+              <label for="toggle69" class="clr-control-label">GET</label>
+            </div>
+          </clr-stack-label>
+        </clr-stack-block>
+      </clr-stack-block>
       <clr-stack-block [(clrSbExpanded)]="expanded[3]">
         <clr-stack-label>Evidences</clr-stack-label>
         <clr-stack-block>
