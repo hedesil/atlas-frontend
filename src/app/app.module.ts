@@ -50,7 +50,7 @@ import { AuditComponent } from './audit/audit.component';
     UsersComponent,
     UserDetailsComponent,
     ProfileDetailsComponent,
-    MethodologiesComponent
+    MethodologiesComponent,
     ProfileDetailsComponent,
     PieChartComponent,
     AuditComponent
