@@ -1,6 +1,6 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {ClrWizard, ClrDatagridSortOrder} from '@clr/angular';
-import {Methodology, Functionality} from '../shared/models/models';
+import {Methodology, Functionality, Company} from '../shared/models/models';
 import {Subject} from 'rxjs';
 import {FormGroup, FormBuilder, FormArray} from '@angular/forms';
 import {debounceTime, distinctUntilChanged, map, switchMap} from 'rxjs/operators';
@@ -70,13 +70,13 @@ export class MethodologiesComponent implements OnInit {
   }
 
   resetSwitches() {
-    for (var i = 0; i < this.switches.length; i++) {
+    for (let i = 0; i < this.switches.length; i++) {
       this.switches[i] = false;
     }
   }
 
   closeStacked() {
-    for (var i = 0; i < this.expanded.length; i++) {
+    for (let i = 0; i < this.expanded.length; i++) {
       this.expanded[i] = false;
     }
   }
@@ -86,7 +86,7 @@ export class MethodologiesComponent implements OnInit {
   }
 
   removeFunctionality2(functionalityName) {
-    var filtered = this.newMethodology.functionalities.filter(function(value, index, arr) {
+    let filtered = this.newMethodology.functionalities.filter(function(value, index, arr) {
       return value.name != functionalityName;
     });
     this.newMethodology.functionalities = filtered;
@@ -120,7 +120,7 @@ export class MethodologiesComponent implements OnInit {
   }
 
   addTests() {
-    var tests = this.searchForm.controls.tests as FormArray;
+    let tests = this.searchForm.controls.tests as FormArray;
     tests.push(this.fb.group({
       name: '',
       description: ''
@@ -157,4 +157,14 @@ export class MethodologiesComponent implements OnInit {
     }
   }
 
+  deleteMethodology = (methodology: Methodology) => {
+    this.methodologiesService.deleteMethodology(methodology)
+      .subscribe(() => {
+          this.alertService.success("Company has been deleted");
+          this.getMethodologies();
+        },
+        error => {
+          this.alertService.error(error.error.message)
+        });
+  };
 }
