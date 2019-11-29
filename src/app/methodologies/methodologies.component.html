@@ -33,7 +33,7 @@
                   [(ngModel)]="newMethodology.description" required></textarea>
         <br>
       </div>
-      <div class="right-container"><br>
+      <div class="right-container">
 
         <label>Test</label>
         <ng-select style="width: 100%" placeholder="Select one company"
@@ -48,11 +48,11 @@
         </ng-select>
         <br>
       </div>
-      <div class="modal-footer">
-        <button class="btn btn-outline" (click)="addMethodology();closeModal()" type="submit">Submit</button>
-        <button class="btn btn-primary" (click)="closeModal()" type="button">Cancel</button>
-      </div>
     </form>
+    <div class="modal-footer">
+      <button class="btn btn-outline" (click)="addMethodology();closeModal()" type="submit">Submit</button>
+      <button class="btn btn-primary" (click)="closeModal()" type="button">Cancel</button>
+    </div>
   </div>
 </clr-modal>
 

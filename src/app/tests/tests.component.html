@@ -12,9 +12,30 @@
     </clr-dg-row>
     <clr-dg-footer>
       <clr-dg-pagination #pagination [clrDgPageSize]="10">
-        <clr-dg-page-size [clrPageSizeOptions]="[1,2,10,20,50,100]">Areas per page</clr-dg-page-size>
-        {{pagination.firstItem + 1}} - {{pagination.lastItem + 1}} of {{total}} Areas
+        <clr-dg-page-size [clrPageSizeOptions]="[1,2,10,20,50,100]">Tests per page</clr-dg-page-size>
+        {{pagination.firstItem + 1}} - {{pagination.lastItem + 1}} of {{total}} Tests
       </clr-dg-pagination>
     </clr-dg-footer>
   </clr-datagrid>
 </div>
+
+<clr-modal [(clrModalOpen)]="isModalVisible" [clrModalClosable]="false" [clrModalSize]="'lg'">
+  <h3 class="modal-title">New Test</h3>
+  <div class="modal-body">
+    <form clrForm>
+      <clr-input-container>
+        <label>Name</label>
+        <input clrInput type="text" [(ngModel)]="newTest.name" name="nameTest" required />
+      </clr-input-container>
+      <clr-input-container>
+        <label>Description</label>
+        <input clrInput type="text" [(ngModel)]="newTest.name" name="descriptionTest" />
+      </clr-input-container>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary" (click)="addTest()">Submit</button>
+    <button class="btn btn-primary" (click)="closeModal()">Close</button>
+  </div>
+</clr-modal>
+
