@@ -27,6 +27,9 @@ import { UsersComponent } from './administration/users/users.component';
 import { UserDetailsComponent } from './administration/users/user-details/user-details.component';
 import { ProfileDetailsComponent } from './administration/profiles/profile-details/profile-details.component';
 import { MethodologiesComponent } from './methodologies/methodologies.component';
+import { PieChartComponent } from './pie-chart/pie-chart.component';
+import { ChartsModule } from 'ng2-charts';
+import { AuditComponent } from './audit/audit.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +51,9 @@ import { MethodologiesComponent } from './methodologies/methodologies.component'
     UserDetailsComponent,
     ProfileDetailsComponent,
     MethodologiesComponent
+    ProfileDetailsComponent,
+    PieChartComponent,
+    AuditComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +63,8 @@ import { MethodologiesComponent } from './methodologies/methodologies.component'
     HttpClientModule,
     FormsModule,
     NgSelectModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ChartsModule
   ],
   providers: [SearchService, CompanyService, AreaService],
   bootstrap: [AppComponent]

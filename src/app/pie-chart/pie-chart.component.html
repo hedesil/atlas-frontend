@@ -1,0 +1,23 @@
+<p>pie-chart works!</p>
+
+
+<div  style="display: block;">
+  <canvas *ngIf="chartReady" baseChart 
+    [data]="pieChartData" 
+    [labels]="pieChartLabels" 
+    [chartType]="pieChartType"
+    [options]="pieChartOptions"
+    [plugins]="pieChartPlugins"
+    [legend]="pieChartLegend">
+  </canvas>
+</div>
+
+<clr-select-container>
+  <label>Selecione el tipo de grafico que necesita</label>
+  <select clrSelect name="options" [(ngModel)]="options" (change)="cambiagrafico()" required>
+    <option value="pie">Tarta</option>
+    <option value="bar">Barra</option>
+    <option value="radar">Radar</option>
+  </select>
+  <clr-control-error>Una opción es requerida</clr-control-error>
+</clr-select-container>
