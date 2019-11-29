@@ -35,3 +35,4 @@ export * from './tag';
 export * from './url';
 export * from './user';
 export * from './vulnerability';
+export * from './knowledge';

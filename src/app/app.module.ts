@@ -30,6 +30,7 @@ import { MethodologiesComponent } from './methodologies/methodologies.component'
 import { PieChartComponent } from './pie-chart/pie-chart.component';
 import { ChartsModule } from 'ng2-charts';
 import { AuditComponent } from './audit/audit.component';
+import { KnowledgeComponent } from './knowledge/knowledge.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { AuditComponent } from './audit/audit.component';
     MethodologiesComponent,
     ProfileDetailsComponent,
     PieChartComponent,
-    AuditComponent
+    AuditComponent,
+    KnowledgeComponent
   ],
   imports: [
     BrowserModule,

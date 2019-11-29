@@ -1,0 +1,51 @@
+<div class="wrap">
+  <button class="btn btn-outline" (click)="isModalVisible=true">New knowledge</button>
+  <button class="btn btn-outline" (click)="newKnowledgeVisible=true">Filter</button>
+  <clr-datagrid>
+    <clr-dg-column [clrDgField]="'name'" [clrDgSortOrder]="descSort">Name</clr-dg-column>
+    <clr-dg-column [clrDgField]="'category'" [clrDgSortOrder]="descSort">Category</clr-dg-column>
+    <clr-dg-column [clrDgField]="'content'" [clrDgSortOrder]="descSort">Content</clr-dg-column>
+    <clr-dg-row *clrDgItems="let knowledge of knowledgeList" [clrDgItem]="knowledge">
+      <clr-dg-cell>{{knowledge.name}}</clr-dg-cell>
+      <clr-dg-cell>{{knowledge.category}}</clr-dg-cell>
+      <clr-dg-cell>{{knowledge.content}}</clr-dg-cell>
+      <clr-dg-action-overflow>
+        <button class="action-item" (click)="deleteKnowledge(knowledge)">Delete</button>
+      </clr-dg-action-overflow>
+    </clr-dg-row>
+    <clr-dg-footer>
+      <clr-dg-pagination #pagination [clrDgPageSize]="10">
+        <clr-dg-page-size [clrPageSizeOptions]="[1,2,10,20,50,100]">knowledge per page</clr-dg-page-size>
+        {{pagination.firstItem + 1}} - {{pagination.lastItem + 1}} of {{total}} knowledge
+      </clr-dg-pagination>
+    </clr-dg-footer>
+  </clr-datagrid>
+</div>
+
+<clr-modal [(clrModalOpen)]="isModalVisible" [clrModalClosable]="false" [clrModalSize]="'lg'">  
+  <h3 class="modal-title">New knowledge</h3>
+  <div class="modal-body">
+    <form clrForm clrLayout="horizontal" (ngSubmit)="newKnowledgeVisible = false">
+      <div class="left-container">
+        <clr-input-container>
+          <label>Name</label>
+          <input type="text" name="name" clrInput [(ngModel)]="newKnowledge.name" placeholder="name"/>
+        </clr-input-container>
+        <clr-input-container>
+          <label>Category</label>
+          <input type="text" name="category" clrInput [(ngModel)]="newKnowledge.category" placeholder="category"/>
+        </clr-input-container>
+        <clr-textarea-container>
+          <label>Description</label>
+          <textarea clrTextarea placeholder="content ..." name="content"
+                    [(ngModel)]="newKnowledge.content" required></textarea>
+        </clr-textarea-container>
+        <br>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-outline" (click)="addKnowledge();closeModal()" type="submit">Submit</button>
+        <button class="btn btn-primary" (click)="closeModal()" type="button">Cancel</button>
+      </div>
+    </form>
+  </div>
+</clr-modal>

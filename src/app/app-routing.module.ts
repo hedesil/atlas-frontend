@@ -11,6 +11,7 @@ import {GroupsComponent} from './administration/groups/groups.component';
 import {ProfilesComponent} from './administration/profiles/profiles.component';
 import { UsersComponent } from './administration/users/users.component';
 import {MethodologiesComponent} from './methodologies/methodologies.component';
+import {KnowledgeComponent} from './knowledge/knowledge.component';
 
 
 const routes: Routes = [
@@ -30,6 +31,7 @@ const routes: Routes = [
     ]
   },
   {path: 'methodologies', component: MethodologiesComponent},
+  {path: 'knowledge', component: KnowledgeComponent},
 ];
 
 @NgModule({
