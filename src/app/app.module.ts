@@ -31,6 +31,7 @@ import { PieChartComponent } from './pie-chart/pie-chart.component';
 import { ChartsModule } from 'ng2-charts';
 import { AuditComponent } from './audit/audit.component';
 import { KnowledgeComponent } from './knowledge/knowledge.component';
+import { SisifoComponent } from './sisifo/sisifo.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { KnowledgeComponent } from './knowledge/knowledge.component';
     ProfileDetailsComponent,
     PieChartComponent,
     AuditComponent,
-    KnowledgeComponent
+    KnowledgeComponent,
+    SisifoComponent
   ],
   imports: [
     BrowserModule,

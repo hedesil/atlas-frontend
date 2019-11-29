@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
+import {AppConstants} from '../shared/constants/constants'
 
 interface Company {
   id: number;
@@ -17,10 +18,9 @@ export class AuthenticationService {
   constructor(private http: HttpClient) {
   }
 
-  private apiUrl = 'https://localhost:5000/auth/login';
-
+  private apiUrl = AppConstants.baseURL;
 
   login(credentials): Observable<Company> {
-    return this.http.post<Company>(this.apiUrl, credentials);
+    return this.http.post<Company>(this.apiUrl+"/auth/login", credentials);
   }
 }

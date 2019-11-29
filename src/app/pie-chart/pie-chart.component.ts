@@ -9,7 +9,7 @@ import { SingleDataSet, Label, Color, monkeyPatchChartJsLegend, monkeyPatchChart
   styleUrls: ['./pie-chart.component.scss']
 })
 export class PieChartComponent implements OnInit {
-  
+
    public pieChartOptions: ChartOptions = {
     responsive: true,
     };
@@ -22,7 +22,7 @@ export class PieChartComponent implements OnInit {
 
   public options: ChartType;
   public verSeleccion: string        = '';
-  public selección : ChartType = 'pie';
+  public seleccion : ChartType = 'pie';
   // Pie
    
 
@@ -34,9 +34,8 @@ export class PieChartComponent implements OnInit {
   public pieChartPlugins = []
 
  ngOnInit(){
- 
   this.pintargrafica();
-
+  
  }
  pintargrafica(){
  //this.pieChartOptions: ChartOptions = {
@@ -44,16 +43,15 @@ export class PieChartComponent implements OnInit {
  //};
   this.pieChartLabels = [['Download', 'Sales'], ['In', 'Store', 'Sales'], 'Mail Sales'];
   this.pieChartData = [300, 500, 100];
-  this.pieChartType = this.selección;
+  this.pieChartType = 'pie';
   this.chartReady = true;
   this.pieChartLegend = true;
   this.pieChartPlugins = []
-
  }
 
-  cambiagrafico(){
-    this.selección = this.options;
-    this.ngOnInit();
+  cambiagrafico(options){
+    this.seleccion = options;
+    this.pieChartType = this.seleccion;
   }
 
 }
