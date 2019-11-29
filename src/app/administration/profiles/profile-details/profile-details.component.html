@@ -215,6 +215,31 @@
                   </clr-stack-label>
                 </clr-stack-block>
               </clr-stack-block>
+              <clr-stack-block [(clrSbExpanded)]="expanded[11]">
+                <clr-stack-label>Test</clr-stack-label>
+                <clr-stack-block>
+                  <clr-stack-label>
+                      <div class="clr-toggle-wrapper">
+                          <input type="checkbox" id="toggle61" [checked]="hasFunctionality('ADD TESTS')" (change)="toggle($event,'ADD TESTS')" class="clr-toggle">
+                          <label for="toggle61" class="clr-control-label">ADD</label>
+                      </div>
+                      <div class="clr-toggle-wrapper">
+                          <input type="checkbox" id="toggle62" [checked]="hasFunctionality('MODIFY TESTS')" (change)="toggle($event,'MODIFY TESTS')"
+                              class="clr-toggle">
+                          <label for="toggle62" class="clr-control-label">MODIFY</label>
+                      </div>
+                      <div class="clr-toggle-wrapper">
+                          <input type="checkbox" id="toggle63" [checked]="hasFunctionality('DELETE TESTS')" (change)="toggle($event,'DELETE TESTS')"
+                              class="clr-toggle">
+                          <label for="toggle63" class="clr-control-label">DELETE</label>
+                      </div>
+                      <div class="clr-toggle-wrapper">
+                          <input type="checkbox" id="toggle64" [checked]="hasFunctionality('GET TESTS')" (change)="toggle($event,'GET TESTS')" class="clr-toggle">
+                          <label for="toggle64" class="clr-control-label">GET</label>
+                      </div>
+                  </clr-stack-label>
+                </clr-stack-block>
+              </clr-stack-block>
             <clr-stack-block [(clrSbExpanded)]="expanded[3]">
               <clr-stack-label>Evidences</clr-stack-label>
               <clr-stack-block>

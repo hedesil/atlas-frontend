@@ -19,9 +19,9 @@ export class ProfileDetailsComponent implements OnInit {
   donotDelete : boolean = true
   profile: Profile
   functionalities : Functionality[] = []
-  expanded = new Array(11);
+  expanded = new Array(12);
 
-  switches = new Array(61)
+  switches = new Array(65)
 
  
 
