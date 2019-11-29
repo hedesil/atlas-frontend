@@ -1,0 +1,2267 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>atlas-frontend documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">atlas-frontend documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>ProfilesComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/administration/profiles/profiles.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-profiles</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./profiles.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./profiles.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#companiesSubject">companiesSubject</a>
+                            </li>
+                            <li>
+                                <a href="#defaultAttribute">defaultAttribute</a>
+                            </li>
+                            <li>
+                                <a href="#deleteProfile">deleteProfile</a>
+                            </li>
+                            <li>
+                                <a href="#descSort">descSort</a>
+                            </li>
+                            <li>
+                                <a href="#expanded">expanded</a>
+                            </li>
+                            <li>
+                                <a href="#filters">filters</a>
+                            </li>
+                            <li>
+                                <a href="#filterVisible">filterVisible</a>
+                            </li>
+                            <li>
+                                <a href="#isModalVisible">isModalVisible</a>
+                            </li>
+                            <li>
+                                <a href="#lgOpen">lgOpen</a>
+                            </li>
+                            <li>
+                                <a href="#newProfile">newProfile</a>
+                            </li>
+                            <li>
+                                <a href="#profiles">profiles</a>
+                            </li>
+                            <li>
+                                <a href="#searchForm">searchForm</a>
+                            </li>
+                            <li>
+                                <a href="#switches">switches</a>
+                            </li>
+                            <li>
+                                <a href="#total">total</a>
+                            </li>
+                            <li>
+                                <a href="#wizardFilter">wizardFilter</a>
+                            </li>
+                            <li>
+                                <a href="#wizardLarge">wizardLarge</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#addFilters">addFilters</a>
+                            </li>
+                            <li>
+                                <a href="#addFunctionality2">addFunctionality2</a>
+                            </li>
+                            <li>
+                                <a href="#addProfile">addProfile</a>
+                            </li>
+                            <li>
+                                <a href="#changeProfileValues">changeProfileValues</a>
+                            </li>
+                            <li>
+                                <a href="#cleanEmptyFields">cleanEmptyFields</a>
+                            </li>
+                            <li>
+                                <a href="#closeModal">closeModal</a>
+                            </li>
+                            <li>
+                                <a href="#closeStacked">closeStacked</a>
+                            </li>
+                            <li>
+                                <a href="#filter">filter</a>
+                            </li>
+                            <li>
+                                <a href="#findProfiles">findProfiles</a>
+                            </li>
+                            <li>
+                                <a href="#getProfiles">getProfiles</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#removeFunctionality2">removeFunctionality2</a>
+                            </li>
+                            <li>
+                                <a href="#resetForm">resetForm</a>
+                            </li>
+                            <li>
+                                <a href="#resetSwitches">resetSwitches</a>
+                            </li>
+                            <li>
+                                <a href="#toggle2">toggle2</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(fb: <a href="https://angular.io/api/forms/FormBuilder" target="_blank">FormBuilder</a>, alertService: <a href="../injectables/AlertsService.html">AlertsService</a>, profileService: <a href="../injectables/ProfilesService.html">ProfilesService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/administration/profiles/profiles.component.ts:38</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>fb</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/forms/FormBuilder" target="_blank" >FormBuilder</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>alertService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AlertsService.html" target="_self" >AlertsService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>profileService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ProfilesService.html" target="_self" >ProfilesService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addFilters"></a>
+                    <span class="name">
+                        <b>
+                            addFilters
+                        </b>
+                        <a href="#addFilters"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addFilters()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="159"
+                            class="link-to-prism">src/app/administration/profiles/profiles.component.ts:159</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addFunctionality2"></a>
+                    <span class="name">
+                        <b>
+                            addFunctionality2
+                        </b>
+                        <a href="#addFunctionality2"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addFunctionality2(functionalityName)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="85"
+                            class="link-to-prism">src/app/administration/profiles/profiles.component.ts:85</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>functionalityName</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addProfile"></a>
+                    <span class="name">
+                        <b>
+                            addProfile
+                        </b>
+                        <a href="#addProfile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addProfile()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="102"
+                            class="link-to-prism">src/app/administration/profiles/profiles.component.ts:102</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="changeProfileValues"></a>
+                    <span class="name">
+                        <b>
+                            changeProfileValues
+                        </b>
+                        <a href="#changeProfileValues"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>changeProfileValues(profile)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="114"
+                            class="link-to-prism">src/app/administration/profiles/profiles.component.ts:114</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>profile</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="cleanEmptyFields"></a>
+                    <span class="name">
+                        <b>
+                            cleanEmptyFields
+                        </b>
+                        <a href="#cleanEmptyFields"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>cleanEmptyFields(filters)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="134"
+                            class="link-to-prism">src/app/administration/profiles/profiles.component.ts:134</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>filters</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="closeModal"></a>
+                    <span class="name">
+                        <b>
+                            closeModal
+                        </b>
+                        <a href="#closeModal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>closeModal()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="59"
+                            class="link-to-prism">src/app/administration/profiles/profiles.component.ts:59</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="closeStacked"></a>
+                    <span class="name">
+                        <b>
+                            closeStacked
+                        </b>
+                        <a href="#closeStacked"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>closeStacked()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="71"
+                            class="link-to-prism">src/app/administration/profiles/profiles.component.ts:71</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="filter"></a>
+                    <span class="name">
+                        <b>
+                            filter
+                        </b>
+                        <a href="#filter"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>filter()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="146"
+                            class="link-to-prism">src/app/administration/profiles/profiles.component.ts:146</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findProfiles"></a>
+                    <span class="name">
+                        <b>
+                            findProfiles
+                        </b>
+                        <a href="#findProfiles"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>findProfiles(a)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="119"
+                            class="link-to-prism">src/app/administration/profiles/profiles.component.ts:119</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>a</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getProfiles"></a>
+                    <span class="name">
+                        <b>
+                            getProfiles
+                        </b>
+                        <a href="#getProfiles"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getProfiles(filters, offset)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="123"
+                            class="link-to-prism">src/app/administration/profiles/profiles.component.ts:123</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>filters</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>offset</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="97"
+                            class="link-to-prism">src/app/administration/profiles/profiles.component.ts:97</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="removeFunctionality2"></a>
+                    <span class="name">
+                        <b>
+                            removeFunctionality2
+                        </b>
+                        <a href="#removeFunctionality2"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>removeFunctionality2(functionalityName)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="89"
+                            class="link-to-prism">src/app/administration/profiles/profiles.component.ts:89</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>functionalityName</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="resetForm"></a>
+                    <span class="name">
+                        <b>
+                            resetForm
+                        </b>
+                        <a href="#resetForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>resetForm()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="52"
+                            class="link-to-prism">src/app/administration/profiles/profiles.component.ts:52</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="resetSwitches"></a>
+                    <span class="name">
+                        <b>
+                            resetSwitches
+                        </b>
+                        <a href="#resetSwitches"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>resetSwitches()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="66"
+                            class="link-to-prism">src/app/administration/profiles/profiles.component.ts:66</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="toggle2"></a>
+                    <span class="name">
+                        <b>
+                            toggle2
+                        </b>
+                        <a href="#toggle2"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>toggle2(e, functionalityName)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="77"
+                            class="link-to-prism">src/app/administration/profiles/profiles.component.ts:77</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>e</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>functionalityName</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="companiesSubject"></a>
+                        <span class="name">
+                            <b>
+                            companiesSubject</b>
+                            <a href="#companiesSubject"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new Subject&lt;string&gt;()</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/administration/profiles/profiles.component.ts:36</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="defaultAttribute"></a>
+                        <span class="name">
+                            <b>
+                            defaultAttribute</b>
+                            <a href="#defaultAttribute"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/administration/profiles/profiles.component.ts:35</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="deleteProfile"></a>
+                        <span class="name">
+                            <b>
+                            deleteProfile</b>
+                            <a href="#deleteProfile"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="167" class="link-to-prism">src/app/administration/profiles/profiles.component.ts:167</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="descSort"></a>
+                        <span class="name">
+                            <b>
+                            descSort</b>
+                            <a href="#descSort"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>ClrDatagridSortOrder.DESC</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/administration/profiles/profiles.component.ts:26</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="expanded"></a>
+                        <span class="name">
+                            <b>
+                            expanded</b>
+                            <a href="#expanded"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new Array(10)</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/administration/profiles/profiles.component.ts:31</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="filters"></a>
+                        <span class="name">
+                            <b>
+                            filters</b>
+                            <a href="#filters"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>null</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>null</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/administration/profiles/profiles.component.ts:27</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="filterVisible"></a>
+                        <span class="name">
+                            <b>
+                            filterVisible</b>
+                            <a href="#filterVisible"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/administration/profiles/profiles.component.ts:38</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isModalVisible"></a>
+                        <span class="name">
+                            <b>
+                            isModalVisible</b>
+                            <a href="#isModalVisible"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/administration/profiles/profiles.component.ts:30</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="lgOpen"></a>
+                        <span class="name">
+                            <b>
+                            lgOpen</b>
+                            <a href="#lgOpen"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/administration/profiles/profiles.component.ts:25</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="newProfile"></a>
+                        <span class="name">
+                            <b>
+                            newProfile</b>
+                            <a href="#newProfile"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/Profile.html" target="_self" >Profile</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{ name : &#x27;&#x27;, functionalities : [] }</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/administration/profiles/profiles.component.ts:29</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="profiles"></a>
+                        <span class="name">
+                            <b>
+                            profiles</b>
+                            <a href="#profiles"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/Profile.html" target="_self" >Profile[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/administration/profiles/profiles.component.ts:28</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="searchForm"></a>
+                        <span class="name">
+                            <b>
+                            searchForm</b>
+                            <a href="#searchForm"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/Group.html" target="_self" >FormGroup</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/app/administration/profiles/profiles.component.ts:37</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="switches"></a>
+                        <span class="name">
+                            <b>
+                            switches</b>
+                            <a href="#switches"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new Array(62)</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/administration/profiles/profiles.component.ts:33</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="total"></a>
+                        <span class="name">
+                            <b>
+                            total</b>
+                            <a href="#total"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/administration/profiles/profiles.component.ts:34</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="wizardFilter"></a>
+                        <span class="name">
+                            <b>
+                            wizardFilter</b>
+                            <a href="#wizardFilter"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>ClrWizard</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ViewChild(&#x27;wizardlg&#x27;, {read: &#x27;&#x27;, static: true})<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/administration/profiles/profiles.component.ts:24</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="wizardLarge"></a>
+                        <span class="name">
+                            <b>
+                            wizardLarge</b>
+                            <a href="#wizardLarge"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>ClrWizard</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ViewChild(&#x27;wizardlg&#x27;, {read: &#x27;&#x27;, static: true})<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/administration/profiles/profiles.component.ts:23</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, ViewChild } from &#x27;@angular/core&#x27;;
+import { ClrWizard, ClrDatagridSortOrder } from &#x27;@clr/angular&#x27;;
+import { Profile, Functionality } from &#x27;../../shared/models/models&#x27;;
+import { Subject } from &#x27;rxjs&#x27;;
+import { FormGroup, FormBuilder, FormArray } from &#x27;@angular/forms&#x27;;
+import { debounceTime, distinctUntilChanged, switchMap } from &#x27;rxjs/operators&#x27;;
+import { AlertsService } from &#x27;../../alerts.service&#x27;;
+import { ProfilesService } from &#x27;./profile.service&#x27;;
+
+
+interface NewProfile{
+  name : string,
+  functionalities : Functionality[]
+}
+
+@Component({
+  selector: &#x27;app-profiles&#x27;,
+  templateUrl: &#x27;./profiles.component.html&#x27;,
+  styleUrls: [&#x27;./profiles.component.scss&#x27;]
+})
+export class ProfilesComponent implements OnInit {
+
+  @ViewChild(&quot;wizardlg&quot;,{read :&quot;&quot;,static: true}) wizardLarge: ClrWizard;
+  @ViewChild(&quot;wizardlg&quot;,{read :&quot;&quot;,static: true}) wizardFilter: ClrWizard;
+  lgOpen: boolean &#x3D; false;
+  descSort &#x3D; ClrDatagridSortOrder.DESC;
+  filters &#x3D; null;
+  profiles: Profile[];
+  newProfile : Profile &#x3D; { name : &#x27;&#x27;, functionalities : [] };
+  isModalVisible &#x3D; false
+  expanded &#x3D; new Array(10);
+
+  switches &#x3D; new Array(62)
+  total: number;
+  defaultAttribute;
+  companiesSubject &#x3D; new Subject&lt;string&gt;();
+  searchForm: FormGroup;
+  filterVisible: boolean;
+
+
+
+ 
+
+
+  constructor(private fb : FormBuilder,private alertService : AlertsService, private profileService : ProfilesService) {
+    this.searchForm &#x3D; this.fb.group({
+      filters: this.fb.array([]),
+    });
+  }
+
+
+  resetForm(){
+    this.searchForm &#x3D; this.fb.group({
+      filters: this.fb.array([]),
+    });
+  }
+
+
+  closeModal(){
+    this.isModalVisible &#x3D; false
+    this.newProfile &#x3D; { name : &#x27;&#x27;, functionalities : []}
+    this.resetSwitches()
+    this.closeStacked()
+  }
+  
+  resetSwitches(){
+    for(var i &#x3D; 0;i&lt; this.switches.length;i++){
+      this.switches[i]&#x3D;false
+    }
+  }
+closeStacked(){
+  for(var i &#x3D; 0;i&lt; this.expanded.length;i++){
+    this.expanded[i]&#x3D;false
+  }
+}
+
+  toggle2(e,functionalityName){
+    if(e.target.checked){
+      this.addFunctionality2(functionalityName)
+    }else{
+      this.removeFunctionality2(functionalityName)
+    }
+  }
+  
+  addFunctionality2(functionalityName){
+    this.newProfile.functionalities.push({ name : functionalityName})
+  }
+  
+  removeFunctionality2(functionalityName){
+    var filtered &#x3D; this.newProfile.functionalities.filter(function(value,index,arr){
+      return value.name !&#x3D; functionalityName
+    })
+    this.newProfile.functionalities&#x3D;filtered
+  }
+  
+
+  ngOnInit() {
+    this.getProfiles(null,0);
+
+  }
+
+  addProfile() {
+    this.profileService.addProfile(this.newProfile)
+      .subscribe((res) &#x3D;&gt; {
+        this.alertService.success(&quot;Profile has been added&quot;)
+        this.getProfiles(null,0);
+      },error &#x3D;&gt; {
+        this.alertService.error(error.error.message)
+      }
+      );
+  }
+
+
+  changeProfileValues(profile) {
+    var profileToUpdate &#x3D; this.profiles.find(this.findProfiles, [profile.id])
+    Object.assign(profileToUpdate, profile)
+  }
+
+  findProfiles(a) {
+    return a.id &#x3D;&#x3D; this[0]
+  }
+
+  getProfiles(filters,offset) {
+    this.profileService.getProfiles(filters,offset)
+      .subscribe((profiles) &#x3D;&gt; {
+        this.profiles &#x3D; profiles[0];
+        this.total &#x3D; profiles[1];
+      },
+      error &#x3D;&gt; {
+        this.alertService.error(error.error.message)
+      });
+  }
+
+  cleanEmptyFields(filters) {
+    console.log(filters)
+    filters.forEach(filter &#x3D;&gt; {
+      Object.keys(filter).forEach(field &#x3D;&gt; {
+        if (!filter[field]) {
+          delete filter[field]
+        }
+      })
+    });
+    return filters
+  }
+
+  filter() {
+    this.profileService.getProfiles(this.cleanEmptyFields(this.searchForm.controls.filters.value), 0)
+      .subscribe((res) &#x3D;&gt; {
+        this.profiles &#x3D; res[0];
+        this.total &#x3D; res[1];
+        this.filters &#x3D; this.searchForm.controls.filters.value
+      },
+        error &#x3D;&gt; {
+          this.alertService.error(error.error.message)
+        }
+      );
+  }
+
+  addFilters() {
+    var filters &#x3D; this.searchForm.controls.filters as FormArray
+    filters.push(this.fb.group({
+      name: &#x27;&#x27;,
+      company : &#x27;&#x27;,
+    }))
+  }
+
+  deleteProfile &#x3D; (profile: Profile) &#x3D;&gt; {
+    this.profileService.deleteProfile(profile)
+      .subscribe((profile) &#x3D;&gt; {
+        this.alertService.success(&quot;Profile has been deleted&quot;)
+        this.getProfiles(null,0);
+      },
+      error &#x3D;&gt; {
+        console.log(error)
+        this.alertService.error(error.error.message)
+      });
+  };
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;wrap&quot;&gt;
+  &lt;button class&#x3D;&quot;btn btn-outline&quot; (click)&#x3D;&quot;isModalVisible&#x3D;true&quot;&gt;New Profile&lt;/button&gt;
+  &lt;button class&#x3D;&quot;btn btn-outline&quot; (click)&#x3D;&quot;filterVisible&#x3D;true&quot;&gt;Filter&lt;/button&gt;
+  &lt;clr-datagrid&gt;
+    &lt;clr-dg-column [clrDgField]&#x3D;&quot;&#x27;name&#x27;&quot; [clrDgSortOrder]&#x3D;&quot;descSort&quot;&gt;Name&lt;/clr-dg-column&gt;
+    &lt;clr-dg-column [clrDgField]&#x3D;&quot;&#x27;total&#x27;&quot; [clrDgSortOrder]&#x3D;&quot;descSort&quot;&gt;Total&lt;/clr-dg-column&gt;
+    &lt;clr-dg-row *clrDgItems&#x3D;&quot;let profile of profiles&quot; [clrDgItem]&#x3D;&quot;profile&quot;&gt;
+      &lt;clr-dg-cell&gt;{{profile.name}}&lt;/clr-dg-cell&gt;
+      &lt;clr-dg-cell&gt;{{profile.users.length}}&lt;/clr-dg-cell&gt;
+      &lt;clr-dg-action-overflow&gt;
+        &lt;button class&#x3D;&quot;action-item&quot; (click)&#x3D;&quot;deleteProfile(profile)&quot;&gt;Delete&lt;/button&gt;
+      &lt;/clr-dg-action-overflow&gt;
+      &lt;app-profile-details *clrIfExpanded [input]&#x3D;&quot;profile&quot; (emit)&#x3D;&quot;changeProfileValues($event)&quot; ngProjectAs&#x3D;&quot;clr-dg-row-detail&quot;&gt;
+      &lt;/app-profile-details&gt;
+    &lt;/clr-dg-row&gt;
+    &lt;clr-dg-footer&gt;
+      &lt;clr-dg-pagination #pagination [clrDgPageSize]&#x3D;&quot;10&quot;&gt;
+        &lt;clr-dg-page-size [clrPageSizeOptions]&#x3D;&quot;[1,2,10,20,50,100]&quot;&gt;Areas per page&lt;/clr-dg-page-size&gt;
+        {{pagination.firstItem + 1}} - {{pagination.lastItem + 1}} of {{total}} Areas
+      &lt;/clr-dg-pagination&gt;
+    &lt;/clr-dg-footer&gt;
+  &lt;/clr-datagrid&gt;
+&lt;/div&gt;
+
+
+
+
+
+
+&lt;clr-modal [(clrModalOpen)]&#x3D;&quot;isModalVisible&quot; [clrModalClosable]&#x3D;&quot;false&quot; [clrModalSize]&#x3D;&quot;&#x27;lg&#x27;&quot;&gt;
+  &lt;h3 class&#x3D;&quot;modal-title&quot;&gt;New Profile&lt;/h3&gt;
+  &lt;div class&#x3D;&quot;modal-body&quot;&gt;
+    &lt;clr-input-container&gt;
+      &lt;label&gt;Name&lt;/label&gt;
+      &lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;name&quot; clrInput [(ngModel)]&#x3D;&quot;newProfile.name&quot; placeholder&#x3D;&quot;Profile&#x27;s name&quot; /&gt;
+    &lt;/clr-input-container&gt;
+    &lt;clr-stack-view&gt;
+      &lt;clr-stack-header&gt;Permissions&lt;/clr-stack-header&gt;
+      &lt;clr-stack-block [(clrSbExpanded)]&#x3D;&quot;expanded[0]&quot;&gt;
+        &lt;clr-stack-label&gt;Administration&lt;/clr-stack-label&gt;
+        &lt;clr-stack-block&gt;
+          &lt;clr-stack-label&gt;Areas&lt;/clr-stack-label&gt;
+          &lt;clr-stack-block&gt;
+            &lt;clr-stack-label&gt;
+              &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+                &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle1&quot; [(ngModel)]&#x3D;&quot;switches[0]&quot; (checked)&#x3D;&quot;switches[0]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;ADD AREAS&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+                &lt;label for&#x3D;&quot;toggle1&quot; class&#x3D;&quot;clr-control-label&quot;&gt;ADD&lt;/label&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+                &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle2&quot; [(ngModel)]&#x3D;&quot;switches[1]&quot; (checked)&#x3D;&quot;switches[1]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;MODIFY AREAS&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+                &lt;label for&#x3D;&quot;toggle2&quot; class&#x3D;&quot;clr-control-label&quot;&gt;MODIFY&lt;/label&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+                &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle3&quot; [(ngModel)]&#x3D;&quot;switches[2]&quot; (checked)&#x3D;&quot;switches[2]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;DELETE AREAS&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+                &lt;label for&#x3D;&quot;toggle3&quot; class&#x3D;&quot;clr-control-label&quot;&gt;DELETE&lt;/label&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+                &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle4&quot; [(ngModel)]&#x3D;&quot;switches[3]&quot; (checked)&#x3D;&quot;switches[3]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;GET AREAS&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+                &lt;label for&#x3D;&quot;toggle4&quot; class&#x3D;&quot;clr-control-label&quot;&gt;GET&lt;/label&gt;
+              &lt;/div&gt;
+            &lt;/clr-stack-label&gt;
+          &lt;/clr-stack-block&gt;
+        &lt;/clr-stack-block&gt;
+        &lt;clr-stack-block&gt;
+          &lt;clr-stack-label&gt;Companies&lt;/clr-stack-label&gt;
+          &lt;clr-stack-block&gt;
+            &lt;clr-stack-label&gt;
+              &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+                &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle13&quot; [(ngModel)]&#x3D;&quot;switches[13]&quot; (checked)&#x3D;&quot;switches[13]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;ADD COMPANIES&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+                &lt;label for&#x3D;&quot;toggle13&quot; class&#x3D;&quot;clr-control-label&quot;&gt;ADD&lt;/label&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+                &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle14&quot; [(ngModel)]&#x3D;&quot;switches[14]&quot; (checked)&#x3D;&quot;switches[14]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;MODIFY COMPANIES&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+                &lt;label for&#x3D;&quot;toggle14&quot; class&#x3D;&quot;clr-control-label&quot;&gt;MODIFY&lt;/label&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+                &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle15&quot; [(ngModel)]&#x3D;&quot;switches[15]&quot; (checked)&#x3D;&quot;switches[15]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;DELETE COMPANIES&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+                &lt;label for&#x3D;&quot;toggle15&quot; class&#x3D;&quot;clr-control-label&quot;&gt;DELETE&lt;/label&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+                &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle16&quot; [(ngModel)]&#x3D;&quot;switches[16]&quot; (checked)&#x3D;&quot;switches[16]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;GET COMPANIES&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+                &lt;label for&#x3D;&quot;toggle16&quot; class&#x3D;&quot;clr-control-label&quot;&gt;GET&lt;/label&gt;
+              &lt;/div&gt;
+            &lt;/clr-stack-label&gt;
+          &lt;/clr-stack-block&gt;
+        &lt;/clr-stack-block&gt;
+        &lt;clr-stack-block&gt;
+          &lt;clr-stack-label&gt;Groups&lt;/clr-stack-label&gt;
+          &lt;clr-stack-block&gt;
+            &lt;clr-stack-label&gt;
+              &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+                &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle25&quot; [(ngModel)]&#x3D;&quot;switches[25]&quot; (checked)&#x3D;&quot;switches[25]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;ADD GROUPS&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+                &lt;label for&#x3D;&quot;toggle25&quot; class&#x3D;&quot;clr-control-label&quot;&gt;ADD&lt;/label&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+                &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle26&quot; [(ngModel)]&#x3D;&quot;switches[26]&quot; (checked)&#x3D;&quot;switches[26]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;MODIFY GROUPS&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+                &lt;label for&#x3D;&quot;toggle26&quot; class&#x3D;&quot;clr-control-label&quot;&gt;MODIFY&lt;/label&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+                &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle27&quot; [(ngModel)]&#x3D;&quot;switches[27]&quot; (checked)&#x3D;&quot;switches[27]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;DELETE GROUPS&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+                &lt;label for&#x3D;&quot;toggle27&quot; class&#x3D;&quot;clr-control-label&quot;&gt;DELETE&lt;/label&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+                &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle28&quot; [(ngModel)]&#x3D;&quot;switches[28]&quot; (checked)&#x3D;&quot;switches[28]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;GET GROUPS&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+                &lt;label for&#x3D;&quot;toggle28&quot; class&#x3D;&quot;clr-control-label&quot;&gt;GET&lt;/label&gt;
+              &lt;/div&gt;
+            &lt;/clr-stack-label&gt;
+          &lt;/clr-stack-block&gt;
+        &lt;/clr-stack-block&gt;
+        &lt;clr-stack-block&gt;
+          &lt;clr-stack-label&gt;Profiles&lt;/clr-stack-label&gt;
+          &lt;clr-stack-block&gt;
+            &lt;clr-stack-label&gt;
+              &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+                &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle33&quot; [(ngModel)]&#x3D;&quot;switches[33]&quot; (checked)&#x3D;&quot;switches[33]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;ADD PROFILES&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+                &lt;label for&#x3D;&quot;toggle33&quot; class&#x3D;&quot;clr-control-label&quot;&gt;ADD&lt;/label&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+                &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle34&quot; [(ngModel)]&#x3D;&quot;switches[34]&quot; (checked)&#x3D;&quot;switches[34]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;MODIFY PROFILES&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+                &lt;label for&#x3D;&quot;toggle34&quot; class&#x3D;&quot;clr-control-label&quot;&gt;MODIFY&lt;/label&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+                &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle35&quot; [(ngModel)]&#x3D;&quot;switches[35]&quot; (checked)&#x3D;&quot;switches[35]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;DELETE PROFILES&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+                &lt;label for&#x3D;&quot;toggle35&quot; class&#x3D;&quot;clr-control-label&quot;&gt;DELETE&lt;/label&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+                &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle36&quot; [(ngModel)]&#x3D;&quot;switches[36]&quot; (checked)&#x3D;&quot;switches[36]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;GET PROFILES&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+                &lt;label for&#x3D;&quot;toggle36&quot; class&#x3D;&quot;clr-control-label&quot;&gt;GET&lt;/label&gt;
+              &lt;/div&gt;
+            &lt;/clr-stack-label&gt;
+          &lt;/clr-stack-block&gt;
+        &lt;/clr-stack-block&gt;
+        &lt;clr-stack-block&gt;
+          &lt;clr-stack-label&gt;Users&lt;/clr-stack-label&gt;
+          &lt;clr-stack-block&gt;
+            &lt;clr-stack-label&gt;
+              &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+                &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle50&quot; [(ngModel)]&#x3D;&quot;switches[50]&quot; (checked)&#x3D;&quot;switches[50]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;ADD USERS&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+                &lt;label for&#x3D;&quot;toggle50&quot; class&#x3D;&quot;clr-control-label&quot;&gt;ADD&lt;/label&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+                &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle51&quot; [(ngModel)]&#x3D;&quot;switches[51]&quot; (checked)&#x3D;&quot;switches[51]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;MODIFY USERS&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+                &lt;label for&#x3D;&quot;toggle51&quot; class&#x3D;&quot;clr-control-label&quot;&gt;MODIFY&lt;/label&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+                &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle52&quot; [(ngModel)]&#x3D;&quot;switches[52]&quot; (checked)&#x3D;&quot;switches[52]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;DELETE USERS&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+                &lt;label for&#x3D;&quot;toggle52&quot; class&#x3D;&quot;clr-control-label&quot;&gt;DELETE&lt;/label&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+                &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle53&quot; [(ngModel)]&#x3D;&quot;switches[53]&quot; (checked)&#x3D;&quot;switches[53]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;GET USERS&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+                &lt;label for&#x3D;&quot;toggle53&quot; class&#x3D;&quot;clr-control-label&quot;&gt;GET&lt;/label&gt;
+              &lt;/div&gt;
+            &lt;/clr-stack-label&gt;
+          &lt;/clr-stack-block&gt;
+        &lt;/clr-stack-block&gt;
+      &lt;/clr-stack-block&gt;
+      &lt;clr-stack-block [(clrSbExpanded)]&#x3D;&quot;expanded[1]&quot;&gt;
+        &lt;clr-stack-label&gt;Assets&lt;/clr-stack-label&gt;
+        &lt;clr-stack-block&gt;
+          &lt;clr-stack-label&gt;
+            &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+              &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle5&quot; [(ngModel)]&#x3D;&quot;switches[5]&quot; (checked)&#x3D;&quot;switches[5]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;ADD ASSETS&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+              &lt;label for&#x3D;&quot;toggle5&quot; class&#x3D;&quot;clr-control-label&quot;&gt;ADD&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+              &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle6&quot; [(ngModel)]&#x3D;&quot;switches[6]&quot; (checked)&#x3D;&quot;switches[6]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;MODIFY ASSETS&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+              &lt;label for&#x3D;&quot;toggle6&quot; class&#x3D;&quot;clr-control-label&quot;&gt;MODIFY&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+              &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle7&quot; [(ngModel)]&#x3D;&quot;switches[7]&quot; (checked)&#x3D;&quot;switches[7]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;DELETE ASSETS&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+              &lt;label for&#x3D;&quot;toggle7&quot; class&#x3D;&quot;clr-control-label&quot;&gt;DELETE&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+              &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle8&quot; [(ngModel)]&#x3D;&quot;switches[8]&quot; (checked)&#x3D;&quot;switches[8]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;GET ASSETS&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+              &lt;label for&#x3D;&quot;toggle8&quot; class&#x3D;&quot;clr-control-label&quot;&gt;GET&lt;/label&gt;
+            &lt;/div&gt;
+          &lt;/clr-stack-label&gt;
+        &lt;/clr-stack-block&gt;
+      &lt;/clr-stack-block&gt;
+      &lt;clr-stack-block [(clrSbExpanded)]&#x3D;&quot;expanded[2]&quot;&gt;
+        &lt;clr-stack-label&gt;Audits&lt;/clr-stack-label&gt;
+        &lt;clr-stack-block&gt;
+          &lt;clr-stack-label&gt;
+            &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+              &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle9&quot; [(ngModel)]&#x3D;&quot;switches[9]&quot; (checked)&#x3D;&quot;switches[9]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;ADD AUDITS&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+              &lt;label for&#x3D;&quot;toggle9&quot; class&#x3D;&quot;clr-control-label&quot;&gt;ADD&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+              &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle10&quot; [(ngModel)]&#x3D;&quot;switches[10]&quot; (checked)&#x3D;&quot;switches[10]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;MODIFY AUDITS&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+              &lt;label for&#x3D;&quot;toggle10&quot; class&#x3D;&quot;clr-control-label&quot;&gt;MODIFY&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+              &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle11&quot; [(ngModel)]&#x3D;&quot;switches[11]&quot; (checked)&#x3D;&quot;switches[11]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;DELETE AUDITS&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+              &lt;label for&#x3D;&quot;toggle11&quot; class&#x3D;&quot;clr-control-label&quot;&gt;DELETE&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+              &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle12&quot; [(ngModel)]&#x3D;&quot;switches[12]&quot; (checked)&#x3D;&quot;switches[12]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;GET AUDITS&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+              &lt;label for&#x3D;&quot;toggle12&quot; class&#x3D;&quot;clr-control-label&quot;&gt;GET&lt;/label&gt;
+            &lt;/div&gt;
+          &lt;/clr-stack-label&gt;
+        &lt;/clr-stack-block&gt;
+      &lt;/clr-stack-block&gt;
+      &lt;clr-stack-block [(clrSbExpanded)]&#x3D;&quot;expanded[3]&quot;&gt;
+        &lt;clr-stack-label&gt;Evidences&lt;/clr-stack-label&gt;
+        &lt;clr-stack-block&gt;
+          &lt;clr-stack-label&gt;
+            &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+              &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle21&quot; [(ngModel)]&#x3D;&quot;switches[21]&quot; (checked)&#x3D;&quot;switches[21]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;ADD EVIDENCES&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+              &lt;label for&#x3D;&quot;toggle21&quot; class&#x3D;&quot;clr-control-label&quot;&gt;ADD&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+              &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle22&quot; [(ngModel)]&#x3D;&quot;switches[22]&quot; (checked)&#x3D;&quot;switches[22]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;MODIFY EVIDENCES&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+              &lt;label for&#x3D;&quot;toggle22&quot; class&#x3D;&quot;clr-control-label&quot;&gt;MODIFY&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+              &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle23&quot; [(ngModel)]&#x3D;&quot;switches[23]&quot; (checked)&#x3D;&quot;switches[23]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;DELETE EVIDENCES&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+              &lt;label for&#x3D;&quot;toggle23&quot; class&#x3D;&quot;clr-control-label&quot;&gt;DELETE&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+              &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle24&quot; [(ngModel)]&#x3D;&quot;switches[24]&quot; (checked)&#x3D;&quot;switches[24]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;GET EVIDENCES&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+              &lt;label for&#x3D;&quot;toggle24&quot; class&#x3D;&quot;clr-control-label&quot;&gt;GET&lt;/label&gt;
+            &lt;/div&gt;
+          &lt;/clr-stack-label&gt;
+        &lt;/clr-stack-block&gt;
+      &lt;/clr-stack-block&gt;
+      &lt;clr-stack-block [(clrSbExpanded)]&#x3D;&quot;expanded[9]&quot;&gt;
+        &lt;clr-stack-label&gt;Methodologies&lt;/clr-stack-label&gt;
+        &lt;clr-stack-block&gt;
+          &lt;clr-stack-label&gt;
+            &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+              &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle58&quot; [(ngModel)]&#x3D;&quot;switches[58]&quot; (checked)&#x3D;&quot;switches[58]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;ADD METHODOLOGIES&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+              &lt;label for&#x3D;&quot;toggle58&quot; class&#x3D;&quot;clr-control-label&quot;&gt;ADD&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+              &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle59&quot; [(ngModel)]&#x3D;&quot;switches[59]&quot; (checked)&#x3D;&quot;switches[59]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;MODIFY METHODOLOGIES&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+              &lt;label for&#x3D;&quot;toggle59&quot; class&#x3D;&quot;clr-control-label&quot;&gt;MODIFY&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+              &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle60&quot; [(ngModel)]&#x3D;&quot;switches[60]&quot; (checked)&#x3D;&quot;switches[60]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;DELETE METHODOLOGIES&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+              &lt;label for&#x3D;&quot;toggle60&quot; class&#x3D;&quot;clr-control-label&quot;&gt;DELETE&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+              &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle61&quot; [(ngModel)]&#x3D;&quot;switches[61]&quot; (checked)&#x3D;&quot;switches[61]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;GET METHODOLOGIES&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+              &lt;label for&#x3D;&quot;toggle61&quot; class&#x3D;&quot;clr-control-label&quot;&gt;GET&lt;/label&gt;
+            &lt;/div&gt;
+          &lt;/clr-stack-label&gt;
+        &lt;/clr-stack-block&gt;
+      &lt;/clr-stack-block&gt;
+      &lt;clr-stack-block [(clrSbExpanded)]&#x3D;&quot;expanded[4]&quot;&gt;
+        &lt;clr-stack-label&gt;Integrations&lt;/clr-stack-label&gt;
+        &lt;clr-stack-block&gt;
+          &lt;clr-stack-label&gt;
+            &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+              &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle29&quot; [(ngModel)]&#x3D;&quot;switches[29]&quot; (checked)&#x3D;&quot;switches[29]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;ADD INTEGRATIONS&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+              &lt;label for&#x3D;&quot;toggle29&quot; class&#x3D;&quot;clr-control-label&quot;&gt;ADD&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+              &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle30&quot; [(ngModel)]&#x3D;&quot;switches[30]&quot; (checked)&#x3D;&quot;switches[30]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;MODIFY INTEGRATIONS&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+              &lt;label for&#x3D;&quot;toggle30&quot; class&#x3D;&quot;clr-control-label&quot;&gt;MODIFY&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+              &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle31&quot; [(ngModel)]&#x3D;&quot;switches[31]&quot; (checked)&#x3D;&quot;switches[31]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;DELETE INTEGRATIONS&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+              &lt;label for&#x3D;&quot;toggle31&quot; class&#x3D;&quot;clr-control-label&quot;&gt;DELETE&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+              &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle32&quot; [(ngModel)]&#x3D;&quot;switches[32]&quot; (checked)&#x3D;&quot;switches[32]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;GET INTEGRATIONS&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+              &lt;label for&#x3D;&quot;toggle32&quot; class&#x3D;&quot;clr-control-label&quot;&gt;GET&lt;/label&gt;
+            &lt;/div&gt;
+          &lt;/clr-stack-label&gt;
+        &lt;/clr-stack-block&gt;
+      &lt;/clr-stack-block&gt;
+      &lt;clr-stack-block [(clrSbExpanded)]&#x3D;&quot;expanded[5]&quot;&gt;
+        &lt;clr-stack-label&gt;Responsables&lt;/clr-stack-label&gt;
+        &lt;clr-stack-block&gt;
+          &lt;clr-stack-label&gt;
+            &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+              &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle37&quot; [(ngModel)]&#x3D;&quot;switches[37]&quot; (checked)&#x3D;&quot;switches[37]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;ADD RESPONSABLES&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+              &lt;label for&#x3D;&quot;toggle37&quot; class&#x3D;&quot;clr-control-label&quot;&gt;ADD&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+              &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle38&quot; [(ngModel)]&#x3D;&quot;switches[38]&quot; (checked)&#x3D;&quot;switches[38]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;MODIFY RESPONSABLES&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+              &lt;label for&#x3D;&quot;toggle38&quot; class&#x3D;&quot;clr-control-label&quot;&gt;MODIFY&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+              &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle39&quot; [(ngModel)]&#x3D;&quot;switches[39]&quot; (checked)&#x3D;&quot;switches[39]&quot;  (change)&#x3D;&quot;toggle2($event,&#x27;DELETE RESPONSABLES&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+              &lt;label for&#x3D;&quot;toggle39&quot; class&#x3D;&quot;clr-control-label&quot;&gt;DELETE&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+              &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle40&quot; [(ngModel)]&#x3D;&quot;switches[40]&quot; (checked)&#x3D;&quot;switches[40]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;GET RESPONSABLES&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+              &lt;label for&#x3D;&quot;toggle40&quot; class&#x3D;&quot;clr-control-label&quot;&gt;GET&lt;/label&gt;
+            &lt;/div&gt;
+          &lt;/clr-stack-label&gt;
+        &lt;/clr-stack-block&gt;
+      &lt;/clr-stack-block&gt;
+      &lt;clr-stack-block [(clrSbExpanded)]&#x3D;&quot;expanded[6]&quot;&gt;
+        &lt;clr-stack-label&gt;Tags&lt;/clr-stack-label&gt;
+        &lt;clr-stack-block&gt;
+          &lt;clr-stack-label&gt;
+            &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+              &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle42&quot; [(ngModel)]&#x3D;&quot;switches[42]&quot; (checked)&#x3D;&quot;switches[42]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;ADD TAGS&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+              &lt;label for&#x3D;&quot;toggle42&quot; class&#x3D;&quot;clr-control-label&quot;&gt;ADD&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+              &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle43&quot; [(ngModel)]&#x3D;&quot;switches[43]&quot; (checked)&#x3D;&quot;switches[43]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;MODIFY TAGS&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+              &lt;label for&#x3D;&quot;toggle43&quot; class&#x3D;&quot;clr-control-label&quot;&gt;MODIFY&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+              &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle44&quot; [(ngModel)]&#x3D;&quot;switches[44]&quot; (checked)&#x3D;&quot;switches[44]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;DELETE TAGS&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+              &lt;label for&#x3D;&quot;toggle44&quot; class&#x3D;&quot;clr-control-label&quot;&gt;DELETE&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+              &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle45&quot; [(ngModel)]&#x3D;&quot;switches[45]&quot; (checked)&#x3D;&quot;switches[45]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;GET TAGS&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+              &lt;label for&#x3D;&quot;toggle45&quot; class&#x3D;&quot;clr-control-label&quot;&gt;GET&lt;/label&gt;
+            &lt;/div&gt;
+          &lt;/clr-stack-label&gt;
+        &lt;/clr-stack-block&gt;
+      &lt;/clr-stack-block&gt;
+      &lt;clr-stack-block [(clrSbExpanded)]&#x3D;&quot;expanded[7]&quot;&gt;
+        &lt;clr-stack-label&gt;Urls&lt;/clr-stack-label&gt;
+        &lt;clr-stack-block&gt;
+          &lt;clr-stack-label&gt;
+            &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+              &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle46&quot; [(ngModel)]&#x3D;&quot;switches[46]&quot; (checked)&#x3D;&quot;switches[46]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;ADD URLS&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+              &lt;label for&#x3D;&quot;toggle46&quot; class&#x3D;&quot;clr-control-label&quot;&gt;ADD&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+              &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle47&quot; [(ngModel)]&#x3D;&quot;switches[47]&quot; (checked)&#x3D;&quot;switches[47]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;MODIFY URLS&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+              &lt;label for&#x3D;&quot;toggle47&quot; class&#x3D;&quot;clr-control-label&quot;&gt;MODIFY&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+              &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle48&quot; [(ngModel)]&#x3D;&quot;switches[48]&quot; (checked)&#x3D;&quot;switches[48]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;DELETE URLS&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+              &lt;label for&#x3D;&quot;toggle48&quot; class&#x3D;&quot;clr-control-label&quot;&gt;DELETE&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+              &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle49&quot; [(ngModel)]&#x3D;&quot;switches[49]&quot; (checked)&#x3D;&quot;switches[49]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;GET URLS&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+              &lt;label for&#x3D;&quot;toggle49&quot; class&#x3D;&quot;clr-control-label&quot;&gt;GET&lt;/label&gt;
+            &lt;/div&gt;
+          &lt;/clr-stack-label&gt;
+        &lt;/clr-stack-block&gt;
+      &lt;/clr-stack-block&gt;
+      &lt;clr-stack-block [(clrSbExpanded)]&#x3D;&quot;expanded[8]&quot;&gt;
+        &lt;clr-stack-label&gt;Vulnerabilities&lt;/clr-stack-label&gt;
+        &lt;clr-stack-block&gt;
+          &lt;clr-stack-label&gt;
+            &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+              &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle54&quot; [(ngModel)]&#x3D;&quot;switches[54]&quot; (checked)&#x3D;&quot;switches[54]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;ADD VULNERABILITIES&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+              &lt;label for&#x3D;&quot;toggle54&quot; class&#x3D;&quot;clr-control-label&quot;&gt;ADD&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+              &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle55&quot; [(ngModel)]&#x3D;&quot;switches[55]&quot; (checked)&#x3D;&quot;switches[55]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;MODIFY VULNERABILITIES&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+              &lt;label for&#x3D;&quot;toggle55&quot; class&#x3D;&quot;clr-control-label&quot;&gt;MODIFY&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+              &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle56&quot; [(ngModel)]&#x3D;&quot;switches[56]&quot; (checked)&#x3D;&quot;switches[56]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;DELETE VULNERABILITIES&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+              &lt;label for&#x3D;&quot;toggle56&quot; class&#x3D;&quot;clr-control-label&quot;&gt;DELETE&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;clr-toggle-wrapper&quot;&gt;
+              &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;toggle57&quot; [(ngModel)]&#x3D;&quot;switches[57]&quot; (checked)&#x3D;&quot;switches[57]&quot; (change)&#x3D;&quot;toggle2($event,&#x27;GET VULNERABILITIES&#x27;)&quot; class&#x3D;&quot;clr-toggle&quot;&gt;
+              &lt;label for&#x3D;&quot;toggle57&quot; class&#x3D;&quot;clr-control-label&quot;&gt;GET&lt;/label&gt;
+            &lt;/div&gt;
+          &lt;/clr-stack-label&gt;
+        &lt;/clr-stack-block&gt;
+      &lt;/clr-stack-block&gt;
+    &lt;/clr-stack-view&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;modal-footer&quot;&gt;
+    &lt;button class&#x3D;&quot;btn btn-outline&quot; (click)&#x3D;&quot;addProfile();closeModal()&quot; type&#x3D;&quot;button&quot;&gt;Submit&lt;/button&gt;
+    &lt;button class&#x3D;&quot;btn btn-primary&quot; (click)&#x3D;&quot;closeModal()&quot; type&#x3D;&quot;button&quot;&gt;Cancel&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/clr-modal&gt;
+
+
+&lt;clr-modal [(clrModalOpen)]&#x3D;&quot;filterVisible&quot; [clrModalSize]&#x3D;&quot;&#x27;lg&#x27;&quot;&gt;
+    &lt;h3 class&#x3D;&quot;modal-title&quot;&gt;Filters&lt;/h3&gt;
+    &lt;div class&#x3D;&quot;modal-body&quot;&gt;
+      &lt;button class&#x3D;&quot;btn btn-primary&quot; (click)&#x3D;&quot;addFilters()&quot;&gt;Add&lt;/button&gt;
+        &lt;form clrForm [formGroup]&#x3D;&quot;searchForm&quot;  (ngSubmit)&#x3D;&quot;filter();filterVisible &#x3D; false&quot;&gt;
+              &lt;div formArrayName&#x3D;&quot;filters&quot; *ngFor&#x3D;&quot;let filter of searchForm.controls.filters.controls; let i &#x3D; index&quot;&gt;
+                &lt;ng-container [formGroupName]&#x3D;&quot;i&quot;&gt;
+                  &lt;clr-input-container&gt;
+                    &lt;label&gt;Name&lt;/label&gt;
+                    &lt;input placeholder&#x3D;&quot;Name&quot; clrInput ngModel formControlName&#x3D;&quot;name&quot;&gt;
+                  &lt;/clr-input-container&gt;
+                &lt;/ng-container&gt;
+              &lt;/div&gt;
+              &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn btn-primary&quot;&gt;Submit&lt;/button&gt;
+              &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-primary&quot; (click)&#x3D;&quot;filterVisible &#x3D; false&quot;&gt;Cancel&lt;/button&gt;
+          &lt;/form&gt;
+    &lt;/div&gt;
+  &lt;/clr-modal&gt;
+
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./profiles.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="wrap">  <button class="btn btn-outline" (click)="isModalVisible=true">New Profile</button>  <button class="btn btn-outline" (click)="filterVisible=true">Filter</button>  <clr-datagrid>    <clr-dg-column [clrDgField]="\'name\'" [clrDgSortOrder]="descSort">Name</clr-dg-column>    <clr-dg-column [clrDgField]="\'total\'" [clrDgSortOrder]="descSort">Total</clr-dg-column>    <clr-dg-row *clrDgItems="let profile of profiles" [clrDgItem]="profile">      <clr-dg-cell>{{profile.name}}</clr-dg-cell>      <clr-dg-cell>{{profile.users.length}}</clr-dg-cell>      <clr-dg-action-overflow>        <button class="action-item" (click)="deleteProfile(profile)">Delete</button>      </clr-dg-action-overflow>      <app-profile-details *clrIfExpanded [input]="profile" (emit)="changeProfileValues($event)" ngProjectAs="clr-dg-row-detail">      </app-profile-details>    </clr-dg-row>    <clr-dg-footer>      <clr-dg-pagination #pagination [clrDgPageSize]="10">        <clr-dg-page-size [clrPageSizeOptions]="[1,2,10,20,50,100]">Areas per page</clr-dg-page-size>        {{pagination.firstItem + 1}} - {{pagination.lastItem + 1}} of {{total}} Areas      </clr-dg-pagination>    </clr-dg-footer>  </clr-datagrid></div><clr-modal [(clrModalOpen)]="isModalVisible" [clrModalClosable]="false" [clrModalSize]="\'lg\'">  <h3 class="modal-title">New Profile</h3>  <div class="modal-body">    <clr-input-container>      <label>Name</label>      <input type="text" name="name" clrInput [(ngModel)]="newProfile.name" placeholder="Profile\'s name" />    </clr-input-container>    <clr-stack-view>      <clr-stack-header>Permissions</clr-stack-header>      <clr-stack-block [(clrSbExpanded)]="expanded[0]">        <clr-stack-label>Administration</clr-stack-label>        <clr-stack-block>          <clr-stack-label>Areas</clr-stack-label>          <clr-stack-block>            <clr-stack-label>              <div class="clr-toggle-wrapper">                <input type="checkbox" id="toggle1" [(ngModel)]="switches[0]" (checked)="switches[0]" (change)="toggle2($event,\'ADD AREAS\')" class="clr-toggle">                <label for="toggle1" class="clr-control-label">ADD</label>              </div>              <div class="clr-toggle-wrapper">                <input type="checkbox" id="toggle2" [(ngModel)]="switches[1]" (checked)="switches[1]" (change)="toggle2($event,\'MODIFY AREAS\')" class="clr-toggle">                <label for="toggle2" class="clr-control-label">MODIFY</label>              </div>              <div class="clr-toggle-wrapper">                <input type="checkbox" id="toggle3" [(ngModel)]="switches[2]" (checked)="switches[2]" (change)="toggle2($event,\'DELETE AREAS\')" class="clr-toggle">                <label for="toggle3" class="clr-control-label">DELETE</label>              </div>              <div class="clr-toggle-wrapper">                <input type="checkbox" id="toggle4" [(ngModel)]="switches[3]" (checked)="switches[3]" (change)="toggle2($event,\'GET AREAS\')" class="clr-toggle">                <label for="toggle4" class="clr-control-label">GET</label>              </div>            </clr-stack-label>          </clr-stack-block>        </clr-stack-block>        <clr-stack-block>          <clr-stack-label>Companies</clr-stack-label>          <clr-stack-block>            <clr-stack-label>              <div class="clr-toggle-wrapper">                <input type="checkbox" id="toggle13" [(ngModel)]="switches[13]" (checked)="switches[13]" (change)="toggle2($event,\'ADD COMPANIES\')" class="clr-toggle">                <label for="toggle13" class="clr-control-label">ADD</label>              </div>              <div class="clr-toggle-wrapper">                <input type="checkbox" id="toggle14" [(ngModel)]="switches[14]" (checked)="switches[14]" (change)="toggle2($event,\'MODIFY COMPANIES\')" class="clr-toggle">                <label for="toggle14" class="clr-control-label">MODIFY</label>              </div>              <div class="clr-toggle-wrapper">                <input type="checkbox" id="toggle15" [(ngModel)]="switches[15]" (checked)="switches[15]" (change)="toggle2($event,\'DELETE COMPANIES\')" class="clr-toggle">                <label for="toggle15" class="clr-control-label">DELETE</label>              </div>              <div class="clr-toggle-wrapper">                <input type="checkbox" id="toggle16" [(ngModel)]="switches[16]" (checked)="switches[16]" (change)="toggle2($event,\'GET COMPANIES\')" class="clr-toggle">                <label for="toggle16" class="clr-control-label">GET</label>              </div>            </clr-stack-label>          </clr-stack-block>        </clr-stack-block>        <clr-stack-block>          <clr-stack-label>Groups</clr-stack-label>          <clr-stack-block>            <clr-stack-label>              <div class="clr-toggle-wrapper">                <input type="checkbox" id="toggle25" [(ngModel)]="switches[25]" (checked)="switches[25]" (change)="toggle2($event,\'ADD GROUPS\')" class="clr-toggle">                <label for="toggle25" class="clr-control-label">ADD</label>              </div>              <div class="clr-toggle-wrapper">                <input type="checkbox" id="toggle26" [(ngModel)]="switches[26]" (checked)="switches[26]" (change)="toggle2($event,\'MODIFY GROUPS\')" class="clr-toggle">                <label for="toggle26" class="clr-control-label">MODIFY</label>              </div>              <div class="clr-toggle-wrapper">                <input type="checkbox" id="toggle27" [(ngModel)]="switches[27]" (checked)="switches[27]" (change)="toggle2($event,\'DELETE GROUPS\')" class="clr-toggle">                <label for="toggle27" class="clr-control-label">DELETE</label>              </div>              <div class="clr-toggle-wrapper">                <input type="checkbox" id="toggle28" [(ngModel)]="switches[28]" (checked)="switches[28]" (change)="toggle2($event,\'GET GROUPS\')" class="clr-toggle">                <label for="toggle28" class="clr-control-label">GET</label>              </div>            </clr-stack-label>          </clr-stack-block>        </clr-stack-block>        <clr-stack-block>          <clr-stack-label>Profiles</clr-stack-label>          <clr-stack-block>            <clr-stack-label>              <div class="clr-toggle-wrapper">                <input type="checkbox" id="toggle33" [(ngModel)]="switches[33]" (checked)="switches[33]" (change)="toggle2($event,\'ADD PROFILES\')" class="clr-toggle">                <label for="toggle33" class="clr-control-label">ADD</label>              </div>              <div class="clr-toggle-wrapper">                <input type="checkbox" id="toggle34" [(ngModel)]="switches[34]" (checked)="switches[34]" (change)="toggle2($event,\'MODIFY PROFILES\')" class="clr-toggle">                <label for="toggle34" class="clr-control-label">MODIFY</label>              </div>              <div class="clr-toggle-wrapper">                <input type="checkbox" id="toggle35" [(ngModel)]="switches[35]" (checked)="switches[35]" (change)="toggle2($event,\'DELETE PROFILES\')" class="clr-toggle">                <label for="toggle35" class="clr-control-label">DELETE</label>              </div>              <div class="clr-toggle-wrapper">                <input type="checkbox" id="toggle36" [(ngModel)]="switches[36]" (checked)="switches[36]" (change)="toggle2($event,\'GET PROFILES\')" class="clr-toggle">                <label for="toggle36" class="clr-control-label">GET</label>              </div>            </clr-stack-label>          </clr-stack-block>        </clr-stack-block>        <clr-stack-block>          <clr-stack-label>Users</clr-stack-label>          <clr-stack-block>            <clr-stack-label>              <div class="clr-toggle-wrapper">                <input type="checkbox" id="toggle50" [(ngModel)]="switches[50]" (checked)="switches[50]" (change)="toggle2($event,\'ADD USERS\')" class="clr-toggle">                <label for="toggle50" class="clr-control-label">ADD</label>              </div>              <div class="clr-toggle-wrapper">                <input type="checkbox" id="toggle51" [(ngModel)]="switches[51]" (checked)="switches[51]" (change)="toggle2($event,\'MODIFY USERS\')" class="clr-toggle">                <label for="toggle51" class="clr-control-label">MODIFY</label>              </div>              <div class="clr-toggle-wrapper">                <input type="checkbox" id="toggle52" [(ngModel)]="switches[52]" (checked)="switches[52]" (change)="toggle2($event,\'DELETE USERS\')" class="clr-toggle">                <label for="toggle52" class="clr-control-label">DELETE</label>              </div>              <div class="clr-toggle-wrapper">                <input type="checkbox" id="toggle53" [(ngModel)]="switches[53]" (checked)="switches[53]" (change)="toggle2($event,\'GET USERS\')" class="clr-toggle">                <label for="toggle53" class="clr-control-label">GET</label>              </div>            </clr-stack-label>          </clr-stack-block>        </clr-stack-block>      </clr-stack-block>      <clr-stack-block [(clrSbExpanded)]="expanded[1]">        <clr-stack-label>Assets</clr-stack-label>        <clr-stack-block>          <clr-stack-label>            <div class="clr-toggle-wrapper">              <input type="checkbox" id="toggle5" [(ngModel)]="switches[5]" (checked)="switches[5]" (change)="toggle2($event,\'ADD ASSETS\')" class="clr-toggle">              <label for="toggle5" class="clr-control-label">ADD</label>            </div>            <div class="clr-toggle-wrapper">              <input type="checkbox" id="toggle6" [(ngModel)]="switches[6]" (checked)="switches[6]" (change)="toggle2($event,\'MODIFY ASSETS\')" class="clr-toggle">              <label for="toggle6" class="clr-control-label">MODIFY</label>            </div>            <div class="clr-toggle-wrapper">              <input type="checkbox" id="toggle7" [(ngModel)]="switches[7]" (checked)="switches[7]" (change)="toggle2($event,\'DELETE ASSETS\')" class="clr-toggle">              <label for="toggle7" class="clr-control-label">DELETE</label>            </div>            <div class="clr-toggle-wrapper">              <input type="checkbox" id="toggle8" [(ngModel)]="switches[8]" (checked)="switches[8]" (change)="toggle2($event,\'GET ASSETS\')" class="clr-toggle">              <label for="toggle8" class="clr-control-label">GET</label>            </div>          </clr-stack-label>        </clr-stack-block>      </clr-stack-block>      <clr-stack-block [(clrSbExpanded)]="expanded[2]">        <clr-stack-label>Audits</clr-stack-label>        <clr-stack-block>          <clr-stack-label>            <div class="clr-toggle-wrapper">              <input type="checkbox" id="toggle9" [(ngModel)]="switches[9]" (checked)="switches[9]" (change)="toggle2($event,\'ADD AUDITS\')" class="clr-toggle">              <label for="toggle9" class="clr-control-label">ADD</label>            </div>            <div class="clr-toggle-wrapper">              <input type="checkbox" id="toggle10" [(ngModel)]="switches[10]" (checked)="switches[10]" (change)="toggle2($event,\'MODIFY AUDITS\')" class="clr-toggle">              <label for="toggle10" class="clr-control-label">MODIFY</label>            </div>            <div class="clr-toggle-wrapper">              <input type="checkbox" id="toggle11" [(ngModel)]="switches[11]" (checked)="switches[11]" (change)="toggle2($event,\'DELETE AUDITS\')" class="clr-toggle">              <label for="toggle11" class="clr-control-label">DELETE</label>            </div>            <div class="clr-toggle-wrapper">              <input type="checkbox" id="toggle12" [(ngModel)]="switches[12]" (checked)="switches[12]" (change)="toggle2($event,\'GET AUDITS\')" class="clr-toggle">              <label for="toggle12" class="clr-control-label">GET</label>            </div>          </clr-stack-label>        </clr-stack-block>      </clr-stack-block>      <clr-stack-block [(clrSbExpanded)]="expanded[3]">        <clr-stack-label>Evidences</clr-stack-label>        <clr-stack-block>          <clr-stack-label>            <div class="clr-toggle-wrapper">              <input type="checkbox" id="toggle21" [(ngModel)]="switches[21]" (checked)="switches[21]" (change)="toggle2($event,\'ADD EVIDENCES\')" class="clr-toggle">              <label for="toggle21" class="clr-control-label">ADD</label>            </div>            <div class="clr-toggle-wrapper">              <input type="checkbox" id="toggle22" [(ngModel)]="switches[22]" (checked)="switches[22]" (change)="toggle2($event,\'MODIFY EVIDENCES\')" class="clr-toggle">              <label for="toggle22" class="clr-control-label">MODIFY</label>            </div>            <div class="clr-toggle-wrapper">              <input type="checkbox" id="toggle23" [(ngModel)]="switches[23]" (checked)="switches[23]" (change)="toggle2($event,\'DELETE EVIDENCES\')" class="clr-toggle">              <label for="toggle23" class="clr-control-label">DELETE</label>            </div>            <div class="clr-toggle-wrapper">              <input type="checkbox" id="toggle24" [(ngModel)]="switches[24]" (checked)="switches[24]" (change)="toggle2($event,\'GET EVIDENCES\')" class="clr-toggle">              <label for="toggle24" class="clr-control-label">GET</label>            </div>          </clr-stack-label>        </clr-stack-block>      </clr-stack-block>      <clr-stack-block [(clrSbExpanded)]="expanded[9]">        <clr-stack-label>Methodologies</clr-stack-label>        <clr-stack-block>          <clr-stack-label>            <div class="clr-toggle-wrapper">              <input type="checkbox" id="toggle58" [(ngModel)]="switches[58]" (checked)="switches[58]" (change)="toggle2($event,\'ADD METHODOLOGIES\')" class="clr-toggle">              <label for="toggle58" class="clr-control-label">ADD</label>            </div>            <div class="clr-toggle-wrapper">              <input type="checkbox" id="toggle59" [(ngModel)]="switches[59]" (checked)="switches[59]" (change)="toggle2($event,\'MODIFY METHODOLOGIES\')" class="clr-toggle">              <label for="toggle59" class="clr-control-label">MODIFY</label>            </div>            <div class="clr-toggle-wrapper">              <input type="checkbox" id="toggle60" [(ngModel)]="switches[60]" (checked)="switches[60]" (change)="toggle2($event,\'DELETE METHODOLOGIES\')" class="clr-toggle">              <label for="toggle60" class="clr-control-label">DELETE</label>            </div>            <div class="clr-toggle-wrapper">              <input type="checkbox" id="toggle61" [(ngModel)]="switches[61]" (checked)="switches[61]" (change)="toggle2($event,\'GET METHODOLOGIES\')" class="clr-toggle">              <label for="toggle61" class="clr-control-label">GET</label>            </div>          </clr-stack-label>        </clr-stack-block>      </clr-stack-block>      <clr-stack-block [(clrSbExpanded)]="expanded[4]">        <clr-stack-label>Integrations</clr-stack-label>        <clr-stack-block>          <clr-stack-label>            <div class="clr-toggle-wrapper">              <input type="checkbox" id="toggle29" [(ngModel)]="switches[29]" (checked)="switches[29]" (change)="toggle2($event,\'ADD INTEGRATIONS\')" class="clr-toggle">              <label for="toggle29" class="clr-control-label">ADD</label>            </div>            <div class="clr-toggle-wrapper">              <input type="checkbox" id="toggle30" [(ngModel)]="switches[30]" (checked)="switches[30]" (change)="toggle2($event,\'MODIFY INTEGRATIONS\')" class="clr-toggle">              <label for="toggle30" class="clr-control-label">MODIFY</label>            </div>            <div class="clr-toggle-wrapper">              <input type="checkbox" id="toggle31" [(ngModel)]="switches[31]" (checked)="switches[31]" (change)="toggle2($event,\'DELETE INTEGRATIONS\')" class="clr-toggle">              <label for="toggle31" class="clr-control-label">DELETE</label>            </div>            <div class="clr-toggle-wrapper">              <input type="checkbox" id="toggle32" [(ngModel)]="switches[32]" (checked)="switches[32]" (change)="toggle2($event,\'GET INTEGRATIONS\')" class="clr-toggle">              <label for="toggle32" class="clr-control-label">GET</label>            </div>          </clr-stack-label>        </clr-stack-block>      </clr-stack-block>      <clr-stack-block [(clrSbExpanded)]="expanded[5]">        <clr-stack-label>Responsables</clr-stack-label>        <clr-stack-block>          <clr-stack-label>            <div class="clr-toggle-wrapper">              <input type="checkbox" id="toggle37" [(ngModel)]="switches[37]" (checked)="switches[37]" (change)="toggle2($event,\'ADD RESPONSABLES\')" class="clr-toggle">              <label for="toggle37" class="clr-control-label">ADD</label>            </div>            <div class="clr-toggle-wrapper">              <input type="checkbox" id="toggle38" [(ngModel)]="switches[38]" (checked)="switches[38]" (change)="toggle2($event,\'MODIFY RESPONSABLES\')" class="clr-toggle">              <label for="toggle38" class="clr-control-label">MODIFY</label>            </div>            <div class="clr-toggle-wrapper">              <input type="checkbox" id="toggle39" [(ngModel)]="switches[39]" (checked)="switches[39]"  (change)="toggle2($event,\'DELETE RESPONSABLES\')" class="clr-toggle">              <label for="toggle39" class="clr-control-label">DELETE</label>            </div>            <div class="clr-toggle-wrapper">              <input type="checkbox" id="toggle40" [(ngModel)]="switches[40]" (checked)="switches[40]" (change)="toggle2($event,\'GET RESPONSABLES\')" class="clr-toggle">              <label for="toggle40" class="clr-control-label">GET</label>            </div>          </clr-stack-label>        </clr-stack-block>      </clr-stack-block>      <clr-stack-block [(clrSbExpanded)]="expanded[6]">        <clr-stack-label>Tags</clr-stack-label>        <clr-stack-block>          <clr-stack-label>            <div class="clr-toggle-wrapper">              <input type="checkbox" id="toggle42" [(ngModel)]="switches[42]" (checked)="switches[42]" (change)="toggle2($event,\'ADD TAGS\')" class="clr-toggle">              <label for="toggle42" class="clr-control-label">ADD</label>            </div>            <div class="clr-toggle-wrapper">              <input type="checkbox" id="toggle43" [(ngModel)]="switches[43]" (checked)="switches[43]" (change)="toggle2($event,\'MODIFY TAGS\')" class="clr-toggle">              <label for="toggle43" class="clr-control-label">MODIFY</label>            </div>            <div class="clr-toggle-wrapper">              <input type="checkbox" id="toggle44" [(ngModel)]="switches[44]" (checked)="switches[44]" (change)="toggle2($event,\'DELETE TAGS\')" class="clr-toggle">              <label for="toggle44" class="clr-control-label">DELETE</label>            </div>            <div class="clr-toggle-wrapper">              <input type="checkbox" id="toggle45" [(ngModel)]="switches[45]" (checked)="switches[45]" (change)="toggle2($event,\'GET TAGS\')" class="clr-toggle">              <label for="toggle45" class="clr-control-label">GET</label>            </div>          </clr-stack-label>        </clr-stack-block>      </clr-stack-block>      <clr-stack-block [(clrSbExpanded)]="expanded[7]">        <clr-stack-label>Urls</clr-stack-label>        <clr-stack-block>          <clr-stack-label>            <div class="clr-toggle-wrapper">              <input type="checkbox" id="toggle46" [(ngModel)]="switches[46]" (checked)="switches[46]" (change)="toggle2($event,\'ADD URLS\')" class="clr-toggle">              <label for="toggle46" class="clr-control-label">ADD</label>            </div>            <div class="clr-toggle-wrapper">              <input type="checkbox" id="toggle47" [(ngModel)]="switches[47]" (checked)="switches[47]" (change)="toggle2($event,\'MODIFY URLS\')" class="clr-toggle">              <label for="toggle47" class="clr-control-label">MODIFY</label>            </div>            <div class="clr-toggle-wrapper">              <input type="checkbox" id="toggle48" [(ngModel)]="switches[48]" (checked)="switches[48]" (change)="toggle2($event,\'DELETE URLS\')" class="clr-toggle">              <label for="toggle48" class="clr-control-label">DELETE</label>            </div>            <div class="clr-toggle-wrapper">              <input type="checkbox" id="toggle49" [(ngModel)]="switches[49]" (checked)="switches[49]" (change)="toggle2($event,\'GET URLS\')" class="clr-toggle">              <label for="toggle49" class="clr-control-label">GET</label>            </div>          </clr-stack-label>        </clr-stack-block>      </clr-stack-block>      <clr-stack-block [(clrSbExpanded)]="expanded[8]">        <clr-stack-label>Vulnerabilities</clr-stack-label>        <clr-stack-block>          <clr-stack-label>            <div class="clr-toggle-wrapper">              <input type="checkbox" id="toggle54" [(ngModel)]="switches[54]" (checked)="switches[54]" (change)="toggle2($event,\'ADD VULNERABILITIES\')" class="clr-toggle">              <label for="toggle54" class="clr-control-label">ADD</label>            </div>            <div class="clr-toggle-wrapper">              <input type="checkbox" id="toggle55" [(ngModel)]="switches[55]" (checked)="switches[55]" (change)="toggle2($event,\'MODIFY VULNERABILITIES\')" class="clr-toggle">              <label for="toggle55" class="clr-control-label">MODIFY</label>            </div>            <div class="clr-toggle-wrapper">              <input type="checkbox" id="toggle56" [(ngModel)]="switches[56]" (checked)="switches[56]" (change)="toggle2($event,\'DELETE VULNERABILITIES\')" class="clr-toggle">              <label for="toggle56" class="clr-control-label">DELETE</label>            </div>            <div class="clr-toggle-wrapper">              <input type="checkbox" id="toggle57" [(ngModel)]="switches[57]" (checked)="switches[57]" (change)="toggle2($event,\'GET VULNERABILITIES\')" class="clr-toggle">              <label for="toggle57" class="clr-control-label">GET</label>            </div>          </clr-stack-label>        </clr-stack-block>      </clr-stack-block>    </clr-stack-view>  </div>  <div class="modal-footer">    <button class="btn btn-outline" (click)="addProfile();closeModal()" type="button">Submit</button>    <button class="btn btn-primary" (click)="closeModal()" type="button">Cancel</button>  </div></clr-modal><clr-modal [(clrModalOpen)]="filterVisible" [clrModalSize]="\'lg\'">    <h3 class="modal-title">Filters</h3>    <div class="modal-body">      <button class="btn btn-primary" (click)="addFilters()">Add</button>        <form clrForm [formGroup]="searchForm"  (ngSubmit)="filter();filterVisible = false">              <div formArrayName="filters" *ngFor="let filter of searchForm.controls.filters.controls; let i = index">                <ng-container [formGroupName]="i">                  <clr-input-container>                    <label>Name</label>                    <input placeholder="Name" clrInput ngModel formControlName="name">                  </clr-input-container>                </ng-container>              </div>              <button type="submit" class="btn btn-primary">Submit</button>              <button type="button" class="btn btn-primary" (click)="filterVisible = false">Cancel</button>          </form>    </div>  </clr-modal></div>'
+    var COMPONENTS = [{'name': 'AdministrationComponent', 'selector': 'app-administration'},{'name': 'AlertsComponent', 'selector': 'app-alerts'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AreaDetailsComponent', 'selector': 'app-area-details'},{'name': 'AreasComponent', 'selector': 'app-areas'},{'name': 'AssetsComponent', 'selector': 'app-assets'},{'name': 'AuditComponent', 'selector': 'app-audit'},{'name': 'AuditsComponent', 'selector': 'app-audits'},{'name': 'CompaniesComponent', 'selector': 'app-companies'},{'name': 'CompanyDetailsComponent', 'selector': 'app-company-details'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DepartmentsComponent', 'selector': 'app-departments'},{'name': 'GroupsComponent', 'selector': 'app-groups'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MethodologiesComponent', 'selector': 'app-methodologies'},{'name': 'PieChartComponent', 'selector': 'app-pie-chart'},{'name': 'ProfileDetailsComponent', 'selector': 'app-profile-details'},{'name': 'ProfilesComponent', 'selector': 'app-profiles'},{'name': 'TestsComponent', 'selector': 'app-tests'},{'name': 'UserDetailsComponent', 'selector': 'app-user-details'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'VulnerabilitiesComponent', 'selector': 'app-vulnerabilities'},{'name': 'VulnerabilityDetailsComponent', 'selector': 'app-vulnerability-details'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'ProfilesComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'ProfilesComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

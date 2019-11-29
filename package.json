@@ -10,7 +10,8 @@
     "e2e": "ng e2e",
     "deploy": "npm run build && firebase deploy",
     "docker:build": "docker build -t atlas-app:latest .",
-    "docker:push": "docker push mmoremol/atlas-app:latest"
+    "docker:push": "docker push mmoremol/atlas-app:latest",
+    "compodoc": "npx compodoc -p tsconfig.json"
   },
   "private": true,
   "dependencies": {
@@ -53,6 +54,7 @@
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
-    "typescript": "~3.5.3"
+    "typescript": "~3.5.3",
+    "@compodoc/compodoc": "^1.1.11"
   }
 }

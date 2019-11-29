@@ -1,0 +1,720 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>atlas-frontend documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">atlas-frontend documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>TestsComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/tests/tests.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-tests</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./tests.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./tests.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#descSort">descSort</a>
+                            </li>
+                            <li>
+                                <a href="#isModalVisible">isModalVisible</a>
+                            </li>
+                            <li>
+                                <a href="#newTest">newTest</a>
+                            </li>
+                            <li>
+                                <a href="#testsList">testsList</a>
+                            </li>
+                            <li>
+                                <a href="#total">total</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#addTest">addTest</a>
+                            </li>
+                            <li>
+                                <a href="#closeModal">closeModal</a>
+                            </li>
+                            <li>
+                                <a href="#deleteTest">deleteTest</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor()</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/tests/tests.component.ts:19</a></div>
+                            </td>
+                        </tr>
+
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addTest"></a>
+                    <span class="name">
+                        <b>
+                            addTest
+                        </b>
+                        <a href="#addTest"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addTest()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="39"
+                            class="link-to-prism">src/app/tests/tests.component.ts:39</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="closeModal"></a>
+                    <span class="name">
+                        <b>
+                            closeModal
+                        </b>
+                        <a href="#closeModal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>closeModal()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="31"
+                            class="link-to-prism">src/app/tests/tests.component.ts:31</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteTest"></a>
+                    <span class="name">
+                        <b>
+                            deleteTest
+                        </b>
+                        <a href="#deleteTest"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>deleteTest(test)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="28"
+                            class="link-to-prism">src/app/tests/tests.component.ts:28</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>test</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="25"
+                            class="link-to-prism">src/app/tests/tests.component.ts:25</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="descSort"></a>
+                        <span class="name">
+                            <b>
+                            descSort</b>
+                            <a href="#descSort"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/tests/tests.component.ts:16</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isModalVisible"></a>
+                        <span class="name">
+                            <b>
+                            isModalVisible</b>
+                            <a href="#isModalVisible"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/tests/tests.component.ts:15</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="newTest"></a>
+                        <span class="name">
+                            <b>
+                            newTest</b>
+                            <a href="#newTest"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/Test.html" target="_self" >Test</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{description: &quot;&quot;, name: &quot;&quot;}</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/tests/tests.component.ts:19</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="testsList"></a>
+                        <span class="name">
+                            <b>
+                            testsList</b>
+                            <a href="#testsList"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/tests/tests.component.ts:17</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="total"></a>
+                        <span class="name">
+                            <b>
+                            total</b>
+                            <a href="#total"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/tests/tests.component.ts:18</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {Component, OnInit} from &#x27;@angular/core&#x27;;
+
+export interface Test {
+  name: string;
+  description: string;
+}
+
+@Component({
+  selector: &#x27;app-tests&#x27;,
+  templateUrl: &#x27;./tests.component.html&#x27;,
+  styleUrls: [&#x27;./tests.component.scss&#x27;]
+})
+
+export class TestsComponent implements OnInit {
+  isModalVisible: boolean;
+  descSort;
+  testsList;
+  total;
+  newTest: Test &#x3D; {description: &quot;&quot;, name: &quot;&quot;};
+
+  constructor() {
+
+  }
+
+  ngOnInit() {
+  }
+
+  deleteTest(test) {
+  }
+
+  closeModal() {
+    this.isModalVisible &#x3D; false;
+    this.newTest &#x3D; {
+      name: &#x27;&#x27;,
+      description: &#x27;&#x27;
+    };
+  }
+
+  addTest() {
+
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;wrap&quot;&gt;
+  &lt;button class&#x3D;&quot;btn btn-outline&quot; (click)&#x3D;&quot;isModalVisible&#x3D;true&quot;&gt;New Test&lt;/button&gt;
+  &lt;clr-datagrid&gt;
+    &lt;clr-dg-column [clrDgField]&#x3D;&quot;&#x27;name&#x27;&quot; [clrDgSortOrder]&#x3D;&quot;descSort&quot;&gt;Name&lt;/clr-dg-column&gt;
+    &lt;clr-dg-column [clrDgField]&#x3D;&quot;&#x27;total&#x27;&quot; [clrDgSortOrder]&#x3D;&quot;descSort&quot;&gt;Description&lt;/clr-dg-column&gt;
+    &lt;clr-dg-row *clrDgItems&#x3D;&quot;let test of testsList&quot; [clrDgItem]&#x3D;&quot;test&quot;&gt;
+      &lt;clr-dg-cell&gt;{{test.name}}&lt;/clr-dg-cell&gt;
+      &lt;clr-dg-cell&gt;{{test.description}}&lt;/clr-dg-cell&gt;
+      &lt;clr-dg-action-overflow&gt;
+        &lt;button class&#x3D;&quot;action-item&quot; (click)&#x3D;&quot;deleteTest(test)&quot;&gt;Delete&lt;/button&gt;
+      &lt;/clr-dg-action-overflow&gt;
+    &lt;/clr-dg-row&gt;
+    &lt;clr-dg-footer&gt;
+      &lt;clr-dg-pagination #pagination [clrDgPageSize]&#x3D;&quot;10&quot;&gt;
+        &lt;clr-dg-page-size [clrPageSizeOptions]&#x3D;&quot;[1,2,10,20,50,100]&quot;&gt;Tests per page&lt;/clr-dg-page-size&gt;
+        {{pagination.firstItem + 1}} - {{pagination.lastItem + 1}} of {{total}} Tests
+      &lt;/clr-dg-pagination&gt;
+    &lt;/clr-dg-footer&gt;
+  &lt;/clr-datagrid&gt;
+&lt;/div&gt;
+
+&lt;clr-modal [(clrModalOpen)]&#x3D;&quot;isModalVisible&quot; [clrModalClosable]&#x3D;&quot;false&quot; [clrModalSize]&#x3D;&quot;&#x27;lg&#x27;&quot;&gt;
+  &lt;h3 class&#x3D;&quot;modal-title&quot;&gt;New Test&lt;/h3&gt;
+  &lt;div class&#x3D;&quot;modal-body&quot;&gt;
+    &lt;form clrForm&gt;
+      &lt;clr-input-container&gt;
+        &lt;label&gt;Name&lt;/label&gt;
+        &lt;input clrInput type&#x3D;&quot;text&quot; [(ngModel)]&#x3D;&quot;newTest.name&quot; name&#x3D;&quot;nameTest&quot; required /&gt;
+      &lt;/clr-input-container&gt;
+      &lt;clr-input-container&gt;
+        &lt;label&gt;Description&lt;/label&gt;
+        &lt;input clrInput type&#x3D;&quot;text&quot; [(ngModel)]&#x3D;&quot;newTest.name&quot; name&#x3D;&quot;descriptionTest&quot; /&gt;
+      &lt;/clr-input-container&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;modal-footer&quot;&gt;
+    &lt;button class&#x3D;&quot;btn btn-primary&quot; (click)&#x3D;&quot;addTest()&quot;&gt;Submit&lt;/button&gt;
+    &lt;button class&#x3D;&quot;btn btn-primary&quot; (click)&#x3D;&quot;closeModal()&quot;&gt;Close&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/clr-modal&gt;
+
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./tests.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="wrap">  <button class="btn btn-outline" (click)="isModalVisible=true">New Test</button>  <clr-datagrid>    <clr-dg-column [clrDgField]="\'name\'" [clrDgSortOrder]="descSort">Name</clr-dg-column>    <clr-dg-column [clrDgField]="\'total\'" [clrDgSortOrder]="descSort">Description</clr-dg-column>    <clr-dg-row *clrDgItems="let test of testsList" [clrDgItem]="test">      <clr-dg-cell>{{test.name}}</clr-dg-cell>      <clr-dg-cell>{{test.description}}</clr-dg-cell>      <clr-dg-action-overflow>        <button class="action-item" (click)="deleteTest(test)">Delete</button>      </clr-dg-action-overflow>    </clr-dg-row>    <clr-dg-footer>      <clr-dg-pagination #pagination [clrDgPageSize]="10">        <clr-dg-page-size [clrPageSizeOptions]="[1,2,10,20,50,100]">Tests per page</clr-dg-page-size>        {{pagination.firstItem + 1}} - {{pagination.lastItem + 1}} of {{total}} Tests      </clr-dg-pagination>    </clr-dg-footer>  </clr-datagrid></div><clr-modal [(clrModalOpen)]="isModalVisible" [clrModalClosable]="false" [clrModalSize]="\'lg\'">  <h3 class="modal-title">New Test</h3>  <div class="modal-body">    <form clrForm>      <clr-input-container>        <label>Name</label>        <input clrInput type="text" [(ngModel)]="newTest.name" name="nameTest" required />      </clr-input-container>      <clr-input-container>        <label>Description</label>        <input clrInput type="text" [(ngModel)]="newTest.name" name="descriptionTest" />      </clr-input-container>    </form>  </div>  <div class="modal-footer">    <button class="btn btn-primary" (click)="addTest()">Submit</button>    <button class="btn btn-primary" (click)="closeModal()">Close</button>  </div></clr-modal></div>'
+    var COMPONENTS = [{'name': 'AdministrationComponent', 'selector': 'app-administration'},{'name': 'AlertsComponent', 'selector': 'app-alerts'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AreaDetailsComponent', 'selector': 'app-area-details'},{'name': 'AreasComponent', 'selector': 'app-areas'},{'name': 'AssetsComponent', 'selector': 'app-assets'},{'name': 'AuditComponent', 'selector': 'app-audit'},{'name': 'AuditsComponent', 'selector': 'app-audits'},{'name': 'CompaniesComponent', 'selector': 'app-companies'},{'name': 'CompanyDetailsComponent', 'selector': 'app-company-details'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DepartmentsComponent', 'selector': 'app-departments'},{'name': 'GroupsComponent', 'selector': 'app-groups'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MethodologiesComponent', 'selector': 'app-methodologies'},{'name': 'PieChartComponent', 'selector': 'app-pie-chart'},{'name': 'ProfileDetailsComponent', 'selector': 'app-profile-details'},{'name': 'ProfilesComponent', 'selector': 'app-profiles'},{'name': 'TestsComponent', 'selector': 'app-tests'},{'name': 'UserDetailsComponent', 'selector': 'app-user-details'},{'name': 'UsersComponent', 'selector': 'app-users'},{'name': 'VulnerabilitiesComponent', 'selector': 'app-vulnerabilities'},{'name': 'VulnerabilityDetailsComponent', 'selector': 'app-vulnerability-details'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'TestsComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'TestsComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

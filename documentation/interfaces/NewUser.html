@@ -1,0 +1,452 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>atlas-frontend documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">atlas-frontend documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content interface">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Interfaces</li>
+  <li>NewUser</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/administration/users/users.component.ts</code>
+        </p>
+
+
+
+        <section>
+            <h3 id="index">Index</h3>
+            <table class="table table-sm table-bordered index-table">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Properties</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                        <a href="#companies">companies</a>
+                                </li>
+                                <li>
+                                        <a href="#name">name</a>
+                                </li>
+                                <li>
+                                        <a href="#profile">profile</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+
+            <section>
+                <h3 id="inputs">Properties</h3>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="companies"></a>
+                                        <span class="name"><b>companies</b><a href="#companies"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>companies:     <code>Company[]</code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>    <code>Company[]</code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="name"></a>
+                                        <span class="name"><b>name</b><a href="#name"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>name:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="profile"></a>
+                                        <span class="name"><b>profile</b><a href="#profile"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>profile:         <code><a href="../interfaces/Profile.html" target="_self" >Profile</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="../interfaces/Profile.html" target="_self" >Profile</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                        </tbody>
+                    </table>
+            </section>
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, ViewChild } from &#x27;@angular/core&#x27;;
+import { Company, Area, Profile, User } from &#x27;src/app/shared/models/models&#x27;;
+import { ClrDatagridSortOrder, ClrWizard } from &#x27;@clr/angular&#x27;;
+import { Subject } from &#x27;rxjs&#x27;;
+import { FormGroup, FormBuilder, FormArray } from &#x27;@angular/forms&#x27;;
+import { debounceTime, distinctUntilChanged, switchMap, map } from &#x27;rxjs/operators&#x27;;
+import { CompanyService } from &#x27;../companies/company.service&#x27;;
+import { AlertsService } from &#x27;src/app/alerts.service&#x27;;
+import { UsersService } from &#x27;./users.service&#x27;;
+import { ProfilesService } from &#x27;../profiles/profile.service&#x27;;
+
+
+interface NewUser {
+  name: string,
+  companies: Company[],
+  profile : Profile
+}
+
+@Component({
+  selector: &#x27;app-users&#x27;,
+  templateUrl: &#x27;./users.component.html&#x27;,
+  styleUrls: [&#x27;./users.component.scss&#x27;]
+})
+export class UsersComponent implements OnInit {
+  constructor(private profileService : ProfilesService,private companyService : CompanyService,private fb : FormBuilder,private alertService : AlertsService, private userService : UsersService) { 
+    this.searchForm &#x3D; this.fb.group({
+      filters: this.fb.array([]),
+    });
+  }
+
+  @ViewChild(&quot;wizardlg&quot;,{read :&quot;&quot;,static: true}) wizardLarge: ClrWizard;
+  @ViewChild(&quot;wizardlg&quot;,{read :&quot;&quot;,static: true}) wizardFilter: ClrWizard;
+  lgOpen: boolean &#x3D; false;
+  descSort &#x3D; ClrDatagridSortOrder.DESC;
+  filters &#x3D; null;
+  companies: Company[];
+  profiles : Profile[];
+  users: User[];
+
+  total: number;
+  defaultAttribute;
+  defaultAttributeProfile;
+  companiesSubject &#x3D; new Subject&lt;string&gt;();
+  profilesSubject &#x3D; new Subject&lt;string&gt;();
+  searchForm: FormGroup;
+  filterVisible: boolean;
+  companies$;
+  profiles$;
+
+
+  getCompanies(user : User) : string{
+    var aux&#x3D;[]
+    user.companies.forEach((company)&#x3D;&gt;{
+      aux.push(company.name)
+    })
+    return aux.join(&quot;,&quot;);
+  }
+  
+  
+  resetForm(){
+    this.searchForm &#x3D; this.fb.group({
+      filters: this.fb.array([]),
+    });
+  }
+  readonly companiesList$ &#x3D; this.companiesSubject.pipe(
+    debounceTime(500),
+    distinctUntilChanged(),
+    switchMap(companyName &#x3D;&gt; this.companyService.getCompanies(companyName, 0)
+      .pipe(
+        map(result &#x3D;&gt; {
+          return result[0];
+        })
+      )
+    ));
+
+    searchCompany(companyName) {
+      if (companyName !&#x3D;&#x3D; &#x27;&#x27;) {
+        this.companiesSubject.next(companyName);
+      }
+    }
+
+
+    readonly profilesList$ &#x3D; this.profilesSubject.pipe(
+      debounceTime(500),
+      distinctUntilChanged(),
+      switchMap(profileName &#x3D;&gt; this.profileService.getProfiles(profileName, 0)
+        .pipe(
+          map(result &#x3D;&gt; {
+            return result[0];
+          })
+        )
+      ));
+  
+      searchProfile(profileName) {
+        if (profileName !&#x3D;&#x3D; &#x27;&#x27;) {
+          this.profilesSubject.next(profileName);
+        }
+      }
+
+
+  ngOnInit() {
+    this.companies$ &#x3D; this.companyService.getCompanies(null, 0).pipe(
+      map(companies &#x3D;&gt; {
+        this.companies &#x3D; companies[0];
+        this.defaultAttribute &#x3D; this.companies[0];
+        this.total &#x3D; companies[1];
+        return companies;
+      })
+    );
+    this.profiles$ &#x3D; this.profileService.getProfiles(null, 0).pipe(
+      map(profiles &#x3D;&gt; {
+        this.profiles &#x3D; profiles[0];
+        this.defaultAttributeProfile &#x3D; this.profiles[0];
+        this.total &#x3D; profiles[1];
+        return profiles;
+      })
+    );
+    this.getUsers(null,0);
+  }
+
+  addUser({value}: { value: NewUser }) {
+    this.userService.addUser(value)
+      .subscribe((res) &#x3D;&gt; {
+        this.alertService.success(&quot;User has been added&quot;)
+        this.getUsers(null,0);
+      },error &#x3D;&gt; {
+        this.alertService.error(error.error.message)
+      }
+      );
+  }
+
+  changeUserValues(user) {
+    var userToUpdate &#x3D; this.users.find(this.findUsers, [user.id])
+    Object.assign(userToUpdate, user)
+  }
+
+  findUsers(u) {
+    return u.id &#x3D;&#x3D; this[0]
+  }
+
+  getUsers(filters, offset) {
+    this.userService.getUsers(filters, offset)
+      .subscribe(
+        (users) &#x3D;&gt; {
+          this.users &#x3D; users[0];
+          this.total &#x3D; users[1]
+        },
+        error &#x3D;&gt; {
+          this.alertService.error(error.error.message)
+        }
+      );
+  }
+
+  cleanEmptyFields(filters) {
+    console.log(filters)
+    filters.forEach(filter &#x3D;&gt; {
+      Object.keys(filter).forEach(field &#x3D;&gt; {
+        if (!filter[field]) {
+          delete filter[field]
+        }
+      })
+    });
+    return filters
+  }
+
+  filter() {
+    this.userService.getUsers(this.cleanEmptyFields(this.searchForm.controls.filters.value), 0)
+      .subscribe((res) &#x3D;&gt; {
+        this.users &#x3D; res[0];
+        this.total &#x3D; res[1];
+        this.filters &#x3D; this.searchForm.controls.filters.value
+      },
+        error &#x3D;&gt; {
+          this.alertService.error(error.error.message)
+        }
+      );
+  }
+
+  addFilters() {
+    var filters &#x3D; this.searchForm.controls.filters as FormArray
+    filters.push(this.fb.group({
+      name: &#x27;&#x27;,
+      profile : &#x27;&#x27;
+    }))
+  }
+ 
+  deleteUser &#x3D; (user: User) &#x3D;&gt; {
+    this.userService.deleteUser(user)
+      .subscribe((user) &#x3D;&gt; {
+        this.alertService.success(&quot;User has been deleted&quot;)
+        this.getUsers(null,0);
+      },
+      error &#x3D;&gt; {
+        this.alertService.error(error.error.message)
+      });
+  };
+
+
+
+}
+</code></pre>
+    </div>
+</div>
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
+            var COMPODOC_CURRENT_PAGE_URL = 'NewUser.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
