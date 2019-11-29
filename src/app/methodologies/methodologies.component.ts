@@ -5,7 +5,7 @@ import {Subject} from 'rxjs';
 import {FormGroup, FormBuilder, FormArray} from '@angular/forms';
 import {debounceTime, distinctUntilChanged, map, switchMap} from 'rxjs/operators';
 import {AlertsService} from '../alerts.service';
-import {MethodologiesService} from '../methodologies/methodologies.service';
+import {MethodologiesService} from './methodologies.service';
 import {CompanyService} from '../administration/companies/company.service';
 
 
@@ -20,6 +20,7 @@ export class MethodologiesComponent implements OnInit {
   @ViewChild('wizardlg', {read: '', static: true}) wizardLarge: ClrWizard;
   @ViewChild('wizardlg', {read: '', static: true}) wizardFilter: ClrWizard;
   lgOpen: boolean = false;
+  testVisible: boolean;
   descSort = ClrDatagridSortOrder.DESC;
   filters = null;
   tests = null;

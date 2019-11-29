@@ -4,13 +4,13 @@
   <clr-datagrid>
     <clr-dg-column [clrDgField]="'name'" [clrDgSortOrder]="descSort">Name</clr-dg-column>
     <clr-dg-column [clrDgField]="'total'" [clrDgSortOrder]="descSort">Description</clr-dg-column>
-      <clr-dg-row *clrDgItems="let methodology of methodologiesList" [clrDgItem]="methodology">
-        <clr-dg-cell>{{methodology.name}}</clr-dg-cell>
-        <clr-dg-cell>{{methodology.description}}</clr-dg-cell>
-        <clr-dg-action-overflow>
-          <button class="action-item" (click)="deleteMethodology(methodology)">Delete</button>
-        </clr-dg-action-overflow>
-      </clr-dg-row>
+    <clr-dg-row *clrDgItems="let methodology of methodologiesList" [clrDgItem]="methodology">
+      <clr-dg-cell>{{methodology.name}}</clr-dg-cell>
+      <clr-dg-cell>{{methodology.description}}</clr-dg-cell>
+      <clr-dg-action-overflow>
+        <button class="action-item" (click)="deleteMethodology(methodology)">Delete</button>
+      </clr-dg-action-overflow>
+    </clr-dg-row>
     <clr-dg-footer>
       <clr-dg-pagination #pagination [clrDgPageSize]="10">
         <clr-dg-page-size [clrPageSizeOptions]="[1,2,10,20,50,100]">Areas per page</clr-dg-page-size>
@@ -37,15 +37,29 @@
         <br>
       </div>
       <div class="right-container"><br>
-          <label>Company</label>
-          <ng-select style="width: 100%" placeholder="Select one company"
-                     [items]="companiesList$ |async" bindLabel="name" [(ngModel)]="newMethodology.company"
-                     (input)="searchCompany($event.target.value)" name="company" [clearable]="false">
-          </ng-select>
-          <br>
+        <label>Company</label>
+        <ng-select style="width: 100%" placeholder="Select one company"
+                   [items]="companiesList$ |async" bindLabel="name" [(ngModel)]="newMethodology.company"
+                   (input)="searchCompany($event.target.value)" name="company" [clearable]="false">
+        </ng-select>
+        <br>
         <label for="select-full" class="clr-control-label">Tests</label>
         <div>
           <button class="btn btn-primary" (click)="addTests()">Add test</button>
+          <form clrForm [formGroup]="searchForm" (ngSubmit)="test();testVisible = false">
+            <div formArrayName="tests" *ngFor="let test of searchForm.controls.tests.controls; let i = index">
+              <ng-container [formGroupName]="i">
+                <clr-input-container>
+                  <label>Name</label>
+                  <input placeholder="Name" clrInput ngModel formControlName="name">
+                </clr-input-container>
+                <clr-input-container>
+                  <label>Description</label>
+                  <input placeholder="Description" ngModel clrInput formControlName="description">
+                </clr-input-container>
+              </ng-container>
+            </div>
+          </form>
         </div>
       </div>
     </form>
