@@ -13,6 +13,7 @@ import { UsersComponent } from './administration/users/users.component';
 import {MethodologiesComponent} from './methodologies/methodologies.component';
 import { VulnerabilitiesComponent } from './vulnerabilities/vulnerabilities.component';
 import { AuditsComponent } from './audits/audits.component';
+import {TestsComponent} from './tests/tests.component';
 
 
 const routes: Routes = [
@@ -34,6 +35,7 @@ const routes: Routes = [
     ]
   },
   {path: 'methodologies', component: MethodologiesComponent},
+  {path: 'tests', component: TestsComponent},
 ];
 
 @NgModule({

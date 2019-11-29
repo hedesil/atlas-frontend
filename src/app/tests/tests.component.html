@@ -1,0 +1,20 @@
+<div class="wrap">
+  <button class="btn btn-outline" (click)="isModalVisible=true">New Test</button>
+  <clr-datagrid>
+    <clr-dg-column [clrDgField]="'name'" [clrDgSortOrder]="descSort">Name</clr-dg-column>
+    <clr-dg-column [clrDgField]="'total'" [clrDgSortOrder]="descSort">Description</clr-dg-column>
+    <clr-dg-row *clrDgItems="let test of testsList" [clrDgItem]="test">
+      <clr-dg-cell>{{test.name}}</clr-dg-cell>
+      <clr-dg-cell>{{test.description}}</clr-dg-cell>
+      <clr-dg-action-overflow>
+        <button class="action-item" (click)="deleteTest(test)">Delete</button>
+      </clr-dg-action-overflow>
+    </clr-dg-row>
+    <clr-dg-footer>
+      <clr-dg-pagination #pagination [clrDgPageSize]="10">
+        <clr-dg-page-size [clrPageSizeOptions]="[1,2,10,20,50,100]">Areas per page</clr-dg-page-size>
+        {{pagination.firstItem + 1}} - {{pagination.lastItem + 1}} of {{total}} Areas
+      </clr-dg-pagination>
+    </clr-dg-footer>
+  </clr-datagrid>
+</div>
