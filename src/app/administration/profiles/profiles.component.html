@@ -200,6 +200,29 @@
           </clr-stack-label>
         </clr-stack-block>
       </clr-stack-block>
+      <clr-stack-block [(clrSbExpanded)]="expanded[10]">
+        <clr-stack-label>Knowledge</clr-stack-label>
+        <clr-stack-block>
+          <clr-stack-label>
+            <div class="clr-toggle-wrapper">
+              <input type="checkbox" id="toggle62" [(ngModel)]="switches[62]" (checked)="switches[62]" (change)="toggle2($event,'ADD KNOWLEDGE')" class="clr-toggle">
+              <label for="toggle62" class="clr-control-label">ADD</label>
+            </div>
+            <div class="clr-toggle-wrapper">
+              <input type="checkbox" id="toggle63" [(ngModel)]="switches[63]" (checked)="switches[63]" (change)="toggle2($event,'MODIFY KNOWLEDGE')" class="clr-toggle">
+              <label for="toggle63" class="clr-control-label">MODIFY</label>
+            </div>
+            <div class="clr-toggle-wrapper">
+              <input type="checkbox" id="toggle64" [(ngModel)]="switches[64]" (checked)="switches[64]" (change)="toggle2($event,'DELETE KNOWLEDGE')" class="clr-toggle">
+              <label for="toggle64" class="clr-control-label">DELETE</label>
+            </div>
+            <div class="clr-toggle-wrapper">
+              <input type="checkbox" id="toggle65" [(ngModel)]="switches[65]" (checked)="switches[65]" (change)="toggle2($event,'GET KNOWLEDGE')" class="clr-toggle">
+              <label for="toggle65" class="clr-control-label">GET</label>
+            </div>
+          </clr-stack-label>
+        </clr-stack-block>
+      </clr-stack-block>
       <clr-stack-block [(clrSbExpanded)]="expanded[3]">
         <clr-stack-label>Evidences</clr-stack-label>
         <clr-stack-block>

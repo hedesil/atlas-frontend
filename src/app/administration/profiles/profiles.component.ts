@@ -28,9 +28,9 @@ export class ProfilesComponent implements OnInit {
   profiles: Profile[];
   newProfile : Profile = { name : '', functionalities : [] };
   isModalVisible = false
-  expanded = new Array(10);
+  expanded = new Array(11);
 
-  switches = new Array(62)
+  switches = new Array(66)
   total: number;
   defaultAttribute;
   companiesSubject = new Subject<string>();
