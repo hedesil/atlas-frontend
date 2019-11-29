@@ -4,11 +4,12 @@ import {Subject} from 'rxjs';
 import {debounceTime, distinctUntilChanged, map, switchMap} from 'rxjs/operators';
 import {CompanyService} from '../administration/companies/company.service';
 import {TestsService} from './tests.service';
+import {AlertsService} from '../alerts.service';
 
 export interface Test {
-  name: string;
-  description: string;
-  company: Company;
+  name?: string;
+  description?: string;
+  company?: Company;
 }
 
 @Component({
@@ -36,7 +37,7 @@ export class TestsComponent implements OnInit {
       )
     ));
 
-  constructor(private companyService: CompanyService, private testsService: TestsService) {
+  constructor(private companyService: CompanyService, private testsService: TestsService, private alertsService: AlertsService) {
 
   }
 
@@ -61,6 +62,15 @@ export class TestsComponent implements OnInit {
   }
 
   deleteTest(test) {
+    this.testsService.deleteTest(test)
+      .subscribe(
+        (res) => {
+          this.alertsService.success('Methodology has been deleted');
+          this.getTests();
+        }, error => {
+          this.alertsService.error(error.error.message);
+        }
+      );
   }
 
   closeModal() {
@@ -73,6 +83,14 @@ export class TestsComponent implements OnInit {
   }
 
   addTest() {
-
+    this.testsService.addTest(this.newTest)
+      .subscribe(
+      (res) => {
+        this.alertsService.success('Methodology has been added');
+        this.getTests();
+      }, error => {
+        this.alertsService.error(error.error.message);
+      }
+    );
   }
 }
