@@ -3,7 +3,7 @@ import {HttpClient, HttpErrorResponse} from '@angular/common/http';
 import {Observable, of, throwError} from 'rxjs';
 import {catchError, delay, filter, map, tap} from 'rxjs/operators';
 import {Company} from '../../shared/models/company';
-import {AppConstants, atlas_url} from '../../shared/constants/constants';
+import {AppConstants} from '../../shared/constants/constants';
 
 @Injectable({
   providedIn: 'root'

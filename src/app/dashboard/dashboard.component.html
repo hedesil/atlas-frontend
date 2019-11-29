@@ -1,45 +1,45 @@
 <div class="wrap">
-    <div class="clr-row">
-        <div class="clr-col-lg-3 clr-col-3">
-            <a [routerLink]="['/administration/areas']" routerLinkActive="active" class="card clickable">
-                <div class="card-block">
-                    <p class="card-text">
-                        <clr-icon shape="blocks-group"></clr-icon>
-                        {{nAreas}} Areas
-                    </p>
-                </div>
-            </a>
+  <div class="clr-row">
+    <div class="clr-col-lg-3 clr-col-3">
+      <a [routerLink]="['/administration/areas']" routerLinkActive="active" class="card clickable">
+        <div class="card-block">
+          <p class="card-text">
+            <clr-icon shape="blocks-group"></clr-icon>
+            {{nAreas}} Areas
+          </p>
         </div>
-        <div class="clr-col-lg-3 clr-col-3">
-            <a [routerLink]="['/administration/companies']" routerLinkActive="active" class="card clickable">
-                <div class="card-block">
-                    <p class="card-text">
-                        <clr-icon shape="block"></clr-icon>
-                        {{nCompanies}} Companies
-                    </p>
-                </div>
-            </a>
-        </div>
-        <div class="clr-col-lg-3 clr-col-3">
-            <a [routerLink]="['/administration/profiles']" routerLinkActive="active" class="card clickable">
-                <div class="card-block">
-                    <p class="card-text">
-                        <clr-icon shape="key"></clr-icon>
-                        {{nProfiles}} Profiles
-                    </p>
-                </div>
-            </a>
-        </div>
-        <div class="clr-col-lg-3 clr-col-3">
-            <a [routerLink]="['/administration/users']" routerLinkActive="active" class="card clickable">
-                <div class="card-block">
-                    <p class="card-text">
-                        <clr-icon shape="users"></clr-icon>
-                        {{nUsers}} Users
-                    </p>
-                </div>
-            </a>
-        </div>
+      </a>
     </div>
+    <div class="clr-col-lg-3 clr-col-3">
+      <a [routerLink]="['/administration/companies']" routerLinkActive="active" class="card clickable">
+        <div class="card-block">
+          <p class="card-text">
+            <clr-icon shape="block"></clr-icon>
+            {{nCompanies}} Companies
+          </p>
+        </div>
+      </a>
+    </div>
+    <div class="clr-col-lg-3 clr-col-3">
+      <a [routerLink]="['/administration/profiles']" routerLinkActive="active" class="card clickable">
+        <div class="card-block">
+          <p class="card-text">
+            <clr-icon shape="key"></clr-icon>
+            {{nProfiles}} Profiles
+          </p>
+        </div>
+      </a>
+    </div>
+    <div class="clr-col-lg-3 clr-col-3">
+      <a [routerLink]="['/administration/users']" routerLinkActive="active" class="card clickable">
+        <div class="card-block">
+          <p class="card-text">
+            <clr-icon shape="users"></clr-icon>
+            {{nUsers}} Users
+          </p>
+        </div>
+      </a>
+    </div>
+  </div>
 </div>
 <app-pie-chart></app-pie-chart>

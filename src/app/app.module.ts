@@ -8,8 +8,6 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {LoginComponent} from './login/login.component';
 import {AssetsComponent} from './assets/assets.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
-import {SearchComponent} from './search/search.component';
-import {SearchService} from './search/search.service';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {AdministrationComponent} from './administration/administration.component';
 import {CompaniesComponent} from './administration/companies/companies.component';
@@ -37,7 +35,6 @@ import { AuditComponent } from './audit/audit.component';
     LoginComponent,
     AssetsComponent,
     DashboardComponent,
-    SearchComponent,
     AdministrationComponent,
     CompaniesComponent,
     AreasComponent,
@@ -66,7 +63,7 @@ import { AuditComponent } from './audit/audit.component';
     ReactiveFormsModule,
     ChartsModule
   ],
-  providers: [SearchService, CompanyService, AreaService],
+  providers: [CompanyService, AreaService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
