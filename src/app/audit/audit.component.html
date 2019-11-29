@@ -1,0 +1,69 @@
+<p>audit works!</p>
+<div class="wrap">
+  <button class="btn btn-outline" (click)="isModalAudit=true">New Audit</button>
+  <!-- Filtro parte inferior para mostrar las auditorias existentes  --> 
+  <!-- <clr-datagrid>
+    <clr-dg-column [clrDgField]="'name'" [clrDgSortOrder]="descSort">Name</clr-dg-column>
+    <clr-dg-column [clrDgField]="'type'" [clrDgSortOrder]="descSort">Type</clr-dg-column> 
+    <clr-dg-column [clrDgField]="'risk'" [clrDgSortOrder]="descSort">Risk</clr-dg-column>
+    <clr-dg-column [clrDgField]="'status'" [clrDgSortOrder]="descSort">Status</clr-dg-column> 
+    <clr-dg-column [clrDgField]="'company'" [clrDgSortOrder]="descSort">Company</clr-dg-column>
+    <clr-dg-column [clrDgField]="'area'" [clrDgSortOrder]="descSort">Area</clr-dg-column>
+    <clr-dg-row *clrDgItems="let asset of assets" [clrDgItem]="asset">
+      <clr-dg-cell>{{asset.name}}</clr-dg-cell>
+      <clr-dg-cell *ngIf="asset.class==0">
+        <clr-icon shape="world"></clr-icon>
+      </clr-dg-cell>
+      <clr-dg-cell *ngIf="asset.class==1">
+        <clr-icon shape="mobile"></clr-icon>
+      </clr-dg-cell>
+      <clr-dg-cell *ngIf="asset.class==2">
+        <clr-icon shape="router"></clr-icon>
+      </clr-dg-cell>
+      <clr-dg-cell *ngIf="asset.class==3">
+        <clr-icon shape="usb"></clr-icon>
+      </clr-dg-cell>
+      <clr-dg-cell>
+        C:<span class="badge badge-blue">{{asset.confidenciality}}</span>
+        I:<span class="badge badge-blue">{{asset.integrity}}</span>
+        A:<span class="badge badge-blue">{{asset.availability}}</span>
+        T:<span class="badge badge-blue">{{asset.trazability}}</span>
+        Au:<span class="badge badge-blue">{{asset.authorization}}</span>
+      </clr-dg-cell>
+      <clr-dg-cell *ngIf="asset.status==0">On development</clr-dg-cell>
+      <clr-dg-cell *ngIf="asset.status==1">Production</clr-dg-cell>
+      <clr-dg-cell *ngIf="asset.status==2">To be decomissioned</clr-dg-cell>
+      <clr-dg-cell *ngIf="asset.status==3">Decomissioned</clr-dg-cell>
+      <clr-dg-cell>{{asset.company.name}}</clr-dg-cell>
+      <clr-dg-cell>{{asset.businessArea.name}}</clr-dg-cell>
+      <clr-dg-action-overflow>
+        <button class="action-item" (click)="deleteAsset(asset)">Delete</button>
+      </clr-dg-action-overflow>
+<!--      <app-asset-details *clrIfExpanded [input]="asset"  (emit)="changeAssetValues($event)" ngProjectAs="clr-dg-row-detail"></app-asset-details>-->
+<!--    </clr-dg-row>
+    <clr-dg-footer>
+      <clr-dg-pagination #pagination [clrDgPageSize]="10" [clrDgTotalItems]="total">
+        <clr-dg-page-size [clrPageSizeOptions]="[1,2,10,20,50,100]">Assets per page</clr-dg-page-size>
+        {{pagination.firstItem + 1}} - {{pagination.lastItem + 1}} of {{total}} Assets
+      </clr-dg-pagination>
+    </clr-dg-footer>
+  </clr-datagrid>
+</div>
+-->
+<clr-modal [(clrModalOpen)]="isModalVisible" [clrModalClosable]="false" [clrModalSize]="'lg'">
+  <h3 class="modal-title">New Audit</h3>
+  <div class="modal-body">
+  <div class="clr-form-control">
+      <label for="basic" class="clr-control-label">Name</label>
+      <input type="text" name="name" class="clr-input" [(ngModel)]="newAudit.name" placeholder="Audit name" />
+    </div>
+    <div class="clr-form-control">
+      <label for="basic" class="clr-control-label">Type</label>
+      <input type="text" name="type" class="clr-input" [(ngModel)]="newAudit.type" placeholder="Type audit" />
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-outline" (click)="addAsset();closeModal()" type="button">Submit</button>
+    <button class="btn btn-primary" (click)="closeModal()" type="button">Cancel</button>
+  </div>
+</clr-modal>
