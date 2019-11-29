@@ -1,0 +1,83 @@
+<div class="wrap">
+    <button class="btn btn-outline" (click)="lgOpen=true">Add audit</button>
+    <button class="btn btn-outline" (click)="filterVisible=true">Filter</button>
+
+    <clr-datagrid>
+        <clr-dg-column [clrDgField]="'name'" [clrDgSortOrder]="descSort">Name</clr-dg-column>
+        <clr-dg-column [clrDgField]="'asset'" [clrDgSortOrder]="descSort">Asset</clr-dg-column>
+        <clr-dg-column [clrDgField]="'asset'" [clrDgSortOrder]="descSort">Url</clr-dg-column>
+        <clr-dg-column [clrDgField]="'vulnerabilities'">Vulnerabilities</clr-dg-column>
+        <clr-dg-row *clrDgItems="let audit of audits" [clrDgItem]="audit">
+            <clr-dg-cell>{{audit.name}}</clr-dg-cell>
+            <clr-dg-cell>{{audit.asset.name}}</clr-dg-cell>
+            <clr-dg-cell>{{audit.url.url}}</clr-dg-cell>
+            <clr-dg-cell>
+                <a href="..." class="label label-purple clickable">
+                    Critical
+                    <span class="badge">{{getNVulns(audit,'Critical')}}</span>
+                </a>
+                <a href="..." class="label label-danger clickable">
+                    High
+                    <span class="badge">{{getNVulns(audit,'High')}}</span>
+                </a>
+                <a href="..." class="label label-warning clickable">
+                    Medium
+                    <span class="badge">{{getNVulns(audit,'Medium')}}</span>
+                </a>
+                <a href="..." class="label label-success clickable">
+                    Low
+                    <span class="badge">{{getNVulns(audit,'Low')}}</span>
+                </a>
+            </clr-dg-cell>
+        </clr-dg-row>
+
+    </clr-datagrid>
+
+
+
+    <clr-wizard #wizardlg [(clrWizardOpen)]="lgOpen" clrWizardSize="lg">
+            <clr-wizard-title>New audit</clr-wizard-title>
+          
+            <clr-wizard-button [type]="'cancel'">Cancel</clr-wizard-button>
+            <clr-wizard-button [type]="'previous'">Back</clr-wizard-button>
+            <clr-wizard-button [type]="'next'">Next</clr-wizard-button>
+            <clr-wizard-button [type]="'finish'">Finish</clr-wizard-button>
+                  
+            <clr-wizard-page>
+              <ng-template clrPageTitle>Info</ng-template>
+              <form class="clr-form" #newAudit="ngForm">
+                <div class="clr-form-control">
+                  <label for="example" class="clr-control-label">Name</label>
+                  <div class="clr-control-container">
+                    <input type="text" name="name" clrInput ngModel placeholder="Audit's name" />
+                  </div>
+                </div>
+                <div class="clr-form-control">
+                  <label for="select-full" class="clr-control-label">Asset</label>
+                  <div class="clr-control-container">
+                    <ng-select style="width: 250px" placeholder="Asset name"
+                      [items]="assetsList$ |async" bindLabel="name" [(ngModel)]="defaultAttributeAsset"
+                      (input)="searchAsset($event.target.value)" name="asset" [clearable]="false">
+                    </ng-select>
+                  </div>
+                </div>
+                <div class="clr-form-control">
+                        <label for="select-full" class="clr-control-label">Methodology</label>
+                        <div class="clr-control-container">
+                          <ng-select style="width: 250px" placeholder="Methodologies name"
+                            [items]="methodologiesList$ |async" bindLabel="name" [(ngModel)]="defaultAttributeMethodology"
+                            (input)="searchMethodology($event.target.value)" name="methodology" [clearable]="false">
+                          </ng-select>
+                        </div>
+                      </div>
+              </form>
+            </clr-wizard-page>
+            <clr-wizard-page>
+                    <ng-template clrPageTitle>Tools</ng-template>
+                    <clr-checkbox-wrapper *ngFor="let pentestTool of _pentestTools">
+                            <input type="checkbox" clrCheckbox value="{{pentestTool.name}}" name="tool" />
+                            <label>{{pentestTool.name}}</label>
+                          </clr-checkbox-wrapper>
+            </clr-wizard-page>
+          </clr-wizard>
+</div>

@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Asset } from '../shared/models/asset';
 import { Subject } from 'rxjs';
 import { Company } from '../shared/models/models';
@@ -30,23 +30,23 @@ export class AssetsComponent implements OnInit {
   expanded = new Array(9);
   companies: Company[];
   total: number;
-  newAsset : Asset = { name : ''}
-  defaultAttribute;
+  newAsset: Asset = { name: '' }
   areasSubject = new Subject<string>();
   areas$;
   defaultAttributeArea;
+  defaultAttributeCompany;
+  companies$;
 
-
-
-
-  private readonly _assetTypes;
-  private readonly _statusTypes;
-  private readonly _enviromentTypes;
-  private readonly _assetVisibilityTypes;
-  private readonly _grcValues;
-
-
-
+  readonly companiesList$ = this.companiesSubject.pipe(
+    debounceTime(500),
+    distinctUntilChanged(),
+    switchMap(companyName => this.companyService.getCompanies(companyName, 0)
+      .pipe(
+        map(result => {
+          return result[0];
+        })
+      )
+    ));
 
   readonly areasList$ = this.areasSubject.pipe(
     debounceTime(500),
@@ -60,11 +60,19 @@ export class AssetsComponent implements OnInit {
     ));
 
 
-  constructor(private areaService : AreaService, private companyService: CompanyService, private fb: FormBuilder, private alertService: AlertsService, private assetService : AssetService) {
+  private readonly _assetTypes;
+  private readonly _statusTypes;
+  private readonly _enviromentTypes;
+  private readonly _assetVisibilityTypes;
+  private readonly _grcValues;
+  private readonly _trackingSystems;
+
+  constructor(private areaService: AreaService, private companyService: CompanyService, private fb: FormBuilder, private alertService: AlertsService, private assetService: AssetService) {
     this.searchForm = this.fb.group({
       filters: this.fb.array([]),
     });
 
+    this._trackingSystems = AppConstants.trackingSystems;
     this._statusTypes = AppConstants.statusTypes
     this._assetTypes = AppConstants.assetTypes
     this._enviromentTypes = AppConstants.enviromentTypes
@@ -73,7 +81,7 @@ export class AssetsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getAssets(null,0)
+    this.getAssets(null, 0)
   }
 
   searchCompany(companyName) {
@@ -88,24 +96,28 @@ export class AssetsComponent implements OnInit {
     }
   }
 
-  closeModal(){
+  closeModal() {
     this.isModalVisible = false
-    this.newAsset = { name : ''}
+    this.newAsset = { name: '' }
     this.closeStacked()
   }
-  closeStacked(){
-    for(var i = 0;i< this.expanded.length;i++){
-      this.expanded[i]=false
+  closeStacked() {
+    for (var i = 0; i < this.expanded.length; i++) {
+      this.expanded[i] = false
     }
   }
 
-  addAsset({ value } : {value}){
-    this.assetService.addAsset(value)
+  addAsset() {
+    this.newAsset.company = this.defaultAttributeCompany
+    this.newAsset.businessArea = this.defaultAttributeArea
+    this.newAsset.urls = this.cleanEmptyFields(this.searchForm.controls.filters.value)
+    console.log(this.newAsset)
+    this.assetService.addAsset(this.newAsset)
       .subscribe(
         res => {
           this.alertService.success("Asset has been added")
           this.getAssets(null, 0);
-        },error => {
+        }, error => {
           this.alertService.error(error.error.message)
         }
       )
@@ -161,8 +173,9 @@ export class AssetsComponent implements OnInit {
   addFilters() {
     var filters = this.searchForm.controls.filters as FormArray
     filters.push(this.fb.group({
+      enviroment: '',
       name: '',
-      description: ''
+      port: ''
     }))
   }
 

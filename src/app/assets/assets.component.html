@@ -1,37 +1,49 @@
 <div class="wrap">
   <button class="btn btn-outline" (click)="isModalVisible=true">New Asset</button>
+  <button class="btn btn-outline" (click)="filterVisible=true">Filter</button>
   <clr-datagrid>
-    <clr-dg-column>Name</clr-dg-column>
-    <clr-dg-column>Type</clr-dg-column>
-    <clr-dg-column>Visibility</clr-dg-column>
-    <clr-dg-column>Access logs</clr-dg-column>
-    <clr-dg-column>Activity logs</clr-dg-column>
-    <clr-dg-column>Reports</clr-dg-column>
-    <clr-dg-column>Alerts</clr-dg-column>
-    <clr-dg-column>GCU</clr-dg-column>
-    <clr-dg-column>Risk</clr-dg-column>
-    <clr-dg-column>Last audit</clr-dg-column>
-    <clr-dg-column>Next audit</clr-dg-column>
-    <clr-dg-column>Status</clr-dg-column>
-
-    <clr-dg-row *ngFor="let asset of assets">
+    <clr-dg-column [clrDgField]="'name'" [clrDgSortOrder]="descSort">Name</clr-dg-column>
+    <clr-dg-column [clrDgField]="'type'" [clrDgSortOrder]="descSort">Type</clr-dg-column> 
+    <clr-dg-column [clrDgField]="'risk'" [clrDgSortOrder]="descSort">Risk</clr-dg-column>
+    <clr-dg-column [clrDgField]="'status'" [clrDgSortOrder]="descSort">Status</clr-dg-column> 
+    <clr-dg-column [clrDgField]="'company'" [clrDgSortOrder]="descSort">Company</clr-dg-column>
+    <clr-dg-column [clrDgField]="'area'" [clrDgSortOrder]="descSort">Area</clr-dg-column>
+    <clr-dg-row *clrDgItems="let asset of assets" [clrDgItem]="asset">
       <clr-dg-cell>{{asset.name}}</clr-dg-cell>
-      <clr-dg-cell>{{asset.type}}</clr-dg-cell>
-      <clr-dg-cell>{{asset.visibility}}</clr-dg-cell>
-      <clr-dg-cell>{{asset.accessLogs}}</clr-dg-cell>
-      <clr-dg-cell>{{asset.activityLogs}}</clr-dg-cell>
-      <clr-dg-cell>{{asset.reports}}</clr-dg-cell>
-      <clr-dg-cell>{{asset.alerts}}</clr-dg-cell>
-      <clr-dg-cell>{{asset.gcu}}</clr-dg-cell>
-      <clr-dg-cell>{{asset.risk}}</clr-dg-cell>
-      <clr-dg-cell>{{asset.lastAudit}}</clr-dg-cell>
-      <clr-dg-cell>{{asset.nextAudit}}</clr-dg-cell>
-      <clr-dg-cell>{{asset.status}}</clr-dg-cell>
+      <clr-dg-cell *ngIf="asset.class==0">
+        <clr-icon shape="world"></clr-icon>
+      </clr-dg-cell>
+      <clr-dg-cell *ngIf="asset.class==1">
+        <clr-icon shape="mobile"></clr-icon>
+      </clr-dg-cell>
+      <clr-dg-cell *ngIf="asset.class==2">
+        <clr-icon shape="router"></clr-icon>
+      </clr-dg-cell>
+      <clr-dg-cell *ngIf="asset.class==3">
+        <clr-icon shape="usb"></clr-icon>
+      </clr-dg-cell>
+      <clr-dg-cell>
+        C:<span class="badge badge-blue">{{asset.confidenciality}}</span>
+        I:<span class="badge badge-blue">{{asset.integrity}}</span>
+        A:<span class="badge badge-blue">{{asset.availability}}</span>
+        T:<span class="badge badge-blue">{{asset.trazability}}</span>
+        Au:<span class="badge badge-blue">{{asset.authorization}}</span>
+      </clr-dg-cell>
+      <clr-dg-cell *ngIf="asset.status==0">On development</clr-dg-cell>
+      <clr-dg-cell *ngIf="asset.status==1">Production</clr-dg-cell>
+      <clr-dg-cell *ngIf="asset.status==2">To be decomissioned</clr-dg-cell>
+      <clr-dg-cell *ngIf="asset.status==3">Decomissioned</clr-dg-cell>
+      <clr-dg-cell>{{asset.company.name}}</clr-dg-cell>
+      <clr-dg-cell>{{asset.businessArea.name}}</clr-dg-cell>
+      <clr-dg-action-overflow>
+        <button class="action-item" (click)="deleteAsset(asset)">Delete</button>
+      </clr-dg-action-overflow>
+<!--      <app-asset-details *clrIfExpanded [input]="asset"  (emit)="changeAssetValues($event)" ngProjectAs="clr-dg-row-detail"></app-asset-details>-->
     </clr-dg-row>
     <clr-dg-footer>
-      <clr-dg-pagination #pagination [clrDgPageSize]="10">
-        <clr-dg-page-size [clrPageSizeOptions]="[10,20,50,100]">Assets per page</clr-dg-page-size>
-        {{pagination.firstItem + 1}} - {{pagination.lastItem + 1}} of {{pagination.totalItems}} Assets
+      <clr-dg-pagination #pagination [clrDgPageSize]="10" [clrDgTotalItems]="total">
+        <clr-dg-page-size [clrPageSizeOptions]="[1,2,10,20,50,100]">Assets per page</clr-dg-page-size>
+        {{pagination.firstItem + 1}} - {{pagination.lastItem + 1}} of {{total}} Assets
       </clr-dg-pagination>
     </clr-dg-footer>
   </clr-datagrid>
@@ -75,11 +87,21 @@
         <clr-stack-block>
           <clr-stack-label>Type</clr-stack-label>
           <clr-stack-content class="clr-select-wrapper">
-            <select class="clr-select" name="type" [(ngModel)]="newAsset.class">
+            <select class="clr-select" name="kind" [(ngModel)]="newAsset.kind">
               <option [ngValue]="assetType.value" *ngFor="let assetType of _assetTypes">{{assetType.name}}</option>
             </select>
           </clr-stack-content>
         </clr-stack-block>
+        <clr-stack-block>
+            <clr-stack-label>Company</clr-stack-label>
+            <clr-stack-content class="clr-select-wrapper">
+              <div class="clr-control-container">
+                <ng-select appendTo="body" style="width: 250px;" placeholder="Company" [items]="companiesList$ |async" bindLabel="name" [(ngModel)]="defaultAttributeCompany"
+                  (input)="searchCompany($event.target.value)" name="company" [clearable]="false">
+                </ng-select>
+              </div>
+            </clr-stack-content>
+          </clr-stack-block>
         <clr-stack-block>
           <clr-stack-label>Area</clr-stack-label>
           <clr-stack-content class="clr-select-wrapper">
@@ -112,28 +134,34 @@
             <textarea placeholder="Describe something" [(ngModel)]="newAsset.description" class="clr-textarea"></textarea>
           </clr-stack-content>
         </clr-stack-block>
-        <clr-stack-block *ngIf="newAsset.class==0">
+        <clr-stack-block *ngIf="newAsset.kind==0">
           <clr-stack-label>URLs</clr-stack-label>
           <clr-stack-content>
+              <button class="btn btn-primary" (click)="addFilters()">Add</button>
+              <form clrForm [formGroup]="searchForm">
               <div formArrayName="filters" *ngFor="let filter of searchForm.controls.filters.controls; let i = index">
-                  <ng-container [formGroupName]="i">
-                      <div class="clr-form-control">
-                          <label for="example" class="clr-control-label">Name</label>
-                          <div class="clr-control-container">
-                            <input placeholder="Name" clrInput ngModel formControlName="name">
-                          </div>
-                        </div>
-                        <div class="clr-form-control">
-                          <label for="select-full" class="clr-control-label">Company</label>
-                          <div class="clr-control-container">
-                            <ng-select style="width: 250px" placeholder="B&uacute;squeda por compañ&iacute;a"
-                              [items]="companiesList$ |async" bindLabel="name" ngModel
-                              (input)="searchCompany($event.target.value)"   [clearable]="false" formControlName="company">
-                            </ng-select>
-                          </div>
-                        </div>
-                  </ng-container>
+              <ng-container [formGroupName]="i">
+                <div class="clr-form-control">
+                  <label for="example" class="clr-control-label">Enviroment</label>
+                  <div class="clr-control-container">
+                    <input placeholder="Enviroment" clrInput ngModel formControlName="enviroment">
+                  </div>
                 </div>
+                <div class="clr-form-control">
+                    <label for="example" class="clr-control-label">Name</label>
+                    <div class="clr-control-container">
+                      <input placeholder="Name" clrInput ngModel formControlName="name">
+                    </div>
+                  </div>
+                  <div class="clr-form-control">
+                      <label for="example" class="clr-control-label">Port</label>
+                      <div class="clr-control-container">
+                        <input placeholder="Port" clrInput ngModel formControlName="port">
+                      </div>
+                    </div>
+              </ng-container>
+            </div>
+            </form>
           </clr-stack-content>
         </clr-stack-block>
       </clr-stack-block>
@@ -180,10 +208,56 @@
           </clr-stack-content>
         </clr-stack-block>
       </clr-stack-block>
+      <clr-stack-block>
+        <clr-stack-label>Tracking</clr-stack-label>
+        <clr-stack-block *ngFor="let trackingSystem of _trackingSystems">
+          <clr-stack-label>{{trackingSystem.name}}</clr-stack-label>
+          <clr-stack-content>
+              <input type="text" name="{{trackingSystem.name}}" class="clr-input" placeholder="Project's URL" />
+          </clr-stack-content>
+        </clr-stack-block>
+      </clr-stack-block>
     </clr-stack-view>
   </div>
   <div class="modal-footer">
     <button class="btn btn-outline" (click)="addAsset();closeModal()" type="button">Submit</button>
     <button class="btn btn-primary" (click)="closeModal()" type="button">Cancel</button>
+  </div>
+</clr-modal>
+
+<clr-modal [(clrModalOpen)]="filterVisible" [clrModalSize]="'lg'">
+  <h3 class="modal-title">Filters</h3>
+  <div class="modal-body">
+    <button class="btn btn-primary" (click)="addFilters()">Add</button>
+      <form clrForm [formGroup]="searchForm"  (ngSubmit)="filter();filterVisible = false">
+            <div formArrayName="filters" *ngFor="let filter of searchForm.controls.filters.controls; let i = index">
+              <ng-container [formGroupName]="i">
+                <clr-input-container>
+                  <label>Name</label>
+                  <input placeholder="Name" clrInput ngModel formControlName="name">
+                </clr-input-container>
+                <clr-input-container>
+                  <label>Project Code</label>
+                  <input placeholder="Project code" clrInput ngModel formControlName="hgf">
+                </clr-input-container>
+                <div class="clr-select-wrapper">
+                  <select class="clr-select" name="status" [(ngModel)]="newAsset.status">
+                    <option [ngValue]="statusType.value" *ngFor="let statusType of _statusTypes">{{statusType.name}}</option>
+                  </select>
+                </div>
+                <clr-input-container>
+                  <label>Alias</label>
+                  <input placeholder="Alias" clrInput ngModel formControlName="alias">
+                </clr-input-container>
+                <div class="clr-select-wrapper">
+                  <select class="clr-select" name="kind" [(ngModel)]="newAsset.kind">
+                    <option [ngValue]="assetType.value" *ngFor="let assetType of _assetTypes">{{assetType.name}}</option>
+                  </select>
+                </div>
+              </ng-container>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="button" class="btn btn-primary" (click)="filterVisible = false">Cancel</button>
+        </form>
   </div>
 </clr-modal>

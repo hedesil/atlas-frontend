@@ -28,6 +28,21 @@ export class AppConstants {
     ]
   }
 
+public static get trackingSystems(): Object[]{
+  return [
+    {name : "JIRA" },
+    {name : "OpenOffice" },
+  ]
+}
+
+public static get pentestTools(): Object[]{
+  return [
+    {name : "Acunetix" },
+    {name : "Nessus" },
+    {name : "Sisifo"}
+  ]
+}
+
   public static get statusTypes(): Object[] {
     return [
       { name : "On development" , value : 0},

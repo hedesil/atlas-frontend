@@ -11,6 +11,8 @@ import {GroupsComponent} from './administration/groups/groups.component';
 import {ProfilesComponent} from './administration/profiles/profiles.component';
 import { UsersComponent } from './administration/users/users.component';
 import {MethodologiesComponent} from './methodologies/methodologies.component';
+import { VulnerabilitiesComponent } from './vulnerabilities/vulnerabilities.component';
+import { AuditsComponent } from './audits/audits.component';
 
 
 const routes: Routes = [
@@ -18,6 +20,8 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'assets', component: AssetsComponent},
   {path: 'dashboard', component: DashboardComponent},
+  {path: 'vulnerabilities', component : VulnerabilitiesComponent},
+  {path: 'audits', component: AuditsComponent},
   {path: 'administration', component: AdministrationComponent,
     children: [
       {path: '', redirectTo: 'companies', pathMatch: "full"},
