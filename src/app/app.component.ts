@@ -11,18 +11,22 @@ export class AppComponent implements OnInit {
   title = 'atlas-frontend';
   isActive: boolean;
   active: string;
+  isLoggedIn : boolean = false
+
 
   constructor() {
     this.isActive = true;
   }
 
+
   ngOnInit() {
     if (this.isActive === true) {
       this.active = 'active';
     }
+    this.isLoggedIn = this.isLoggedInComprobation()
   }
 
-  isLoggedIn() {
-    return sessionStorage.getItem('token');
+  isLoggedInComprobation() : boolean {
+    return sessionStorage.getItem('token')!=undefined;
   }
 }
