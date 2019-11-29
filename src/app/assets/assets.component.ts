@@ -30,7 +30,7 @@ export class AssetsComponent implements OnInit {
   expanded = new Array(9);
   companies: Company[];
   total: number;
-  newAsset: Asset = { name: '' }
+  newAsset: Asset = { name: '' };
   areasSubject = new Subject<string>();
   areas$;
   defaultAttributeArea;

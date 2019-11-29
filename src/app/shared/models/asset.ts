@@ -25,8 +25,10 @@ export interface Asset {
   authentication?: number;
   authorization?: number;
   availability?: number;
+  company?: string;
   _class?: number;
   confidenciality?: number;
+  businessArea?: string;
   department?: Department;
   description?: string;
   groups?: Array<Group>;
