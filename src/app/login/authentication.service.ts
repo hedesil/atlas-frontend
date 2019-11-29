@@ -22,6 +22,6 @@ export class AuthenticationService {
 
 
   login(credentials): Observable<Company> {
-    return this.http.post<Company>(this.apiUrl, credentials);
+    return this.http.post<Company>(this.apiUrl+"/auth/login", credentials);
   }
 }
