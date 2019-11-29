@@ -25,11 +25,19 @@
     <form clrForm>
       <clr-input-container>
         <label>Name</label>
-        <input clrInput type="text" [(ngModel)]="newTest.name" name="nameTest" required />
+        <input clrInput type="text" [(ngModel)]="newTest.name" name="nameTest" required/>
       </clr-input-container>
       <clr-input-container>
         <label>Description</label>
-        <input clrInput type="text" [(ngModel)]="newTest.name" name="descriptionTest" />
+        <input clrInput type="text" [(ngModel)]="newTest.name" name="descriptionTest"/>
+      </clr-input-container>
+
+      <clr-input-container>
+        <label>Company</label>
+        <ng-select style="width: 100%" placeholder="Select one company"
+                   [items]="companiesList$ |async" bindLabel="name" [(ngModel)]="newTest.company"
+                   (input)="searchCompany($event.target.value)" name="company" [clearable]="false">
+        </ng-select>
       </clr-input-container>
     </form>
   </div>
