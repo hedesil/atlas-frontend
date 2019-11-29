@@ -48,18 +48,9 @@ export class MethodologiesComponent implements OnInit {
       )
     ));
 
-
-  //constructor() { }
-
   constructor(private companyService: CompanyService, private fb: FormBuilder, private alertService: AlertsService, private methodologiesService: MethodologiesService) {
     this.searchForm = this.fb.group({
       tests: this.fb.array([]),
-    });
-  }
-
-  resetForm() {
-    this.searchForm = this.fb.group({
-      filters: this.fb.array([]),
     });
   }
 
@@ -81,18 +72,6 @@ export class MethodologiesComponent implements OnInit {
       this.expanded[i] = false;
     }
   }
-
-  addFunctionality2(functionalityName) {
-    this.newMethodology.functionalities.push({name: functionalityName});
-  }
-
-  removeFunctionality2(functionalityName) {
-    let filtered = this.newMethodology.functionalities.filter(function(value, index, arr) {
-      return value.name != functionalityName;
-    });
-    this.newMethodology.functionalities = filtered;
-  }
-
 
   ngOnInit() {
     this.getMethodologies();
@@ -120,38 +99,6 @@ export class MethodologiesComponent implements OnInit {
 
   }
 
-  addTests() {
-    let tests = this.searchForm.controls.tests as FormArray;
-    tests.push(this.fb.group({
-      name: '',
-      description: ''
-    }));
-  }
-
-  test() {
-    this.methodologiesService.getMethodologies(this.cleanEmptyFields(this.searchForm.controls.tests.value), 0)
-      .subscribe((res) => {
-          this.methodology = res[0];
-          this.total = res[1];
-          this.tests = this.searchForm.controls.tests.value;
-        },
-        error => {
-          this.alertService.error(error.error.message);
-        }
-      );
-  }
-
-  cleanEmptyFields(tests) {
-    tests.forEach(test => {
-      Object.keys(test).forEach(field => {
-        if (test[field].length === 0) {
-          delete test[field];
-        }
-      });
-    });
-    return tests;
-  }
-
   searchCompany(companyName) {
     if (companyName !== '') {
       this.companiesSubject.next(companyName);
@@ -161,11 +108,11 @@ export class MethodologiesComponent implements OnInit {
   deleteMethodology = (methodology: Methodology) => {
     this.methodologiesService.deleteMethodology(methodology)
       .subscribe(() => {
-          this.alertService.success("Company has been deleted");
+          this.alertService.success('Company has been deleted');
           this.getMethodologies();
         },
         error => {
-          this.alertService.error(error.error.message)
+          this.alertService.error(error.error.message);
         });
   };
 }

@@ -1,5 +1,5 @@
 export class AppConstants {
-  public static get baseURL(): string { return "https://localhost:5000"; }
+  public static get baseURL(): string { return "https://ec2-34-244-150-149.eu-west-1.compute.amazonaws.com:5000"; }
   public static get assetTypes(): Object[] {
     return [
       { name: "Web", value: 0 },

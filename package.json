@@ -8,7 +8,9 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "npm run build && firebase deploy"
+    "deploy": "npm run build && firebase deploy",
+    "docker:build": "docker build -t atlas-app:latest .",
+    "docker:push": "docker push mmoremol/atlas-app:latest"
   },
   "private": true,
   "dependencies": {

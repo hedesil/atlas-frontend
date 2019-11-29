@@ -31,6 +31,7 @@ import { AuditsComponent } from './audits/audits.component';
 import { PieChartComponent } from './pie-chart/pie-chart.component';
 import { ChartsModule } from 'ng2-charts';
 import { AuditComponent } from './audit/audit.component';
+import { TestsComponent } from './tests/tests.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { AuditComponent } from './audit/audit.component';
     MethodologiesComponent,
     VulnerabilitiesComponent,
     VulnerabilityDetailsComponent,
-    AuditsComponent
+    AuditsComponent,
+    TestsComponent
   ],
   imports: [
     BrowserModule,
