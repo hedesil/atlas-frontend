@@ -52,9 +52,9 @@
   <div class="modal-body">
     <button class="btn btn-primary" (click)="addFilters()">Add</button>
       <form clrForm [formGroup]="searchForm"  (ngSubmit)="filter();filterVisible = false">
-            <div formArrayName="filters" *ngFor="let filter of searchForm.controls.filters.controls; let i = index">
-              <ng-container [formGroupName]="i">
-                <clr-input-container>
+                  <div formArrayName="filters" *ngFor="let filter of searchForm.controls.filters.controls; let i = index">
+                    <ng-container [formGroupName]="i">
+                      <clr-input-container>
                   <label>Name</label>
                   <input placeholder="Name" clrInput ngModel formControlName="name">
                 </clr-input-container>
