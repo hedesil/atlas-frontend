@@ -18,19 +18,19 @@ export class KnowledgeService {
   }
 
   getKnowledge(filters, offset): Observable<Knowledge[] | number> {
-    return this.http.post<Knowledge[] | number>(`${this._baseUrl}/knowledge/search`, filters,
+    return this.http.post<Knowledge[] | number>(`${this._baseUrl}/knowledgeBases/search`, filters,
       {headers: {XToken: sessionStorage.getItem('token')}});
 
   }
 
    addKnowledge(newKnowledge): Observable<Knowledge> {
-    return this.http.post<Knowledge>(`${this._baseUrl}/knowledge`, newKnowledge,
+    return this.http.post<Knowledge>(`${this._baseUrl}/knowledgeBases`, newKnowledge,
       {headers: {XToken: sessionStorage.getItem('token')}});
 
   }
 
    deleteKnowledge(knowledge: Knowledge): Observable<Knowledge> {
-    return this.http.delete<Knowledge>(`${this._baseUrl}/knowledge/${knowledge.id}`,
+    return this.http.delete<Knowledge>(`${this._baseUrl}/knowledgeBases/${knowledge.id}`,
       {
         headers: {
           XToken: sessionStorage.getItem('token'),
