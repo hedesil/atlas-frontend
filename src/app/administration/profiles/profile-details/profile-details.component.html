@@ -190,6 +190,31 @@
                 </clr-stack-label>
               </clr-stack-block>
             </clr-stack-block>
+            <clr-stack-block [(clrSbExpanded)]="expanded[10]">
+                <clr-stack-label>Knowledge</clr-stack-label>
+                <clr-stack-block>
+                  <clr-stack-label>
+                      <div class="clr-toggle-wrapper">
+                          <input type="checkbox" id="toggle57" [checked]="hasFunctionality('ADD KNOWLEDGE')" (change)="toggle($event,'ADD KNOWLEDGE')" class="clr-toggle">
+                          <label for="toggle57" class="clr-control-label">ADD</label>
+                      </div>
+                      <div class="clr-toggle-wrapper">
+                          <input type="checkbox" id="toggle58" [checked]="hasFunctionality('MODIFY KNOWLEDGE')" (change)="toggle($event,'MODIFY KNOWLEDGE')"
+                              class="clr-toggle">
+                          <label for="toggle58" class="clr-control-label">MODIFY</label>
+                      </div>
+                      <div class="clr-toggle-wrapper">
+                          <input type="checkbox" id="toggle59" [checked]="hasFunctionality('DELETE KNOWLEDGE')" (change)="toggle($event,'DELETE KNOWLEDGE')"
+                              class="clr-toggle">
+                          <label for="toggle59" class="clr-control-label">DELETE</label>
+                      </div>
+                      <div class="clr-toggle-wrapper">
+                          <input type="checkbox" id="toggle60" [checked]="hasFunctionality('GET KNOWLEDGE')" (change)="toggle($event,'GET KNOWLEDGE')" class="clr-toggle">
+                          <label for="toggle60" class="clr-control-label">GET</label>
+                      </div>
+                  </clr-stack-label>
+                </clr-stack-block>
+              </clr-stack-block>
             <clr-stack-block [(clrSbExpanded)]="expanded[3]">
               <clr-stack-label>Evidences</clr-stack-label>
               <clr-stack-block>
