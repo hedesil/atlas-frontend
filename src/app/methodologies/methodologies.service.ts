@@ -30,6 +30,16 @@ export class MethodologiesService {
 
   }
 
+  getMethodology(methodology: Methodology): Observable<Company> {
+    return this.http.get<Company>(`${this._baseUrl}/methodologies/${methodology.id}`,
+      {
+        headers: {
+          XToken: sessionStorage.getItem('token'),
+        }
+      })
+  }
+
+
   deleteMethodology(methodology: Methodology): Observable<Methodology> {
     return this.http.delete<Methodology>(`${this._baseUrl}/methodologies/${methodology.id}`,
       {

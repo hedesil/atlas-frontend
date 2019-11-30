@@ -8,6 +8,9 @@
       <clr-dg-cell>{{methodology.description}}</clr-dg-cell>
       <clr-dg-action-overflow>
         <button class="action-item" (click)="deleteMethodology(methodology)">Delete</button>
+        <app-methodology-detail *clrIfExpanded [input]="methodology"
+                                ngProjectAs="clr-dg-row-detail">
+        </app-methodology-detail>
       </clr-dg-action-overflow>
     </clr-dg-row>
     <clr-dg-footer>
@@ -38,7 +41,8 @@
         <label>Test</label>
         <ng-select style="width: 100%" placeholder="Select one or more tests"
                    [items]="testsList$ | async" bindLabel="name"
-                   (input)="searchTests($event.target.value)" [(ngModel)]="newMethodology.tests" name="test" [clearable]="false" [multiple]="true">
+                   (input)="searchTests($event.target.value)" [(ngModel)]="newMethodology.tests" name="test"
+                   [clearable]="false" [multiple]="true">
         </ng-select>
         <br>
         <label>Company</label>

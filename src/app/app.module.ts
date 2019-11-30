@@ -36,6 +36,7 @@ import { SisifoComponent } from './sisifo/sisifo.component';
 import { TestsComponent } from './tests/tests.component';
 import { CredentialsComponent } from './administration/credentials/credentials.component';
 import { BarGraficComponent } from './bar-grafic/bar-grafic.component';
+import { MethodologyDetailComponent } from './methodologies/methodology-detail/methodology-detail.component';
 
 @NgModule({
   declarations: [
@@ -69,7 +70,8 @@ CredentialsComponent,
     KnowledgeComponent,
     SisifoComponent,
     AuditsComponent,
-    BarGraficComponent
+    BarGraficComponent,
+    MethodologyDetailComponent
   ],
   imports: [
     BrowserModule,
