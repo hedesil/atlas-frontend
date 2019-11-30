@@ -30,7 +30,6 @@ export class MethodologiesComponent implements OnInit {
     company: undefined,
     description: '',
     name: '',
-    functionalities: [],
     tests: []
   };
   isModalVisible = false;
@@ -77,7 +76,7 @@ export class MethodologiesComponent implements OnInit {
 
   closeModal() {
     this.isModalVisible = false;
-    this.newMethodology = {company: undefined, description: '', users: undefined, name: '', functionalities: [], tests: []};
+    this.newMethodology = {company: undefined, description: '', name: '', tests: []};
     this.resetSwitches();
     this.closeStacked();
   }
