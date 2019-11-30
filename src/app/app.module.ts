@@ -65,7 +65,7 @@ import { BarGraficComponent } from './bar-grafic/bar-grafic.component';
     TestsComponent,
     AuditComponent,
     KnowledgeComponent,
-    SisifoComponent
+    SisifoComponent,
     AuditsComponent,
     BarGraficComponent
   ],
