@@ -22,7 +22,7 @@ export class VulnerabilitiesComponent implements OnInit {
   descSort = ClrDatagridSortOrder.DESC;
   filters = null;
   vulnerabilities: Vulnerability[];
-  newVulnerability : Vulnerability = { name : '', description: '', risk: 0, executedTest: '',solution: '', content: ''};
+  newVulnerability : Vulnerability = { name : '', description: '', risk: 0, executedTest: '', solution: '', contenido: ''};
   isModalVisible = false
   audits : Audit[]
   total: number;
