@@ -34,6 +34,7 @@ import { AuditComponent } from './audit/audit.component';
 import { KnowledgeComponent } from './knowledge/knowledge.component';
 import { SisifoComponent } from './sisifo/sisifo.component';
 import { TestsComponent } from './tests/tests.component';
+import { BarGraficComponent } from './bar-grafic/bar-grafic.component';
 
 @NgModule({
   declarations: [
@@ -65,6 +66,8 @@ import { TestsComponent } from './tests/tests.component';
     AuditComponent,
     KnowledgeComponent,
     SisifoComponent
+    AuditsComponent,
+    BarGraficComponent
   ],
   imports: [
     BrowserModule,
