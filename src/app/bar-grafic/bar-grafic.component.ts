@@ -2,14 +2,12 @@ import { Component, OnInit } from '@angular/core';
 //import * as Chartist from 'chartist';
 import { ChartDataSets, ChartOptions,ChartType } from 'chart.js';
 import { SingleDataSet, Label, Color, monkeyPatchChartJsLegend, monkeyPatchChartJsTooltip } from 'ng2-charts';
-
 @Component({
-  selector: 'app-pie-chart',
-  templateUrl: './pie-chart.component.html',
-  styleUrls: ['./pie-chart.component.scss']
+  selector: 'app-bar-grafic',
+  templateUrl: './bar-grafic.component.html',
+  styleUrls: ['./bar-grafic.component.scss']
 })
-export class PieChartComponent implements OnInit {
-  
+export class BarGraficComponent implements OnInit {
    public pieChartOptions: ChartOptions = {
     responsive: true,
     };
@@ -52,8 +50,7 @@ export class PieChartComponent implements OnInit {
  }
 
   cambiagrafico(options){
-    this.selección = this.options;
+    this.selección = options;
     this.ngOnInit();
   }
-
 }
