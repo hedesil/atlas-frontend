@@ -42,7 +42,7 @@ export class BarGraficComponent implements OnInit {
     //this.pieChartOptions: ChartOptions = {
     // responsive: true,
     //};
-    this.pieChartLabels = [['Criticidad', 'Critica'], ['Criticidad', 'Alta'], ['Criticidad', 'Medio'], 'Criticidad Baja'];
+    this.pieChartLabels = [['Riesgo', 'Critico'], ['Riesgo', 'Alto'], ['Riesgo', 'Medio'], ['Riesgo', 'Bajo']];
     this.pieChartData = [4, 9, 17, 35];
     this.pieChartType = this.seleccion;
     this.chartReady = true;

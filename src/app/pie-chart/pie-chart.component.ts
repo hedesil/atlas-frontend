@@ -41,8 +41,8 @@ export class PieChartComponent implements OnInit {
  //this.pieChartOptions: ChartOptions = {
  // responsive: true,
  //};
-  this.pieChartLabels = [['Criticidad', 'Critica'], ['Criticidad', 'Alta'], ['Criticidad', 'Medio' ], 'Criticidad Baja'];
-  this.pieChartData = [4, 9, 17, 35];
+  this.pieChartLabels = [['Acunetix'], ['Nessus'], ['Sisifo'], ['Resto']];
+  this.pieChartData = [23,10, 55, 45];
   this.pieChartType = this.seleccion;
   this.chartReady = true;
   this.pieChartLegend = true;

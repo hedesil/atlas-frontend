@@ -25,7 +25,7 @@ export class KnowledgeComponent implements OnInit {
   filters = null;
   tests = null;
   knowledge: Knowledge[];
-  newKnowledge: Knowledge = {category: '', content: '', id: 0, users: undefined, name: '', functionalities: []};
+  newKnowledge: Knowledge = {category: '', content: '', name: ''};
   isModalVisible = false;
   expanded = new Array(9);
   switches = new Array(58);
@@ -52,7 +52,7 @@ export class KnowledgeComponent implements OnInit {
 
   closeModal() {
     this.isModalVisible = false;
-    this.newKnowledge = {category: '', content: '', id: 0, users: undefined, name: '', functionalities: []};
+    this.newKnowledge = {category: '', content: '', name: ''};
     this.resetSwitches();
     this.closeStacked();
   }
