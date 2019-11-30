@@ -1,41 +1,48 @@
-    <div class="left-container">
-        <clr-input-container>
-          <label>URL</label>
-          <input type="text" name="url" clrInput [(ngModel)]="prueba" placeholder="url"/>
-        </clr-input-container>
-        <clr-select-container>
-            <label>Selecione el tipologia</label>
-            <select clrSelect name="options" [(ngModel)]="options" (change)="mostrarTabla()" required>
-            <option value="pie">SQL Injection</option>
-            <option value="bar">Cross Site Scripting (XSS)</option>
-            <option value="radar">Broken Authentication and Session Management</option>
-        </select>
-        <clr-control-error>Una opción es requerida</clr-control-error>
-        </clr-select-container>
-        <br>
-      </div>
+<div class="wrapper">
+  <div class="left-container">
+    <clr-input-container>
+      <label>URL</label>
+      <input type="text" name="url" clrInput [(ngModel)]="prueba" placeholder="url"/>
+    </clr-input-container>
+    <clr-select-container>
+      <label>Selecione el tipologia</label>
+      <select clrSelect name="options" [(ngModel)]="options" (change)="mostrarTabla()" required>
+        <option value="pie">SQL Injection</option>
+        <option value="bar">Cross Site Scripting (XSS)</option>
+        <option value="radar">Broken Authentication and Session Management</option>
+      </select>
+      <clr-control-error>Una opción es requerida</clr-control-error>
+    </clr-select-container>
+    <br>
+  </div>
 
-
-<div *ngIf="show">
-  <clr-datagrid>
-    <clr-dg-column [clrDgField]="'name'" [clrDgSortOrder]="descSort">Name</clr-dg-column>
-     <clr-dg-column [clrDgField]="'severity'" [clrDgSortOrder]="descSort">severity</clr-dg-column>
-    <clr-dg-column [clrDgField]="'description'" [clrDgSortOrder]="descSort">Description</clr-dg-column>
-    <clr-dg-column [clrDgField]="'cwe'" [clrDgSortOrder]="descSort">cwe</clr-dg-column>
-    <clr-dg-row *clrDgItems="let analysis of analsysisResponse" [clrDgItem]="analsysis">
-      <clr-dg-cell>{{analysis.name}}</clr-dg-cell>
-      <clr-dg-cell>{{analysis.severity}}</clr-dg-cell>
-      <clr-dg-cell>{{analysis.description}}</clr-dg-cell>
-      <clr-dg-cell>{{analysis.cwe}}</clr-dg-cell>
-      <clr-dg-action-overflow>
-        <button class="action-item" (click)="deleteMethodology(methodology)">Delete</button>
-      </clr-dg-action-overflow>
-    </clr-dg-row>
-    <clr-dg-footer>
-      <clr-dg-pagination #pagination [clrDgPageSize]="10">
-        <clr-dg-page-size [clrPageSizeOptions]="[1,2,10,20,50,100]">Areas per page</clr-dg-page-size>
-        {{pagination.firstItem + 1}} - {{pagination.lastItem + 1}} of {{total}} Areas
-      </clr-dg-pagination>
-    </clr-dg-footer>
-  </clr-datagrid>
+  <div *ngIf="show">
+    <clr-datagrid>
+      <clr-dg-column [clrDgField]="'name'" [clrDgSortOrder]="descSort">Name</clr-dg-column>
+      <clr-dg-column [clrDgField]="'severity'" [clrDgSortOrder]="descSort">severity</clr-dg-column>
+      <clr-dg-column [clrDgField]="'description'" [clrDgSortOrder]="descSort">Description</clr-dg-column>
+      <clr-dg-column [clrDgField]="'cwe'" [clrDgSortOrder]="descSort">cwe</clr-dg-column>
+      <clr-dg-row *clrDgItems="let analysis of analsysisResponse" [clrDgItem]="analysis">
+        <clr-dg-cell>{{analysis.name}}</clr-dg-cell>
+        <clr-dg-row-detail *clrIfExpanded>
+          <ul *ngFor="let endpoint of analysis.endpoints">
+            <li><b>URL:</b> {{endpoint.url}} <b>Method:</b> {{endpoint.method}}</li>
+          </ul>
+        </clr-dg-row-detail>
+        <clr-dg-cell>{{analysis.severity}}</clr-dg-cell>
+        <clr-dg-cell>{{analysis.description}}</clr-dg-cell>
+        <clr-dg-cell>{{analysis.cwe}}</clr-dg-cell>
+        <clr-dg-action-overflow>
+          <button class="action-item" (click)="deleteMethodology(methodology)">Delete</button>
+        </clr-dg-action-overflow>
+      </clr-dg-row>
+      <clr-dg-footer>
+        <clr-dg-pagination #pagination [clrDgPageSize]="10">
+          <clr-dg-page-size [clrPageSizeOptions]="[1,2,10,20,50,100]">Areas per page</clr-dg-page-size>
+          {{pagination.firstItem + 1}} - {{pagination.lastItem + 1}} of {{total}} Areas
+        </clr-dg-pagination>
+      </clr-dg-footer>
+    </clr-datagrid>
+  </div>
 </div>
+
