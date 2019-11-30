@@ -9,7 +9,7 @@ import { SingleDataSet, Label, Color, monkeyPatchChartJsLegend, monkeyPatchChart
   styleUrls: ['./pie-chart.component.scss']
 })
 export class PieChartComponent implements OnInit {
-  
+
    public pieChartOptions: ChartOptions = {
     responsive: true,
     };
@@ -22,19 +22,18 @@ export class PieChartComponent implements OnInit {
 
   public options: ChartType;
   public verSeleccion: string        = '';
-  public selección : ChartType = 'pie';
+  public seleccion : ChartType = 'pie';
   // Pie
-   
 
-  public pieChartLabels: Label[] 
-  public pieChartData: SingleDataSet 
-  public pieChartType: ChartType 
+
+  public pieChartLabels: Label[]
+  public pieChartData: SingleDataSet
+  public pieChartType: ChartType
   public chartReady = true;
   public pieChartLegend = true;
   public pieChartPlugins = []
 
  ngOnInit(){
- 
   this.pintargrafica();
 
  }
@@ -42,18 +41,18 @@ export class PieChartComponent implements OnInit {
  //this.pieChartOptions: ChartOptions = {
  // responsive: true,
  //};
-  this.pieChartLabels = [['Download', 'Sales'], ['In', 'Store', 'Sales'], 'Mail Sales'];
-  this.pieChartData = [300, 500, 100];
-  this.pieChartType = this.selección;
+  this.pieChartLabels = [['Criticidad', 'Critica'], ['Criticidad', 'Alta'], ['Criticidad', 'Medio' ], 'Criticidad Baja'];
+  this.pieChartData = [4, 9, 17, 35];
+  this.pieChartType = this.seleccion;
   this.chartReady = true;
   this.pieChartLegend = true;
   this.pieChartPlugins = []
 
  }
 
-  cambiagrafico(){
-    this.selección = this.options;
-    this.ngOnInit();
+  cambiagrafico(options){
+    this.seleccion = options;
+    this.pieChartType = this.seleccion;
   }
 
 }

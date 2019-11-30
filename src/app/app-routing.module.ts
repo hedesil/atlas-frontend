@@ -15,6 +15,8 @@ import { VulnerabilitiesComponent } from './vulnerabilities/vulnerabilities.comp
 import { AuditsComponent } from './audits/audits.component';
 import {TestsComponent} from './tests/tests.component';
 import { CredentialsComponent } from './administration/credentials/credentials.component';
+import {KnowledgeComponent} from './knowledge/knowledge.component';
+import {SisifoComponent} from './sisifo/sisifo.component';
 
 
 const routes: Routes = [
@@ -33,11 +35,13 @@ const routes: Routes = [
       {path: 'departments', component: DepartmentsComponent},
       {path: 'groups', component: GroupsComponent},
       {path: 'profiles', component: ProfilesComponent},
-      {path: 'credentials', component: CredentialsComponent}
+   {path: 'credentials', component: CredentialsComponent}
     ]
   },
   {path: 'methodologies', component: MethodologiesComponent},
   {path: 'tests', component: TestsComponent},
+  {path: 'knowledge', component: KnowledgeComponent},
+  {path: 'sisifo', component: SisifoComponent},
 ];
 
 @NgModule({
