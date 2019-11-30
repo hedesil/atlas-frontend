@@ -28,14 +28,15 @@
 <clr-modal [(clrModalOpen)]="isModalVisible" [clrModalSize]="'lg'">
     <h3 class="modal-title">New vulnerability</h3>
     <div class="modal-body">
-        <form clrForm #newVulnerability="ngForm">
+       <!-- <form clrForm #newVulnerability="ngForm"> -->
+        <form clrForm clrLayout="horizontal" (ngSubmit)="newKnowledgeVisible = false">   
             <clr-input-container>
                 <label>Name</label>
-                <input type="text" name="name" clrInput ngModel placeholder="Vulnerability name" />
+                <input type="text" name="name" clrInput [(ngModel)]="newVulnerability.name" placeholder="Vulnerability name" />
             </clr-input-container>
             <clr-input-container>
                 <label>Description</label>
-                <input type="text" name="description" clrInput ngModel placeholder="Vulnerabilities description" />
+                <input type="text" name="description" clrInput [(ngModel)]="newVulnerability.description" placeholder="Vulnerabilities description" />
             </clr-input-container>
             <div class="clr-form-control">
                 <label for="select-full" class="clr-control-label">Audit</label>
@@ -47,7 +48,7 @@
             </div>
             <clr-select-container>
                 <label>Risk</label>
-                <select clrSelect name="risk" [(ngModel)]="options">
+                <select clrSelect name="risk" [(ngModel)]="newVulnerability.risk">
                   <option value="0">Info</option>
                   <option value="1">Low</option>
                   <option value="2">Medium</option>
@@ -57,15 +58,15 @@
               </clr-select-container>
               <clr-textarea-container>
                 <label>Description</label>
-                <textarea clrTextarea name="description" required></textarea>
+                <textarea clrTextarea name="content" clrInput [(ngModel)]="newVulnerability.content" required></textarea>
               </clr-textarea-container>
               <clr-textarea-container>
                 <label>Executed Test</label>
-                <textarea clrTextarea name="executedTest" required></textarea>
+                <textarea clrTextarea name="executedTest" clrInput [(ngModel)]="newVulnerability.executedTest" required></textarea>
               </clr-textarea-container>
               <clr-textarea-container>
                 <label>Solution</label>
-                <textarea clrTextarea name="Solution" required></textarea>
+                <textarea clrTextarea name="solution" clrInput [(ngModel)]="newVulnerability.solution" required></textarea>
               </clr-textarea-container>
         </form>
     </div>

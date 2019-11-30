@@ -30,11 +30,15 @@
         <clr-input-container>
           <label>Name</label>
           <input type="text" name="name" clrInput [(ngModel)]="newKnowledge.name" placeholder="name"/>
-        </clr-input-container>
-        <clr-input-container>
-          <label>Category</label>
-          <input type="text" name="category" clrInput [(ngModel)]="newKnowledge.category" placeholder="category"/>
-        </clr-input-container>
+        </clr-input-container>>
+        <clr-select-container>
+          <label>Selecione la categoria</label>
+            <select clrSelect name="options" [(ngModel)]="newKnowledge.category"  required>
+              <option selected value="description">Description</option>
+              <option value="solution">Solution</option>
+            </select>
+          <clr-control-error>Una opción es requerida</clr-control-error>
+        </clr-select-container>
         <clr-textarea-container>
           <label>Description</label>
           <textarea clrTextarea placeholder="content ..." name="content"

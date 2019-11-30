@@ -6,8 +6,7 @@ import { debounceTime, distinctUntilChanged, switchMap, map } from 'rxjs/operato
 import { Vulnerability, Audit } from '../shared/models/models';
 import { AlertsService } from '../alerts.service';
 import { VulnerabilitiesService } from './vulnerabilities.service';
-
-
+import { AuditService } from '../audits/audits.service';
 
 
 @Component({
@@ -23,7 +22,7 @@ export class VulnerabilitiesComponent implements OnInit {
   descSort = ClrDatagridSortOrder.DESC;
   filters = null;
   vulnerabilities: Vulnerability[];
-  newVulnerability : Vulnerability = { name : ''};
+  newVulnerability : Vulnerability = { name : '', description: '', risk: 0, executedTest: '',solution: '', content: ''};
   isModalVisible = false
   audits : Audit[]
   total: number;
@@ -36,7 +35,7 @@ export class VulnerabilitiesComponent implements OnInit {
 
 
 
-  /*readonly auditsList$ = this.auditsSubject.pipe(
+  readonly auditsList$ = this.auditsSubject.pipe(
     debounceTime(500),
     distinctUntilChanged(),
     switchMap(auditName => this.auditService.getAudits(auditName,0)
@@ -46,7 +45,7 @@ export class VulnerabilitiesComponent implements OnInit {
         })
       )
   ))
-*/
+
   searchAudit(auditName) {
     if (auditName !== '') {
       this.auditsSubject.next(auditName);
@@ -54,7 +53,7 @@ export class VulnerabilitiesComponent implements OnInit {
   }
 
 
-  constructor(private fb : FormBuilder,private alertService : AlertsService, private vulnerabilityService : VulnerabilitiesService) {
+  constructor(private fb : FormBuilder,private alertService : AlertsService, private vulnerabilityService : VulnerabilitiesService, private auditService: AuditService) {
     this.searchForm = this.fb.group({
       filters: this.fb.array([]),
     });
@@ -76,14 +75,14 @@ export class VulnerabilitiesComponent implements OnInit {
 
 
   ngOnInit() {
-  /*  this.audits$ = this.auditService.getAudits(null, 0).pipe(
+  this.audits$ = this.auditService.getAudits(null, 0).pipe(
       map(audits => {
         this.audits = audits[0];
         this.defaultAttribute = this.audits[0];
         this.total = audits[1];
         return audits;
       })
-    );*/
+    );
     this.getVulnerabilities(null,0);
 
   }
