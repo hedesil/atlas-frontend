@@ -20,7 +20,7 @@ export class BarGraficComponent implements OnInit {
 
   public options: ChartType;
   public verSeleccion: string        = '';
-  public selección : ChartType = 'pie';
+  public seleccion : ChartType = 'pie';
   // Pie
    
 
@@ -42,15 +42,14 @@ export class BarGraficComponent implements OnInit {
  //};
   this.pieChartLabels = [['Criticidad', 'Critica'], ['Criticidad', 'Alta'], ['Criticidad', 'Medio' ], 'Criticidad Baja'];
   this.pieChartData = [4, 9, 17, 35];
-  this.pieChartType = this.selección;
+  this.pieChartType = this.seleccion;
   this.chartReady = true;
   this.pieChartLegend = true;
   this.pieChartPlugins = []
-
  }
 
   cambiagrafico(options){
-    this.selección = options;
-    this.ngOnInit();
+    this.seleccion = options;
+    this.pieChartType = this.seleccion;
   }
 }
