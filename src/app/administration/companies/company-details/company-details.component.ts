@@ -22,30 +22,30 @@ export class CompanyDetailsComponent implements OnInit {
 
   ngOnInit() {
     this.company = this.input;
-    this.getCompanyDetails(this.company);
+    // this.getCompanyDetails(this.company);
   }
 
-  getCompanyDetails = (company: Company) => {
-    this.companyService.getCompany(company)
-      .subscribe((company) => {
-          this.company = company;
-        },
-        error => {
-          this.alertService.error(error.error.message);
-        });
-  };
-
-  modifyCompany() {
-    this.companyService.modifyCompany(this.company)
-      .subscribe((res) => {
-          this.alertService.success('Company has been modified');
-          this.company = res;
-          this.emit.emit(this.company);
-        },
-        error => {
-          this.alertService.error(error.error.message);
-        });
-  }
+  // getCompanyDetails = (company: Company) => {
+  //   this.companyService.getCompany(company)
+  //     .subscribe((company) => {
+  //         this.company = company;
+  //       },
+  //       error => {
+  //         this.alertService.error(error.error.message);
+  //       });
+  // };
+  //
+  // modifyCompany() {
+  //   this.companyService.modifyCompany(this.company)
+  //     .subscribe((res) => {
+  //         this.alertService.success('Company has been modified');
+  //         this.company = res;
+  //         this.emit.emit(this.company);
+  //       },
+  //       error => {
+  //         this.alertService.error(error.error.message);
+  //       });
+  // }
 
 
 }

@@ -3,15 +3,16 @@
   <clr-datagrid>
     <clr-dg-column [clrDgField]="'name'" [clrDgSortOrder]="descSort">Name</clr-dg-column>
     <clr-dg-column [clrDgField]="'total'" [clrDgSortOrder]="descSort">Description</clr-dg-column>
+
     <clr-dg-row *clrDgItems="let methodology of methodologiesList" [clrDgItem]="methodology">
       <clr-dg-cell>{{methodology.name}}</clr-dg-cell>
       <clr-dg-cell>{{methodology.description}}</clr-dg-cell>
       <clr-dg-action-overflow>
         <button class="action-item" (click)="deleteMethodology(methodology)">Delete</button>
-        <app-methodology-detail *clrIfExpanded [input]="methodology"
-                                ngProjectAs="clr-dg-row-detail">
-        </app-methodology-detail>
       </clr-dg-action-overflow>
+      <clr-dg-row-detail *clrIfExpanded>
+        <app-methodology-detail [input]="methodology.tests"></app-methodology-detail>
+      </clr-dg-row-detail>
     </clr-dg-row>
     <clr-dg-footer>
       <clr-dg-pagination #pagination [clrDgPageSize]="10">

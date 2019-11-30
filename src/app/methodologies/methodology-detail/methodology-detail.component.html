@@ -1,6 +1,11 @@
 <div class="wrap">
-  <ul *ngFor="let test of methodologyDetail$ | async">
-    <li>{{test.name}}</li>
-    <li>{{test.description}}</li>
-  </ul>
+  <div class="wrap-tree">
+    <clr-tree-node [clrExpanded]="false">
+      Associated tests to this methodology
+      <clr-tree-node [clrExpanded]="false" *ngFor="let test of input">
+        {{test.name}}
+        <clr-tree-node>{{test.description}}</clr-tree-node>
+      </clr-tree-node>
+    </clr-tree-node>
+  </div>
 </div>
