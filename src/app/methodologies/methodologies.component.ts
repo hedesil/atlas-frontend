@@ -7,6 +7,7 @@ import {debounceTime, distinctUntilChanged, map, switchMap} from 'rxjs/operators
 import {AlertsService} from '../alerts.service';
 import {MethodologiesService} from './methodologies.service';
 import {CompanyService} from '../administration/companies/company.service';
+import {TestsService} from '../tests/tests.service';
 
 
 @Component({
@@ -25,7 +26,13 @@ export class MethodologiesComponent implements OnInit {
   filters = null;
   tests = null;
   methodology: Methodology[];
-  newMethodology: Methodology = {company: undefined, description: '', id: 0, users: undefined, name: '', functionalities: []};
+  newMethodology: Methodology = {
+    company: undefined,
+    description: '',
+    name: '',
+    functionalities: [],
+    tests: []
+  };
   isModalVisible = false;
   expanded = new Array(9);
   switches = new Array(58);
@@ -36,6 +43,7 @@ export class MethodologiesComponent implements OnInit {
   newMethodologyVisible: boolean;
   methodologies$;
   methodologiesList;
+  testsSubject = new Subject<string>();
 
   readonly companiesList$ = this.companiesSubject.pipe(
     debounceTime(500),
@@ -48,7 +56,20 @@ export class MethodologiesComponent implements OnInit {
       )
     ));
 
-  constructor(private companyService: CompanyService, private fb: FormBuilder, private alertService: AlertsService, private methodologiesService: MethodologiesService) {
+  readonly testsList$ = this.testsSubject.pipe(
+    debounceTime(500),
+    distinctUntilChanged(),
+    switchMap(testName => this.testsService.getTests(testName, 0)
+      .pipe(
+        map(result => {
+          return result[0];
+        })
+      )
+    ));
+
+  constructor(private companyService: CompanyService, private fb: FormBuilder,
+              private alertService: AlertsService, private testsService: TestsService,
+              private methodologiesService: MethodologiesService) {
     this.searchForm = this.fb.group({
       tests: this.fb.array([]),
     });
@@ -56,7 +77,7 @@ export class MethodologiesComponent implements OnInit {
 
   closeModal() {
     this.isModalVisible = false;
-    this.newMethodology = {company: undefined, description: '', id: 0, users: undefined, name: '', functionalities: []};
+    this.newMethodology = {company: undefined, description: '', users: undefined, name: '', functionalities: [], tests: []};
     this.resetSwitches();
     this.closeStacked();
   }
@@ -102,6 +123,12 @@ export class MethodologiesComponent implements OnInit {
   searchCompany(companyName) {
     if (companyName !== '') {
       this.companiesSubject.next(companyName);
+    }
+  }
+
+  searchTests(testName) {
+    if (testName !== '') {
+      this.testsSubject.next(testName);
     }
   }
 
