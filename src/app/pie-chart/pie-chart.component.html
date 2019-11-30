@@ -11,10 +11,12 @@
 
 <clr-select-container>
   <label>Selecione el tipo de grafico que necesita</label>
-  <select clrSelect name="options" [(ngModel)]="options" (change)="cambiagrafico()" required>
-    <option value="pie">Tarta</option>
+  <select clrSelect name="options" [(ngModel)]="options" (change)="cambiagrafico(options)" required>
+    <option selected value="pie">Tarta</option>
     <option value="bar">Barra</option>
     <option value="radar">Radar</option>
   </select>
   <clr-control-error>Una opción es requerida</clr-control-error>
 </clr-select-container>
+
+
