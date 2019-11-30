@@ -30,7 +30,6 @@ import { VulnerabilityDetailsComponent } from './vulnerabilities/vulnerability-d
 import { AuditsComponent } from './audits/audits.component';
 import { PieChartComponent } from './pie-chart/pie-chart.component';
 import { ChartsModule } from 'ng2-charts';
-import { AuditComponent } from './audit/audit.component';
 import { KnowledgeComponent } from './knowledge/knowledge.component';
 import { SisifoComponent } from './sisifo/sisifo.component';
 import { TestsComponent } from './tests/tests.component';
@@ -59,14 +58,12 @@ import { MethodologyDetailComponent } from './methodologies/methodology-detail/m
     MethodologiesComponent,
     ProfileDetailsComponent,
     PieChartComponent,
-    AuditComponent,
     MethodologiesComponent,
     VulnerabilitiesComponent,
     VulnerabilityDetailsComponent,
     AuditsComponent,
     TestsComponent,
-CredentialsComponent,
-    AuditComponent,
+    CredentialsComponent,
     KnowledgeComponent,
     SisifoComponent,
     AuditsComponent,
