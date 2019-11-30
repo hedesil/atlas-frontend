@@ -30,7 +30,7 @@ export class ProfilesComponent implements OnInit {
   isModalVisible = false
   expanded = new Array(11);
 
-  switches = new Array(66)
+  switches = new Array(74)
   total: number;
   defaultAttribute;
   companiesSubject = new Subject<string>();

@@ -139,6 +139,31 @@
                   </clr-stack-label>
                 </clr-stack-block>
               </clr-stack-block>
+              <clr-stack-block>
+                <clr-stack-label>Credentials</clr-stack-label>
+                <clr-stack-block>
+                  <clr-stack-label>
+                      <div class="clr-toggle-wrapper">
+                          <input type="checkbox" id="toggle65" [checked]="hasFunctionality('ADD CREDENTIALS')" (change)="toggle($event,'ADD CREDENTIALS')" class="clr-toggle">
+                          <label for="toggle65" class="clr-control-label">ADD</label>
+                      </div>
+                      <div class="clr-toggle-wrapper">
+                          <input type="checkbox" id="toggle66" [checked]="hasFunctionality('MODIFY CREDENTIALS')" (change)="toggle($event,'MODIFY CREDENTIALS')"
+                              class="clr-toggle">
+                          <label for="toggle66" class="clr-control-label">MODIFY</label>
+                      </div>
+                      <div class="clr-toggle-wrapper">
+                          <input type="checkbox" id="toggle67" [checked]="hasFunctionality('DELETE CREDENTIALS')" (change)="toggle($event,'DELETE CREDENTIALS')"
+                              class="clr-toggle">
+                          <label for="toggle67" class="clr-control-label">DELETE</label>
+                      </div>
+                      <div class="clr-toggle-wrapper">
+                          <input type="checkbox" id="toggle68" [checked]="hasFunctionality('GET CREDENTIALS')" (change)="toggle($event,'GET CREDENTIALS')" class="clr-toggle">
+                          <label for="toggle68" class="clr-control-label">GET</label>
+                      </div>
+                  </clr-stack-label>
+                </clr-stack-block>
+              </clr-stack-block>
             </clr-stack-block>
             <clr-stack-block [(clrSbExpanded)]="expanded[1]">
               <clr-stack-label>Assets</clr-stack-label>

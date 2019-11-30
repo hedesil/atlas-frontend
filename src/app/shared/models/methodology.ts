@@ -12,6 +12,7 @@
 import { Functionality } from './functionality';
 import { User } from './user';
 import {Company} from './company';
+import {Test} from '../../tests/tests.service';
 
 export interface Methodology {
     id?: number;
@@ -19,5 +20,6 @@ export interface Methodology {
     description?: string;
     users?: Array<User>;
     functionalities?: Array<Functionality>;
-    company: Company
+    company?: Company,
+    tests?: Test[]
 }

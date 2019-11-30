@@ -36,14 +36,14 @@
       <div class="right-container">
 
         <label>Test</label>
-        <ng-select style="width: 100%" placeholder="Select one company"
-                   [items]="companiesList$ |async" bindLabel="name"
-                   (input)="searchCompany($event.target.value)" name="company" [clearable]="false">
+        <ng-select style="width: 100%" placeholder="Select one or more tests"
+                   [items]="testsList$ | async" bindLabel="name"
+                   (input)="searchTests($event.target.value)" [(ngModel)]="newMethodology.tests" name="test" [clearable]="false" [multiple]="true">
         </ng-select>
         <br>
         <label>Company</label>
         <ng-select style="width: 100%" placeholder="Select one company"
-                   [items]="companiesList$ |async" bindLabel="name" [(ngModel)]="newMethodology.company"
+                   [items]="companiesList$ | async" bindLabel="name" [(ngModel)]="newMethodology.company"
                    (input)="searchCompany($event.target.value)" name="company" [clearable]="false">
         </ng-select>
         <br>
