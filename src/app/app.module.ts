@@ -34,6 +34,7 @@ import { AuditComponent } from './audit/audit.component';
 import { KnowledgeComponent } from './knowledge/knowledge.component';
 import { SisifoComponent } from './sisifo/sisifo.component';
 import { TestsComponent } from './tests/tests.component';
+import { CredentialsComponent } from './administration/credentials/credentials.component';
 import { BarGraficComponent } from './bar-grafic/bar-grafic.component';
 
 @NgModule({
@@ -63,6 +64,7 @@ import { BarGraficComponent } from './bar-grafic/bar-grafic.component';
     VulnerabilityDetailsComponent,
     AuditsComponent,
     TestsComponent,
+CredentialsComponent,
     AuditComponent,
     KnowledgeComponent,
     SisifoComponent,

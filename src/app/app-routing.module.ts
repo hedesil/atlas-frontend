@@ -14,6 +14,7 @@ import {MethodologiesComponent} from './methodologies/methodologies.component';
 import { VulnerabilitiesComponent } from './vulnerabilities/vulnerabilities.component';
 import { AuditsComponent } from './audits/audits.component';
 import {TestsComponent} from './tests/tests.component';
+import { CredentialsComponent } from './administration/credentials/credentials.component';
 import {KnowledgeComponent} from './knowledge/knowledge.component';
 import {SisifoComponent} from './sisifo/sisifo.component';
 
@@ -34,6 +35,7 @@ const routes: Routes = [
       {path: 'departments', component: DepartmentsComponent},
       {path: 'groups', component: GroupsComponent},
       {path: 'profiles', component: ProfilesComponent},
+   {path: 'credentials', component: CredentialsComponent}
     ]
   },
   {path: 'methodologies', component: MethodologiesComponent},

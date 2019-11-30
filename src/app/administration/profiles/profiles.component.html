@@ -153,6 +153,29 @@
             </clr-stack-label>
           </clr-stack-block>
         </clr-stack-block>
+        <clr-stack-block>
+          <clr-stack-label>Credentials</clr-stack-label>
+          <clr-stack-block>
+            <clr-stack-label>
+              <div class="clr-toggle-wrapper">
+                <input type="checkbox" id="toggle70" [(ngModel)]="switches[70]" (checked)="switches[70]" (change)="toggle2($event,'ADD CREDENTIALS')" class="clr-toggle">
+                <label for="toggle70" class="clr-control-label">ADD</label>
+              </div>
+              <div class="clr-toggle-wrapper">
+                <input type="checkbox" id="toggle71" [(ngModel)]="switches[71]" (checked)="switches[71]" (change)="toggle2($event,'MODIFY CREDENTIALS')" class="clr-toggle">
+                <label for="toggle71" class="clr-control-label">MODIFY</label>
+              </div>
+              <div class="clr-toggle-wrapper">
+                <input type="checkbox" id="toggle72" [(ngModel)]="switches[72]" (checked)="switches[72]" (change)="toggle2($event,'DELETE CREDENTIALS')" class="clr-toggle">
+                <label for="toggle72" class="clr-control-label">DELETE</label>
+              </div>
+              <div class="clr-toggle-wrapper">
+                <input type="checkbox" id="toggle73" [(ngModel)]="switches[73]" (checked)="switches[73]" (change)="toggle2($event,'GET CREDENTIALS')" class="clr-toggle">
+                <label for="toggle73" class="clr-control-label">GET</label>
+              </div>
+            </clr-stack-label>
+          </clr-stack-block>
+        </clr-stack-block>
       </clr-stack-block>
       <clr-stack-block [(clrSbExpanded)]="expanded[1]">
         <clr-stack-label>Assets</clr-stack-label>

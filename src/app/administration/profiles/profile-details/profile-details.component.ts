@@ -21,7 +21,7 @@ export class ProfileDetailsComponent implements OnInit {
   functionalities : Functionality[] = []
   expanded = new Array(12);
 
-  switches = new Array(65)
+  switches = new Array(69)
 
  
 
