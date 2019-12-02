@@ -27,3 +27,6 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 For more information, you can read the wiki of the project:
 
 - https://github.com/hedesil/atlas-frontend/wiki/Atlas
+
+The needed microservice for the frontend application is on: 
+- https://github.com/JunquerGJ/Atlas
